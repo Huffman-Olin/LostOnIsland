@@ -90,10 +90,7 @@ public class Player implements Serializable{
         if (this.woodCamp != other.woodCamp) {
             return false;
         }
-        if (this.woodCarrying != other.woodCarrying) {
-            return false;
-        }
-        return true;
+        return this.woodCarrying == other.woodCarrying;
     }
     
     

@@ -60,15 +60,15 @@ public class Game implements Serializable{
         if (!Objects.equals(this.gameName, other.gameName)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.timeRemaining) != Double.doubleToLongBits(other.timeRemaining)) {
-            return false;
-        }
-        return true;
+        return Double.doubleToLongBits(this.timeRemaining) == Double.doubleToLongBits(other.timeRemaining);
     }
     
     /**************************************************************************/
     
-    
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args){
         System.out.println("I just want to print out something!");
         Player playerOne = new Player();
