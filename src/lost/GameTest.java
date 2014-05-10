@@ -12,8 +12,7 @@ public class GameTest {
       Instructions introInstructions = new Instructions();
       introInstructions.setGameInstructions("Find wood and don't die");
       
-      
+        introInstructions.toString();
        
     }
-
 }
