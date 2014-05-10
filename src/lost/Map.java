@@ -11,7 +11,7 @@ import java.util.Objects;
 
 /**
  *
- * @author bethanytaylor
+ * @author olinHuffman
  */
 public class Map implements Serializable {
     
