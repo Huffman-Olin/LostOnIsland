@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package lost;
+package byui.cit260.LostOnAnIsland.objectModeling;
 
 import java.io.Serializable;
 import java.util.Objects;

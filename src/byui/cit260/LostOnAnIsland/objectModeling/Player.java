@@ -2,7 +2,7 @@
 
 
 
-package lost;
+package byui.cit260.LostOnAnIsland.objectModeling;
 import java.io.Serializable;
 import java.util.Objects;
 

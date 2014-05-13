@@ -1,5 +1,5 @@
 
-package lost;
+package byui.cit260.LostOnAnIsland.objectModeling;
 
 /*
  * Lost Game

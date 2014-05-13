@@ -8,7 +8,7 @@
  */
 
 
-package lost;
+package byui.cit260.LostOnAnIsland.objectModeling;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
