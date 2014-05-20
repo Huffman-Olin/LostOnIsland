@@ -2,11 +2,13 @@
 package byui.cit260.LostOnAnIsland.control;
 
 
-  // @author olinhuffman
+  /*** @author olinhuffman*/
  
 public class ChallengeControl {
 
-        public double calcTime(double input, double answer){
+        public static boolean calcTime(double playerGuess){
+            
+  
             
             /*
             BEGIN
@@ -29,11 +31,35 @@ public class ChallengeControl {
             END
             */
             
+            boolean result;
             
+            if (playerGuess < 0 || playerGuess > 2){
+                 result = false;
+            }
+            else{
             
-
-
-            return answer;
+            //Generate random distance and speed
+            
+            double speed = Math.floor(Math.random() * 5);
+            System.out.println(speed);
+            double dist = Math.floor(Math.random() * 4);
+            System.out.println(dist);
+            
+            //Calculate time
+            
+            double time = (dist/speed) / 60;
+            
+            if (time == playerGuess){
+                result = true;
+            }
+            else{
+                result = false;
+            }
+            
+            }
+            
+            System.out.println(result);
+            return result;
             
         }
         

@@ -1,6 +1,8 @@
 
 package byui.cit260.LostOnAnIsland.objectModeling;
 
+import byui.cit260.LostOnAnIsland.control.ChallengeControl;
+
 
   // @author olinhuffman
  
@@ -9,10 +11,9 @@ public class GameTest {
   public static void main(String[] args) {
       
       
-      Instructions introInstructions = new Instructions();
-      introInstructions.setGameInstructions("Find wood and don't die");
+    ChallengeControl.calcTime(2);
       
-        introInstructions.toString();
+      
        
     }
 }

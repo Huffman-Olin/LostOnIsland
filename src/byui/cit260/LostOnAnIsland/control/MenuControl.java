@@ -2,7 +2,7 @@
 package byui.cit260.LostOnAnIsland.control;
 
 
-  // @author olinhuffman
+  /*** @author olinhuffman*/
  
 public class MenuControl {
 

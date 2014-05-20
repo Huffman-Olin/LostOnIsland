@@ -22,10 +22,9 @@ package byui.cit260.LostOnAnIsland.objectModeling;
 import java.io.Serializable;
 import java.util.Objects;
 
-/**
- *
- * @author bethanytaylor
- */
+
+/*** @author bethanytaylor*/
+ 
 public class Challenge implements Serializable{
     
     private String name;
