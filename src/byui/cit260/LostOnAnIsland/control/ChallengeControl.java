@@ -1,6 +1,7 @@
 
 package byui.cit260.LostOnAnIsland.control;
 
+import java.text.DecimalFormat;
 
   /*** @author olinhuffman*/
  
@@ -8,7 +9,7 @@ public class ChallengeControl {
 
         public static boolean calcTime(double playerGuess){
             
-  
+    DecimalFormat numFormat = new DecimalFormat("#.0");
             
             /*
             BEGIN
@@ -38,16 +39,34 @@ public class ChallengeControl {
             }
             else{
             
-            //Generate random distance and speed
+                
             
-            double speed = Math.floor(Math.random() * 5);
+            //Generate random numbers for distance and speed   
+            // Can not be 0
+            // Round number to one decimal place
+            
+            int speed = (int) (Math.random() * 10);
+            if (speed == 0){
+                speed = (int) (Math.random() * 10);
+            }
+                
             System.out.println(speed);
-            double dist = Math.floor(Math.random() * 4);
+            
+            
+            int dist = (int) (Math.random() * 8);
+            if (dist == 0){
+                dist = (int) (Math.random() * 8);
+            }
+            
             System.out.println(dist);
+               
+            
             
             //Calculate time
             
-            double time = (dist/speed) / 60;
+            double placeHolder = (double)dist/(double)speed;
+            int time = (int)(placeHolder * 60.0);
+            System.out.println(time);
             
             if (time == playerGuess){
                 result = true;
