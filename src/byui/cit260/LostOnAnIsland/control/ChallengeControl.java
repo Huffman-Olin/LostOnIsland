@@ -107,5 +107,36 @@ public class ChallengeControl {
 
             return answer;
         }
+        public static double calcWaterNeeded(){
+           int berriesEaten =(int) (Math.random() * 15);
+           double waterNeeded = berriesEaten / 3;
+           if(waterNeeded <= 0){
+                berriesEaten =(int) (Math.random() * 15);
+                waterNeeded = (berriesEaten / 3) * 5;
+           }
+           return waterNeeded;
+        }
+           
+        
+        public static void printWaterNeeded(){
+            double waterNeeded = calcWaterNeeded();
+            if (waterNeeded < 0){
+                System.out.println("********************************************"+
+                        "\nInvalid water input!"
+                + "\n***********************************************");
+            }
+           
+            if (waterNeeded == 1){
+             System.out.println("*************************************************************" +
+                     "\nYou need to drink " + waterNeeded + " mouthful of water in order to survive" +
+                     "\n*************************************************************");
+  
+        }
+            else{
+                 System.out.println("**************************************************************" +
+                     "\nYou need to drink " + waterNeeded + " mouthfuls of water in order to survive" +
+                     "\n**************************************************************"); 
+            }
+        }
         
 }

@@ -12,6 +12,8 @@ public class GameTest {
       
       
     ChallengeControl.calcTime(2);
+    System.out.println("");
+    ChallengeControl.printWaterNeeded();
       
       
        
