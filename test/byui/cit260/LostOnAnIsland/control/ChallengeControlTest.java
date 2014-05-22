@@ -69,5 +69,18 @@ public class ChallengeControlTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+
+    /**
+     * Test of calcWaterNeeded method, of class ChallengeControl.
+     */
+    @Test
+    public void testCalcWaterNeeded() {
+        System.out.println("calcWaterNeeded");
+        double expResult = 0.0;
+        double result = ChallengeControl.calcWaterNeeded();
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
     
 }
