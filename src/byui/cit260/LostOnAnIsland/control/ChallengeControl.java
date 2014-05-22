@@ -14,31 +14,21 @@ public class ChallengeControl {
             BEGIN
                 GET input	
                 CHECK input
-                IF(input < 0) THEN
-                        RETURN -1
-                IF(input > 2) THEN
-                        RETURN -1
-
+    
                 CALC minuteTime (t); distance/speed = t
                 ASSIGN t to var = correctTime
                 COMPARE correctTime to input
-                IF (correctTime == input)
-                        RETURN true
-                IF (correctTime != input)
-                        RETURN false
-
+   
                 RETURN boolean value; var = answer
             END
             */
             
             boolean result;
             
-            if (playerGuess < 0 || playerGuess > 2){
+            if (playerGuess < 0 || playerGuess > 500){
                  result = false;
             }
-            else{
-            
-                
+            else{ 
             
             //Generate random numbers for distance and speed   
             // Can not be 0
@@ -59,7 +49,6 @@ public class ChallengeControl {
             
             System.out.println("Distance is " + dist);
                
-            
             
             //Calculate minuteTime
             
@@ -82,9 +71,9 @@ public class ChallengeControl {
         }
         
         
-        public double calcPhysics(double input, double answer){
+        public boolean calcPhysics(double playerGuess){
             
-        /*    
+        /*    double input, double answer
         BEGIN
             GET input
             CHECK input
@@ -104,8 +93,40 @@ public class ChallengeControl {
             RETURN Boolean value; var = answer
         END
         */
+             boolean result;
+            
+            if (playerGuess < 0 || playerGuess > 500){
+                 result = false;
+            }
+            
+            else{
+                
+                
+            int finalVel = (int) (Math.random() * 5);
+            
+            if (finalVel == 0){
+                    
+                finalVel = (int) (Math.random() * 5);
+            }
+            
+            System.out.println("FinalVelocity = " + finalVel);
+                
+            double time = finalVel / 9.8;
+            
+            System.out.println("Time = " + time);
+            
+            if (time == playerGuess){
+                
+                result = true;
+            }
+            
+            else {
+                result = false;
+            }
 
-            return answer;
+            }
+            return result;
         }
+           
         
 }

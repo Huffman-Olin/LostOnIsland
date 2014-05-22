@@ -43,9 +43,11 @@ public class ChallengeControlTest {
      */
     @Test
     public void testCalcTime() {
-        System.out.println("calcTime");
-        double playerGuess = 0.0;
-        boolean expResult = false;
+        System.out.println("calcTime Text #1");
+        double speed = 6;
+        double distance = 3;
+        double playerGuess = 120;
+        boolean expResult = true;
         boolean result = ChallengeControl.calcTime(playerGuess);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -62,8 +64,8 @@ public class ChallengeControlTest {
         double answer = 0.0;
         ChallengeControl instance = new ChallengeControl();
         double expResult = 0.0;
-        double result = instance.calcPhysics(input, answer);
-        assertEquals(expResult, result, 0.0);
+        //double result = ChallengeControl.calcPhysics(playerGuess);
+        //assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
