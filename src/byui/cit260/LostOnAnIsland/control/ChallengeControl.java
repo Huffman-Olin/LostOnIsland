@@ -1,7 +1,6 @@
 
 package byui.cit260.LostOnAnIsland.control;
 
-
   /*** @author olinhuffman*/
  
 public class ChallengeControl {
@@ -9,7 +8,8 @@ public class ChallengeControl {
         public static boolean calcTime(double playerGuess){
             
 
-            
+
+  /*** @author olinhuffman*/            
             /*
             BEGIN
                 GET input	
