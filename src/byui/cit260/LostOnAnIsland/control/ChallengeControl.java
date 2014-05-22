@@ -20,7 +20,7 @@ public class ChallengeControl {
                 IF(input > 2) THEN
                         RETURN -1
 
-                CALC time (t); distance/speed = t
+                CALC minuteTime (t); distance/speed = t
                 ASSIGN t to var = correctTime
                 COMPARE correctTime to input
                 IF (correctTime == input)
@@ -50,7 +50,7 @@ public class ChallengeControl {
                 speed = (int) (Math.random() * 10);
             }
                 
-            System.out.println(speed);
+            System.out.println("Speed is " + speed);
             
             
             int dist = (int) (Math.random() * 8);
@@ -58,17 +58,17 @@ public class ChallengeControl {
                 dist = (int) (Math.random() * 8);
             }
             
-            System.out.println(dist);
+            System.out.println("Distance is " + dist);
                
             
             
-            //Calculate time
+            //Calculate minuteTime
             
-            double placeHolder = (double)dist/(double)speed;
-            int time = (int)(placeHolder * 60.0);
-            System.out.println(time);
+            double hourTime = (double)dist/(double)speed;
+            int minuteTime = (int)(hourTime * 60.0);
+            System.out.println("Time is " + minuteTime);
             
-            if (time == playerGuess){
+            if (minuteTime == playerGuess){
                 result = true;
             }
             else{
@@ -94,7 +94,7 @@ public class ChallengeControl {
             IF(input > 20) THEN
                     RETURN -1
 
-            CALC time (t) Formula: t = (vf - vi) / a
+            CALC minuteTime (t) Formula: t = (vf - vi) / a
             ASSIGN (t) to var = correctTime
             COMPARE correctTime to input
             IF(correctTime == input) THEN
