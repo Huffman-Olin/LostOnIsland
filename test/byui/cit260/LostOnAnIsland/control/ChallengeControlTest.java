@@ -42,21 +42,58 @@ public class ChallengeControlTest {
      * Test of calcTime method, of class ChallengeControl.
      */
     @Test
-    public void testCalcTime() {
+    public void testCalcTime1() {
         System.out.println("calcTime Text #1");
-        double speed = 6;
-        double distance = 3;
         double playerGuess = 120;
-        boolean expResult = true;
-        boolean result = ChallengeControl.calcTime(playerGuess);
+        int expResult = 1;
+        int result = ChallengeControl.calcTime(playerGuess);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+    }
+    
+     @Test
+    public void testCalcTime2() {
+        System.out.println("calcTime Text #2");
+        double playerGuess = 0;
+        int expResult = -1;
+        int result = ChallengeControl.calcTime(playerGuess);
+        assertEquals(expResult, result);
+        
+    }
+    
+     @Test
+    public void testCalcTime3() {
+        System.out.println("calcTime Text #3");
+        double playerGuess = -140;
+        int expResult = -1;
+        int result = ChallengeControl.calcTime(playerGuess);
+        assertEquals(expResult, result);
+        
+    }
+    
+     @Test
+    public void testCalcTime4() {
+        System.out.println("calcTime Text #4");
+        double playerGuess = 1;
+        int expResult = 1;
+        int result = ChallengeControl.calcTime(playerGuess);
+        assertEquals(expResult, result);
+        
+    }
+
+     @Test
+    public void testCalcTime5() {
+        System.out.println("calcTime Text #5");
+        double playerGuess = 501;
+        int expResult = -1;
+        int result = ChallengeControl.calcTime(playerGuess);
+        assertEquals(expResult, result);
+        
     }
 
     /**
      * Test of calcPhysics method, of class ChallengeControl.
-     */
+     
     @Test
     public void testCalcPhysics() {
         System.out.println("calcPhysics");
@@ -72,7 +109,7 @@ public class ChallengeControlTest {
 
     /**
      * Test of calcWaterNeeded method, of class ChallengeControl.
-     */
+     
     @Test
     public void testCalcWaterNeeded() {
         System.out.println("calcWaterNeeded");
@@ -82,5 +119,5 @@ public class ChallengeControlTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-    
+    */
 }
