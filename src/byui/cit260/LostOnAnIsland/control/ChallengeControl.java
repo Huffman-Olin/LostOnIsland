@@ -5,7 +5,7 @@ package byui.cit260.LostOnAnIsland.control;
  
 public class ChallengeControl {
 
-        public static boolean calcTime(double playerGuess){
+        public static int calcTime(double playerGuess){
             
 
 
@@ -23,10 +23,10 @@ public class ChallengeControl {
             END
             */
             
-            boolean result;
+            int result;
             
-            if (playerGuess < 0 || playerGuess > 500){
-                 result = false;
+            if (playerGuess <= 0 || playerGuess > 500){
+                 result = -1;
             }
             else{ 
             
@@ -56,15 +56,19 @@ public class ChallengeControl {
             int minuteTime = (int)(hourTime * 60.0);
             System.out.println("Time is " + minuteTime);
             
-            if (minuteTime == playerGuess){
-                result = true;
-            }
-            else{
-                result = false;
-            }
+           
+            
+                
+            
+                if (minuteTime == playerGuess){
+                    result = 1;
+                }   
+                else{
+                    result = 1;
+                }
+            
             
             }
-            
             System.out.println(result);
             return result;
             
