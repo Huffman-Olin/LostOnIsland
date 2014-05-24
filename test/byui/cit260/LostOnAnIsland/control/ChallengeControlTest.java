@@ -40,6 +40,7 @@ public class ChallengeControlTest {
 
     /**
      * Test of calcTime method, of class ChallengeControl.
+     * @param playerGuess
      */
     /*
     @Test
@@ -102,33 +103,76 @@ public class ChallengeControlTest {
         
 
     }
+  
 
-    /**
-     * Test of calcPhysics method, of class ChallengeControl.
-     
+    /*
+     Test of calcPhysics method, of class ChallengeControl.
+     **/
+             
     @Test
-    public void testCalcPhysics() {
-        System.out.println("calcPhysics");
-        double input = 0.0;
-        double answer = 0.0;
+    public void testCalcPhysics1() {
+        System.out.println("calcPhysics Test #1");
+        double playerGuess = 200;
         ChallengeControl instance = new ChallengeControl();
-        double expResult = 0.0;
-        //double result = ChallengeControl.calcPhysics(playerGuess);
-        //assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int expResult = 1;
+        int result = instance.calcPhysics(playerGuess);
+        assertEquals(expResult, result, 0.0); 
+    }
+    
+    /**
+     *
+     */
+    
+    @Test
+    public void testCalcPhysics2() {
+        System.out.println("calcPhysics Test #2");
+        double playerGuess = -120;
+        ChallengeControl instance = new ChallengeControl();
+        int expResult = -1;
+        int result = instance.calcPhysics(playerGuess);
+        assertEquals(expResult, result, 0.0); 
+    }
+    
+    @Test
+    public void testCalcPhysics3() {
+        System.out.println("calcPhysics Test #3");
+        double playerGuess = 0;
+        ChallengeControl instance = new ChallengeControl();
+        int expResult = -1;
+        int result = instance.calcPhysics(playerGuess);
+        assertEquals(expResult, result, 0.0); 
+    }
+    
+    @Test
+    public void testCalcPhysics4() {
+        System.out.println("calcPhysics Test #4");
+        double playerGuess = 1;
+        ChallengeControl instance = new ChallengeControl();
+        int expResult = 1;
+        int result = instance.calcPhysics(playerGuess);
+        assertEquals(expResult, result, 0.0); 
+    }
+    
+    @Test
+    public void testCalcPhysics5() {
+        System.out.println("calcPhysics Test #5");
+        double playerGuess = 200;
+        ChallengeControl instance = new ChallengeControl();
+        int expResult = 1;
+        int result = instance.calcPhysics(playerGuess);
+        assertEquals(expResult, result, 0.0); 
     }
 
     /**
      * Test of calcWaterNeeded method, of class ChallengeControl.
-     */
+     
     @Test
     public void testCalcWaterNeeded() {
         System.out.println("calcWaterNeeded");
         double expResult = 0.0;
         double result = ChallengeControl.calcWaterNeeded();
         assertEquals(expResult, result, 0.0);
-        
+        */
     
 }
-}
+
