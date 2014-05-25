@@ -55,10 +55,7 @@ public class ChallengeControl {
             double hourTime = (double)dist/(double)speed;
             int minuteTime = (int)(hourTime * 60.0);
             System.out.println("Time is " + minuteTime);
-            
            
-            
-                
             
                 if (minuteTime == playerGuess){
                     result = 1;
@@ -79,42 +76,30 @@ public class ChallengeControl {
     }
         
         
-        public boolean calcPhysics(double playerGuess){
+        public int calcPhysics(double playerGuess){
             
-        /*    double input, double answer
-        BEGIN
+        /*BEGIN
             GET input
             CHECK input
-            IF (input > 0) THEN
-                    RETURN -1 (incorrect)
-            IF(input > 20) THEN
-                    RETURN -1
-
             CALC minuteTime (t) Formula: t = (vf - vi) / a
             ASSIGN (t) to var = correctTime
             COMPARE correctTime to input
-            IF(correctTime == input) THEN
-                    RETURN true
-            IF(correctTime != input) THEN
-                    RETURN = false
-
             RETURN Boolean value; var = answer
-        END
-        */
-             boolean result;
+        END*/
+             int result;
             
-            if (playerGuess < 0 || playerGuess > 500){
-                 result = false;
+            if (playerGuess <= 0 || playerGuess > 500){
+                 result = -1;
             }
             
             else{
                 
                 
-            int finalVel = (int) (Math.random() * 5);
+            int finalVel = (int) (Math.random() * 25);
             
             if (finalVel == 0){
                     
-                finalVel = (int) (Math.random() * 5);
+                finalVel = (int) (Math.random() * 25);
             }
             
             System.out.println("FinalVelocity = " + finalVel);
@@ -125,11 +110,11 @@ public class ChallengeControl {
             
             if (time == playerGuess){
                 
-                result = true;
+                result = 1;
             }
             
             else {
-                result = false;
+                result = 1;
             }
 
             }
