@@ -123,11 +123,46 @@ public class ChallengeControlTest {
      * Test of calcWaterNeeded method, of class ChallengeControl.
      */
     @Test
-    public void testCalcWaterNeeded() {
-        System.out.println("calcWaterNeeded");
-        double expResult = 0.0;
-        double result = ChallengeControl.calcWaterNeeded();
-        assertEquals(expResult, result, 0.0);
+    public void testCalcWaterNeeded1() {
+        System.out.println("Test 1");
+        double playerGuess = 5;
+        boolean expResult = false ;
+        boolean result = ChallengeControl.calcWaterNeeded(5);
+        result = ChallengeControl.calcWaterNeeded(1);
+        assertEquals(expResult, result);
+        
+    
+}
+        @Test
+    public void testCalcWaterNeeded2() {
+        System.out.println("Test 2");
+        double playerGuess = 25;
+        boolean expResult = false ;
+        boolean result = ChallengeControl.calcWaterNeeded(5);
+        result = ChallengeControl.calcWaterNeeded(1);
+        assertEquals(expResult, result);
+        
+    
+}
+        @Test
+    public void testCalcWaterNeeded3() {
+        System.out.println("Test 3");
+        double playerGuess = 0;
+        boolean expResult = false ;
+        boolean result = ChallengeControl.calcWaterNeeded(5);
+        result = ChallengeControl.calcWaterNeeded(1);
+        assertEquals(expResult, result);
+        
+    
+}
+        @Test
+    public void testCalcWaterNeeded4() {
+        System.out.println("Test 4");
+        double playerGuess = -2;
+        boolean expResult = false ;
+        boolean result = ChallengeControl.calcWaterNeeded(5);
+        result = ChallengeControl.calcWaterNeeded(1);
+        assertEquals(expResult, result);
         
     
 }

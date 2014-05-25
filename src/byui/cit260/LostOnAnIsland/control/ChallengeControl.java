@@ -73,6 +73,10 @@ public class ChallengeControl {
             return result;
             
         }
+
+    static double calcWaterNeeded() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
         
         
         public boolean calcPhysics(double playerGuess){
@@ -132,37 +136,35 @@ public class ChallengeControl {
             return result;
         }
 
-        public static double calcWaterNeeded(){
-           int berriesEaten =(int) (Math.random() * 15);
-           double waterNeeded = berriesEaten / 3;
-           if(waterNeeded <= 0){
-                berriesEaten =(int) (Math.random() * 15);
-                waterNeeded = (berriesEaten / 3) * 5;
-           }
-           return waterNeeded;
-        }
-           
-        
-        public static void printWaterNeeded(){
-            double waterNeeded = calcWaterNeeded();
-            if (waterNeeded < 0){
-                System.out.println("********************************************"+
-                        "\nInvalid water input!"
-                + "\n***********************************************");
+        public static boolean calcWaterNeeded(double playerGuess){
+        boolean result;
+            
+            if (playerGuess < 0 || playerGuess > 25){
+                 result = false;
             }
-           
-            if (waterNeeded == 1){
-             System.out.println("*************************************************************" +
-                     "\nYou need to drink " + waterNeeded + " mouthful of water in order to survive" +
-                     "\n*************************************************************");
-  
-        }
+            
             else{
-                 System.out.println("**************************************************************" +
-                     "\nYou need to drink " + waterNeeded + " mouthfuls of water in order to survive" +
-                     "\n**************************************************************"); 
+                
+                
+            int berrieEaten = (int) (Math.random() * 15);
+            System.out.println("Berries Eaten = " + berrieEaten);
+                
+            double waterToDrink = (berrieEaten / 3) * 5;
+            
+            System.out.println("Water to drink = " + waterToDrink);
+            
+            if (waterToDrink == playerGuess){
+                
+                result = true;
             }
-        }
+            
+            else {
+                result = false;
+            }
 
-        
-}
+            }
+            return result;
+        }   
+            } 
+
+
