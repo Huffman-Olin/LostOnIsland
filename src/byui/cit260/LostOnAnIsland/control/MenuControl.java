@@ -32,7 +32,10 @@ public class MenuControl {
           
         while(!valid){ 
             
-            System.out.println("Please enter your name:");
+            System.out.println
+                       ("\n***********************"
+                    +   "\nPlease enter your name:"
+                       +"\n***********************");
             
            
             
@@ -54,10 +57,13 @@ public class MenuControl {
             else{
                 valid = true;
             }
+            System.out.println("\n" + 
+                    "Thank you, " + playerName);
         }
             
              
          return playerName;
          
      }
+
 }
