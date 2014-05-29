@@ -1,6 +1,8 @@
 
 package byui.cit260.LostOnAnIsland.control;
 
+import byui.cit260.LostOnAnIsland.objectModeling.Player;
+
   /*** @author olinhuffman*/
  
 public class ChallengeControl {
@@ -148,6 +150,8 @@ public class ChallengeControl {
             }
             return result;
         }   
-            } 
+            
+        
+} 
 
 
