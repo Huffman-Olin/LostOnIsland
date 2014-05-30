@@ -119,12 +119,12 @@ public class MainMenuView {
      public static void printStoryLine(){
          System.out.println("***The game background story method has been called***");
      }
-        public static void getMenuInput(char choice) {
+        public static void getMenuInput() {
             Scanner input = new Scanner(System.in);
             String menuInput = input.nextLine();
             menuInput = menuInput.toUpperCase();
             
-            choice =menuInput.charAt(0);
+            char choice = menuInput.charAt(0);
             
       
         
@@ -148,12 +148,17 @@ public class MainMenuView {
                     System.out.println("\n*** Invalid selection *** Try again");
                     break;
                     
+            }          
             }
-
- 
-
-                       
+          public static void displayInstructions(){
+                
             }
+          public int chooseMapLocation(int playerSelection){
+              
+             
+              
+              return playerSelection;
+          }
         }
   
      
