@@ -12,10 +12,17 @@ public class GameTest {
 
      MainMenuView.startProgram(); 
      MainMenuView.getUserName(null);
-     MainMenuView.getMenuInput();
+     MainMenuView.displayDescription("Olin");
+
+     MainMenuView.changeMapLocation();
+
+     
+     /*MainMenuView.getMenuInput();
      GameControl.createPlayer(null);
 
      MainMenuView.displayMainMenu();
+     */
      
+   
     }
 }

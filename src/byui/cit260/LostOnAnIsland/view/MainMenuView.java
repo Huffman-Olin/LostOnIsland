@@ -75,30 +75,52 @@ public class MainMenuView {
      
      public static void displayDescription(String playerName){
          
-         System.out.println(playerName + ", You are an experienced pilot who was traveling to your cabin several hundred miles from home. Unfortunately, you experienced plane troubles and had to make an emergency landing on a remote island. With only a small knife and a limited supply of food and water, you must find 10 pieces of wood to create a signal fire and get rescued. \n" +
-"\n" +
-"You have 12 hours before the sun goes down and all is lost! Explore the island to find the wood. Be careful, wild beasts lurk all around the island, and it is not often that a delicious, “free” meal wanders their way. \n" +
-"\n" +
-"As you travel around to different locations to gather wood, time will be added as “payment” for the wood. There are several places to gather wood from, and once wood has been gathered from a location, there no longer is wood there. If your time reaches 12 hours and you do not have enough wood, the game ends and you lose. \n" +
-"\n" +
-"In the beginning of the game, you will start out with 3 lives.\n" +
-"At each location to collect wood, in order to pick up the wood, you must correctly answer a question. If you incorrectly answer a question, you loose a life and do not pick up the wood.\n" +
-"\n" +
-"The game is over when one of the following occurs :\n" +
-"\n" +
-"You are able to collect enough wood in the allotted time (You win)\n" +
-"You are attacked and killed by a wild animal (You lose)\n" +
-"Your timer exceeds 12 hours (You lose)\n" +
-"You are poisoned by wild berries\n" +
-"You run out of lives\n" +
-"");
+         System.out.println( "\n"
+                 + "\n"
+                 + "\n" 
+                 +
+                 "\n************************************************************************************"
+              
+                 +
+                           "\n You are an experienced pilot who was traveling to your cabin several hundred "
+                 + "        \n miles from home. Unfortunately, you experienced plane troubles and had to make"
+                 + "        \n an emergency landing on a remote island. With only a small knife and a limited "
+                 + "        \n supply of food and water, you must find 10 pieces of wood to create a signal "
+                 + "        \n fire and get rescued." +
+
+                            "\n You have 12 hours before the sun goes down and all is lost! Explore the island"
+                 + "         \n to find the wood. Be careful, wild beasts lurk all around the island, and it "
+                 + "         \n is not often that a delicious, “free” meal wanders their way." +
+ 
+                            "\n As you travel around to different locations to gather wood, time will be" + 
+                            "\n added as “payment” for the wood. There are several places to gather wood" +
+                            "\n from, and once wood has been gathered from a location, there no longer is" +
+                            "\n there. If your time reaches 12 hours and you do not have enough wood, the game"
+                       +    "\n ends and you lose." +
+                            "\n" +
+                            "\n" +
+                            "\n In the beginning of the game, you will start out with 3 lives.\n" +
+                            "\n At each location to collect wood, in order to pick up the wood, you must correctly"
+                 + "         \n answer a question. If you incorrectly answer a question, you loose a life and do not"
+                 + "         \n pick up the wood.\n" +
+                            "\n" +
+                            "\n The game is over when one of the following occurs :" +
+                            "\n" +
+                            "\n A)\tYou are able to collect enough wood in the allotted time (You win)" +
+                            "\n B)\tYou are attacked and killed by a wild animal (You lose)" +
+                            "\n C)\tYour timer exceeds 12 hours (You lose)" +
+                            "\n D)\tYou are poisoned by wild berries" +
+                            "\n E)\tYou run out of lives" +
+                            "\n**************************************************************************************");
+
      }
      
      public static void displayMainMenu(){
      
          System.out.println("\n*****************************\n" 
                           + "          Main Menu\n" 
-                             + "*****************************");
+                             + "*****************************"
+         + "\n\n");
           
          System.out.println("        I-instructions \n" +
                             "        M-map\n" +
@@ -111,10 +133,23 @@ public class MainMenuView {
      
      }
      public static void printInstructions(){
-         System.out.println("***The print Instructions method has been called.***");
+         System.out.println("***The print instruction method has been called.***"); 
      }
-     public static void displayMapOptions(){
-         System.out.println("***The map method has been called***");
+     public static char inputMapLocation(){
+         Scanner mapInput = new Scanner(System.in);
+         String input = mapInput.nextLine();
+         input = input.trim();
+         input = input.toUpperCase();
+         char userInput = input.charAt(0);
+         
+         return userInput;
+     }
+                 
+     public static char changeMapLocation(){
+         char userInput = inputMapLocation();
+         System.out.println("You have selected " + userInput);
+         return userInput;
+         //System.out.println("***The map method has been called***");
      }
      public static void printStoryLine(){
          System.out.println("***The game background story method has been called***");
