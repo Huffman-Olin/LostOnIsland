@@ -12,6 +12,7 @@ public class GameTest {
 
      MainMenuView.startProgram(); 
      MainMenuView.getUserName(null);
+     MainMenuView.getMenuInput('g');
      GameControl.createPlayer(null);
 
      MainMenuView.displayMainMenu();

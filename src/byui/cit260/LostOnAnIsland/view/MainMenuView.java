@@ -110,14 +110,27 @@ public class MainMenuView {
          
      
      }
-        public void doAction(char choice) {
+     public static void printInstructions(){
+         System.out.println("***The print Instructions method has been called.***");
+     }
+     public static void displayMapOptions(){
+         System.out.println("***The map method has been called***");
+     }
+     public static void printStoryLine(){
+         System.out.println("***The game background story method has been called***");
+     }
+        public static void getMenuInput(char choice) {
+            Scanner input = new Scanner(System.in);
+            String menuInput = input.nextLine();
+            menuInput = menuInput.toUpperCase();
             
+            choice =menuInput.charAt(0);
             
-            
-            
+      
+        
             switch (choice) {
                 case 'I': //instructions
-                    System.out.println("Here are instuctions");
+                    MainMenuView.printInstructions();
                     break;
                 case 'M': //map
                     System.out.println("Here is the map");
