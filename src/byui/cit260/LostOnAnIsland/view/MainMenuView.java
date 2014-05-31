@@ -6,7 +6,6 @@
 
 package byui.cit260.LostOnAnIsland.view;
 
-import byui.cit260.LostOnAnIsland.control.MenuControl;
 import java.util.Scanner;
 
 /**
@@ -19,10 +18,8 @@ public class MainMenuView {
          
          MainMenuView.mainMenuDisplay();
          
-    
      }
-     
-     
+
      public static void mainMenuDisplay(){
          
          System.out.println
@@ -122,19 +119,58 @@ public class MainMenuView {
                              + "*****************************"
          + "\n\n");
           
-         System.out.println("        I-instructions \n" +
-                            "        M-map\n" +
+         System.out.println("        I-Instructions \n" +
+                            "        M-Map\n" +
                             "        S-Storyline\n" +
                             "        H-Help\n" +
                             "        Q-Quit");
          
-        
-         
+         System.out.println("Please enter your choice:");
+      
+         char choice = getMenuInput();
+         mainMenuChoices(choice);
      
      }
+     
+     public static char getMenuInput() {
+        Scanner input = new Scanner(System.in);
+        String menuInput = input.nextLine();
+        menuInput = menuInput.toUpperCase();
+
+        char choice = menuInput.charAt(0);
+        
+        return choice;
+    }
+     
+     public static void mainMenuChoices(char choice) {
+
+        switch (choice) {
+            case 'I': //instructions
+                printInstructions();
+                break;
+            case 'M': //map
+                System.out.println("Here is the map");
+                break;
+            case 'S':  //story line
+                printStoryLine();
+                break;
+            case 'H': // Help
+                System.out.println("Here is the help menu");
+                break;
+            case 'Q': //quit
+                System.out.println("Quitting");
+                break;
+            default:
+                System.out.println("\n*** Invalid selection *** Try again");
+                break;
+
+        }          
+     }
+     
      public static void printInstructions(){
          System.out.println("***The print instruction method has been called.***"); 
      }
+     
      public static char inputMapLocation(){
          Scanner mapInput = new Scanner(System.in);
          String input = mapInput.nextLine();
@@ -151,52 +187,21 @@ public class MainMenuView {
          return userInput;
          //System.out.println("***The map method has been called***");
      }
+     
      public static void printStoryLine(){
          System.out.println("***The game background story method has been called***");
      }
-        public static void getMenuInput() {
-            Scanner input = new Scanner(System.in);
-            String menuInput = input.nextLine();
-            menuInput = menuInput.toUpperCase();
-            
-            char choice = menuInput.charAt(0);
-            
-      
-        
-            switch (choice) {
-                case 'I': //instructions
-                    MainMenuView.printInstructions();
-                    break;
-                case 'M': //map
-                    System.out.println("Here is the map");
-                    break;
-                case 'S':  //story line
-                    System.out.println("Story");
-                    break;
-                case 'H': // Help
-                    System.out.println("Here is the help menu");
-                    break;
-                case 'Q': //quit
-                    System.out.println("Quitting");
-                    break;
-                default:
-                    System.out.println("\n*** Invalid selection *** Try again");
-                    break;
-                    
-            }          
-            }
-          public static void displayInstructions(){
-                
-            }
-          public int chooseMapLocation(int playerSelection){
-              
-             
-              
-              return playerSelection;
-          }
+    
+      public static void displayInstructions(){
+
         }
-  
-     
+      public int chooseMapLocation(int playerSelection){
+
+          return playerSelection;
+      }
+    }
+
+
 
 
 

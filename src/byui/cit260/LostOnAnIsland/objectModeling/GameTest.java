@@ -13,7 +13,7 @@ public class GameTest {
      MainMenuView.startProgram(); 
      MainMenuView.getUserName(null);
      MainMenuView.displayDescription("Olin");
-
+     MainMenuView.displayMainMenu();
      MainMenuView.changeMapLocation();
 
      
