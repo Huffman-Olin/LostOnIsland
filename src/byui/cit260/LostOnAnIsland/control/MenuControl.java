@@ -1,12 +1,20 @@
 
 package byui.cit260.LostOnAnIsland.control;
 
-import java.util.Scanner;
-
 
   /*** @author olinhuffman*/
  
 public class MenuControl {
 
-   
+    public static void saveGame(){
+    
+        System.out.println("Saving game...");
+    }
+    
+    public static void quitGame(){
+    
+        System.out.println("Quitting game...");
+    }
 }
+
+

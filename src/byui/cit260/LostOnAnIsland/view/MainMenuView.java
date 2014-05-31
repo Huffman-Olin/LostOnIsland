@@ -6,6 +6,7 @@
 
 package byui.cit260.LostOnAnIsland.view;
 
+import byui.cit260.LostOnAnIsland.control.MenuControl;
 import java.util.Scanner;
 
 /**
@@ -146,19 +147,19 @@ public class MainMenuView {
 
         switch (choice) {
             case 'I': //instructions
-                printInstructions();
+                displayInstructions(); //displays instructions
                 break;
             case 'M': //map
-                System.out.println("Here is the map");
+                displayMapMenu(); //displays the map menu options, calls getMenuInput(), then calls changeMapLocation()
                 break;
             case 'S':  //story line
-                printStoryLine();
+                printStoryLine(); //displays story line
                 break;
             case 'H': // Help
-                System.out.println("Here is the help menu");
+                displayHelp();
                 break;
             case 'Q': //quit
-                System.out.println("Quitting");
+                displayQuitMenu();
                 break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
@@ -167,39 +168,146 @@ public class MainMenuView {
         }          
      }
      
-     public static void printInstructions(){
+     public static void displayInstructions(){
          System.out.println("***The print instruction method has been called.***"); 
      }
      
-     public static char inputMapLocation(){
-         Scanner mapInput = new Scanner(System.in);
-         String input = mapInput.nextLine();
-         input = input.trim();
-         input = input.toUpperCase();
-         char userInput = input.charAt(0);
+     public static void displayMapMenu(){
+         System.out.println("\n*****************************\n" 
+                          + "          Map Menu\n" 
+                             + "*****************************"
+         + "\n\n");
          
-         return userInput;
+         //still need to add options
+        
+         
+         //this gets the input using getMenuInput(), which we can 
+         //use to call anytime we need input from a menu.  
+         char choice = getMenuInput(); 
+         
+         changeMapLocation();
+         
      }
-                 
+            
      public static char changeMapLocation(){
-         char userInput = inputMapLocation();
+         char userInput = getMenuInput(); 
          System.out.println("You have selected " + userInput);
          return userInput;
          //System.out.println("***The map method has been called***");
      }
      
      public static void printStoryLine(){
-         System.out.println("***The game background story method has been called***");
+         System.out.println( "\n"
+                 + "\n"
+                 + "\n" 
+                 +
+                 "\n************************************************************************************"
+              
+                 +
+                           "\n You are an experienced pilot who was traveling to your cabin several hundred "
+                 + "        \n miles from home. Unfortunately, you experienced plane troubles and had to make"
+                 + "        \n an emergency landing on a remote island. With only a small knife and a limited "
+                 + "        \n supply of food and water, you must find 10 pieces of wood to create a signal "
+                 + "        \n fire and get rescued." +
+
+                            "\n You have 12 hours before the sun goes down and all is lost! Explore the island"
+                 + "         \n to find the wood. Be careful, wild beasts lurk all around the island, and it "
+                 + "         \n is not often that a delicious, “free” meal wanders their way." +
+ 
+                            "\n As you travel around to different locations to gather wood, time will be" + 
+                            "\n added as “payment” for the wood. There are several places to gather wood" +
+                            "\n from, and once wood has been gathered from a location, there no longer is" +
+                            "\n there. If your time reaches 12 hours and you do not have enough wood, the game"
+                       +    "\n ends and you lose." +
+                            "\n" +
+                            "\n" +
+                            "\n In the beginning of the game, you will start out with 3 lives.\n" +
+                            "\n At each location to collect wood, in order to pick up the wood, you must correctly"
+                 + "         \n answer a question. If you incorrectly answer a question, you loose a life and do not"
+                 + "         \n pick up the wood.\n" +
+                            "\n" +
+                            "\n The game is over when one of the following occurs :" +
+                            "\n" +
+                            "\n A)\tYou are able to collect enough wood in the allotted time (You win)" +
+                            "\n B)\tYou are attacked and killed by a wild animal (You lose)" +
+                            "\n C)\tYour timer exceeds 12 hours (You lose)" +
+                            "\n D)\tYou are poisoned by wild berries" +
+                            "\n E)\tYou run out of lives" +
+                            "\n**************************************************************************************");
+
+          displayMainMenu(); //show menu again
      }
     
-      public static void displayInstructions(){
+          public static void displayHelp(){
+              System.out.println("\n**********************************************************"
+                      + "\nEach menu will take you through the game.  By selecting "
+                      + "\na choice, you will be prompted to give more "
+                      + "\ninput based on your choice.  You will complete the game "
+                      + "\nonce you have completed enough challenges to recieve an "
+                      + "\nadequate amount of wood and brought it back to camp. Once "
+                      + "\nyou have taken enough logs of wood to camp, you will be "
+                      + "\nable to make a fire and be rescued. Once this has happened the"
+                      + "\ngame will end.  Or you can quit using the main menu option \"quit\" "
+                      + "\n**************************************************************");
+              
+              displayMainMenu(); //show menu again
+          }
 
+          public static void displayQuitMenu(){
+              System.out.println("\n*****************************\n" 
+                          + "          Quit Menu\n" 
+                             + "*****************************"
+         + "\n\n");
+              
+              System.out.println("        R-Return to game \n" +
+                            "        S-Save and quit\n" +
+                            "        Q-Quit without saving game\n" +
+                            "        C-Credits\n");
+              char choice = getMenuInput();
+              quitMenuChoices(choice);
+          }
+          
+          public static void quitMenuChoices(char choice){
+               
+              switch (choice) {
+            case 'R': //return to game
+                displayMainMenu(); //displays main menu 
+                break;
+            case 'S': //save the game by storing data away, and quit by cancelling game
+                MenuControl.saveGame(); 
+                break;
+            case 'Q':  //cancels game
+                MenuControl.quitGame(); 
+                break;
+            case 'C': // display credits
+                displayCredits();
+                break;
+            default:
+                System.out.println("\n*** Invalid selection *** Try again");
+                break;
+
+        }      
+          
+     }
+        
+        public static void displayCredits(){
+            
+            System.out.println("\nThis game is the property of Olin Huffman and Bethany Larsen."
+                             + "\nIn no way, shape, or form can this game be tampered with."
+                             + "\nBut on the off chance that you should attempt such a thing,"
+                             + "\nknow that it will result in your complete termination. "
+                             + "\nAnd we're not taking about the player in the game, we're talking"
+                    + "\nabout you. Thanks for playing!\n\n");
+            
+            MenuControl.quitGame();
         }
-      public int chooseMapLocation(int playerSelection){
 
-          return playerSelection;
-      }
-    }
+              
+          }
+
+
+     
+    
 
 
 
