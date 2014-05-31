@@ -9,6 +9,7 @@ public class MenuControl {
     public static void saveGame(){
     
         System.out.println("Saving game...");
+        
     }
     
     public static void quitGame(){

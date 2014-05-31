@@ -11,16 +11,16 @@ public class GameTest {
       
 
      MainMenuView.startProgram(); 
-     MainMenuView.getUserName(null);
-     MainMenuView.displayDescription("Olin");
-     MainMenuView.displayMainMenu();
+     String playerName = MainMenuView.getUserName();
+     MainMenuView.displayDescription();
+     MainMenuView.runMainMenu();
      MainMenuView.changeMapLocation();
 
      
      /*MainMenuView.getMenuInput();
      GameControl.createPlayer(null);
 
-     MainMenuView.displayMainMenu();
+     MainMenuView.runMainMenu();
      */
      
    
