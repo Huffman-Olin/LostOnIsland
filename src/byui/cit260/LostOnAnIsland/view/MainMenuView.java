@@ -112,14 +112,14 @@ public class MainMenuView {
         System.out.println("\n*****************************\n"
                 + "          Main Menu\n"
                 + "*****************************"
-                + "\n\n");
+                + "\n");
 
-        System.out.println("        I-Instructions \n"
-                + "        M-Map\n"
-                + "        S-Storyline\n"
-                + "        H-Help\n"
-                + "        C-Change Name\n"
-                + "        Q-Quit");
+        System.out.println("\tI-Instructions \n"
+                + "\tM-Map\n"
+                + "\tS-Storyline\n"
+                + "\tH-Help\n"
+                + "\tC-Change Name\n"
+                + "\tQ-Quit");
 
     }
 
