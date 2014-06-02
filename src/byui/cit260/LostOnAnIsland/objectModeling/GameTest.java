@@ -14,7 +14,7 @@ public class GameTest {
      String playerName = MainMenuView.getUserName();
      MainMenuView.displayDescription();
      MainMenuView.runMainMenu();
-     MainMenuView.changeMapLocation();
+
 
      
      /*MainMenuView.getMenuInput();
@@ -22,7 +22,9 @@ public class GameTest {
 
      MainMenuView.runMainMenu();
      */
-     
+   
+   
+    
    
     }
 }

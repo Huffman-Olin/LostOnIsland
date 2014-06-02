@@ -143,7 +143,7 @@ public class MainMenuView {
                     displayInstructions(); //displays instructions
                     break;
                 case 'M': //map
-                    displayMapMenu(); //displays the map menu options, calls getMenuInput(), then calls changeMapLocation()
+                    runMapMenu(); //displays the map menu options, calls getMenuInput(), then calls changeMapLocation()
                     break;
                 case 'S':  //story line
                     displayDescription(); //displays story line
@@ -169,29 +169,64 @@ public class MainMenuView {
     }
 
     public static void displayInstructions() {
-        System.out.println("***The print instruction method has been called.***");
+        System.out.println("*********************************************************"
+        +                  "\nThe objective of the game is to collect enough wood "
+        +                  "\nto start a signal fire and be rescued. Decide on a "
+        +                  "\nmap location to go to. Once there, attempt to collect"
+                +          "\nthe wood. In order to collect that wood, you must"
+                +          "\nanswer the trivia question correctly. If you are able "
+                +          "\nto answer the question correctly, you will pick up that"
+                +          "\npiece of wood. Your timer starts at 12 hours, and each"
+                +          "\nwood pile has a time amount assigned to it. If your time"
+                +          "\nruns out before you have collected the right amount of"
+                +          "\nwood, then you will loose the game."
+                +          "*********************************************************");
     }
 
-    public static void displayMapMenu() {
-        System.out.println("\n*****************************\n"
-                + "          Map Menu\n"
-                + "*****************************"
-                + "\n\n");
+   
 
-        //still need to add options
-        //this gets the input using getMenuInput(), which we can 
-        //use to call anytime we need input from a menu.  
+    public static void displayMap() {
+        
+      System.out.println("S-\tShore\t3 hours"
+              +          "V-\tVolcano\t5 hours"
+              +          "F-\tForest\t.5 hours"
+              +          "R-\tRiver\t4 hours"
+              +          "C-\tCave\t2hours");
+    }
+    public static void getMapInput(char choice){
+        do{
+            switch (choice) {
+                case 'S':
+                    ChallengeDisplay.displayShoreChallenge();
+                    break;
+                case 'V':
+                    ChallengeDisplay.displayVolcanoChallenge();
+                    break;
+                case 'F':
+                    ChallengeDisplay.displayForestChallenge();
+                    break;
+                case 'R':
+                    ChallengeDisplay.displayRiverChallenge();
+                    break;
+                case 'C':
+                    ChallengeDisplay.displayCaveChallenge();
+                    break;
+                case 'M': 
+                    return;
+                default:
+                    System.out.println("Invalid selection. Try again or go away!");
+            }
+        
+          displayMap();
+            choice = getMenuInput();
+
+        } while (true);
+    }
+    public static void runMapMenu(){
+        displayMap();
         char choice = getMenuInput();
-
-        changeMapLocation();
-
-    }
-
-    public static char changeMapLocation() {
-        char userInput = getMenuInput();
-        System.out.println("You have selected " + userInput);
-        return userInput;
-        //System.out.println("***The map method has been called***");
+        getMapInput(choice);
+        
     }
 
     public static void displayHelp() {
