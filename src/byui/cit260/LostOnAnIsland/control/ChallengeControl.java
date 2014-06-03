@@ -74,7 +74,7 @@ public class ChallengeControl {
  
         
         
-        public int calcPhysics(double playerGuess){
+        public static int calcPhysics(double playerGuess){
             
         /*BEGIN
             GET input

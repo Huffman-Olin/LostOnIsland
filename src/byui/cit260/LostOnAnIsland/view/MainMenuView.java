@@ -191,11 +191,11 @@ public class MainMenuView {
               +          "\n"
               +          "\tMap Locations"
               +          "\n"
-              +          "S-\tShore\t-3 hours"
-              +          "\nV-\tVolcano\t-5 hours"
-              +          "\nF-\tForest\t-.5 hours"
-              +          "\nR-\tRiver\t-4 hours"
-              +          "\nC-\tCave\t-2hours"
+              +          "\n\tS-Shore\t-3 hours"
+              +          "\n\tV-Volcano\t-5 hours"
+              +          "\n\tF-Forest\t-.5 hours"
+              +          "\n\tR-River\t-4 hours"
+              +          "\n\tC-Cave\t-2hours"
               +          "\n*****************************");
     }
     public static void getMapInput(char choice){
