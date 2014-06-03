@@ -187,11 +187,16 @@ public class MainMenuView {
 
     public static void displayMap() {
         
-      System.out.println("S-\tShore\t3 hours"
-              +          "V-\tVolcano\t5 hours"
-              +          "F-\tForest\t.5 hours"
-              +          "R-\tRiver\t4 hours"
-              +          "C-\tCave\t2hours");
+      System.out.println("******************************"
+              +          "\n"
+              +          "\tMap Locations"
+              +          "\n"
+              +          "S-\tShore\t-3 hours"
+              +          "\nV-\tVolcano\t-5 hours"
+              +          "\nF-\tForest\t-.5 hours"
+              +          "\nR-\tRiver\t-4 hours"
+              +          "\nC-\tCave\t-2hours"
+              +          "\n*****************************");
     }
     public static void getMapInput(char choice){
         do{
@@ -335,7 +340,7 @@ public class MainMenuView {
                 + "\nBut on the off chance that you should attempt such a thing,"
                 + "\nknow that it will result in your complete termination. "
                 + "\nAnd we're not taking about the player in the game, we're talking"
-                + "\nabout you. Thanks for playing!\n\n");
+                + "\nabout you. Beware and watch your back.... Thanks for playing!\n\n");
 
     }
 
