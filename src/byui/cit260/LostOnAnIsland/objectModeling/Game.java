@@ -17,6 +17,33 @@ public class Game implements Serializable{
     
     private String gameName;
     private double timeRemaining;
+    private Player player; //Create player object
+    private Instructions instructions;// Create instructions objcet
+    private Map gameMap;//Create map object
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Instructions getInstructions() {
+        return instructions;
+    }
+
+    public void setInstructions(Instructions instructions) {
+        this.instructions = instructions;
+    }
+
+    public Map getGameMap() {
+        return gameMap;
+    }
+
+    public void setGameMap(Map gameMap) {
+        this.gameMap = gameMap;
+    }
     
      public Game() {
     }

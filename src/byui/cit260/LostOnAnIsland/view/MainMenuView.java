@@ -14,9 +14,10 @@ import java.util.Scanner;
  */
 public class MainMenuView {
 
-    public static void startProgram() {
+    public static void startNewGame() {
 
         MainMenuView.mainMenuDisplay();
+        
 
     }
 
