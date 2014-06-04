@@ -91,13 +91,5 @@ public class Game implements Serializable{
         }
         return Double.doubleToLongBits(this.timeRemaining) == Double.doubleToLongBits(other.timeRemaining);
     }
-    
-    /**************************************************************************/
-    
-    /**
-     *
-     * @param args
-     */
-
    
 }
