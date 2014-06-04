@@ -6,8 +6,4 @@ package byui.cit260.LostOnAnIsland.objectModeling;
  
 public class Constants {
 
-  public static void main(String[] args) {
-       
-    }
-
 }
