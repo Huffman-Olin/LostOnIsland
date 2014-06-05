@@ -68,10 +68,5 @@ public class Map implements Serializable {
     public String toString() {
         return "Map{" + "playerLocation=" + playerLocation + ", displayMap=" + displayMap + '}';
     }
-    
-    
-    
-  
-    
-    
+
 }

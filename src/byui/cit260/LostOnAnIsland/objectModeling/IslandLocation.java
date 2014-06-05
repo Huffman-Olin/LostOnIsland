@@ -14,17 +14,47 @@ import java.util.Objects;
  * @author olinHuffman
  */
 public class IslandLocation implements Serializable {
-
+    
+    private int row;
+    private int column;
+    private boolean visited;
+    /*private Scene scene;*/
+    
     private String location;
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
+    
+    public IslandLocation(){
     }
     
+    public IslandLocation(int row, int column){
+        this.row = row;
+        this.column = column;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public void setColumn(int column) {
+        this.column = column;
+    }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+
+
     
     
     @Override

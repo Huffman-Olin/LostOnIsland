@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class MainMenuView {
 
-    public static void startNewGame() {
+    public static void runNewGame() {
 
         MainMenuView.mainMenuDisplay();
         
