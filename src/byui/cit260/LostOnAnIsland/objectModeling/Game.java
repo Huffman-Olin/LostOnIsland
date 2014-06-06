@@ -15,10 +15,9 @@ import java.util.Objects;
  */
 public class Game implements Serializable{
     
-    private String gameName;
+    
     private double timeRemaining;
     private Player player; //Create player object
-    private Instructions instructions;// Create instructions objcet
     private Map gameMap;//Create map object
 
     public Player getPlayer() {
@@ -27,14 +26,6 @@ public class Game implements Serializable{
 
     public void setPlayer(Player player) {
         this.player = player;
-    }
-
-    public Instructions getInstructions() {
-        return instructions;
-    }
-
-    public void setInstructions(Instructions instructions) {
-        this.instructions = instructions;
     }
 
     public Map getGameMap() {
@@ -48,13 +39,6 @@ public class Game implements Serializable{
      public Game() {
     }
 
-    public String getGameName() {
-        return gameName;
-    }
-
-    public void setGameName(String gameName) {
-        this.gameName = gameName;
-    }
 
     public double getTimeRemaining() {
         return timeRemaining;
@@ -66,14 +50,14 @@ public class Game implements Serializable{
 
     @Override
     public String toString() {
-        return "Game{" + "gameName=" + gameName + ", timeRemaining=" + timeRemaining + '}';
+        return "Game{" + "timeRemaining=" + timeRemaining + ", player=" + player + ", gameMap=" + gameMap + '}';
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 29 * hash + Objects.hashCode(this.gameName);
+        int hash = 5;
         hash = 29 * hash + (int) (Double.doubleToLongBits(this.timeRemaining) ^ (Double.doubleToLongBits(this.timeRemaining) >>> 32));
+        hash = 29 * hash + Objects.hashCode(this.player);
         return hash;
     }
 
@@ -86,10 +70,18 @@ public class Game implements Serializable{
             return false;
         }
         final Game other = (Game) obj;
-        if (!Objects.equals(this.gameName, other.gameName)) {
+        if (Double.doubleToLongBits(this.timeRemaining) != Double.doubleToLongBits(other.timeRemaining)) {
             return false;
         }
-        return Double.doubleToLongBits(this.timeRemaining) == Double.doubleToLongBits(other.timeRemaining);
+        if (!Objects.equals(this.player, other.player)) {
+            return false;
+        }
+        if (!Objects.equals(this.gameMap, other.gameMap)) {
+            return false;
+        }
+        return true;
     }
+
+    
    
 }
