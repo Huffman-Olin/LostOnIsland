@@ -18,8 +18,7 @@ public class Game implements Serializable{
     
     private double timeRemaining;
     private Player player; //Create player object
-    private Map gameMap;//Create map object
-
+    private IslandLocation gameMap;
     public Player getPlayer() {
         return player;
     }
@@ -28,11 +27,11 @@ public class Game implements Serializable{
         this.player = player;
     }
 
-    public Map getGameMap() {
+    public IslandLocation getGameMap() {
         return gameMap;
     }
 
-    public void setGameMap(Map gameMap) {
+    public void setGameMap(IslandLocation gameMap) {
         this.gameMap = gameMap;
     }
     

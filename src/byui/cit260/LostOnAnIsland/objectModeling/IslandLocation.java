@@ -15,52 +15,34 @@ import java.util.Objects;
  */
 public class IslandLocation implements Serializable {
     
-    private int row;
-    private int column;
-    private boolean visited;
-    /*private Scene scene;*/
-    
-    private String location;
-    
     public IslandLocation(){
+        
     }
+
+      private String playerLocation;
+    private boolean displayMap;
     
-    public IslandLocation(int row, int column){
-        this.row = row;
-        this.column = column;
+    public String getPlayerLocation() {
+        return playerLocation;
     }
 
-    public int getRow() {
-        return row;
+    public void setPlayerLocation(String playerLocation) {
+        this.playerLocation = playerLocation;
     }
 
-    public void setRow(int row) {
-        this.row = row;
+    public boolean isDisplayMap() {
+        return displayMap;
     }
 
-    public int getColumn() {
-        return column;
+    public void setDisplayMap(boolean displayMap) {
+        this.displayMap = displayMap;
     }
 
-    public void setColumn(int column) {
-        this.column = column;
-    }
-
-    public boolean isVisited() {
-        return visited;
-    }
-
-    public void setVisited(boolean visited) {
-        this.visited = visited;
-    }
-
-
-    
-    
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 73 * hash + Objects.hashCode(this.location);
+        int hash = 7;
+        hash = 53 * hash + Objects.hashCode(this.playerLocation);
+        hash = 53 * hash + (this.displayMap ? 1 : 0);
         return hash;
     }
 
@@ -73,7 +55,10 @@ public class IslandLocation implements Serializable {
             return false;
         }
         final IslandLocation other = (IslandLocation) obj;
-        if (!Objects.equals(this.location, other.location)) {
+        if (!Objects.equals(this.playerLocation, other.playerLocation)) {
+            return false;
+        }
+        if (this.displayMap != other.displayMap) {
             return false;
         }
         return true;
@@ -81,12 +66,7 @@ public class IslandLocation implements Serializable {
 
     @Override
     public String toString() {
-        return "IslandLocation{" + "location=" + location + '}';
+        return "Map{" + "playerLocation=" + playerLocation + ", displayMap=" + displayMap + '}';
     }
-   
-   
-   
-   
-   
-    
+
 }

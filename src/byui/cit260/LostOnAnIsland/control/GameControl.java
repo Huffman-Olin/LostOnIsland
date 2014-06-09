@@ -2,7 +2,7 @@
 package byui.cit260.LostOnAnIsland.control;
 
 import byui.cit260.LostOnAnIsland.objectModeling.Game;
-import byui.cit260.LostOnAnIsland.objectModeling.IslandLocation;
+import byui.cit260.LostOnAnIsland.objectModeling.Map;
 import byui.cit260.LostOnAnIsland.objectModeling.Player;
 
 
@@ -13,10 +13,7 @@ public class GameControl {
     
     public static void createNewGame() {
         Game game = new Game(); //created timeRemaining, Player, Map
-        IslandLocation islandLocation = new IslandLocation(); //gets and sets the player's location on the island
-        
-        
-        
+        Map islandLocation = new Map(); //gets and sets the player's location on the island
     }
     
     public static void createLogList() {
@@ -28,9 +25,6 @@ public class GameControl {
         int river = logList[2];
         int volcano = logList[3];
         int shore = logList[4];
-        
-        
-        
     }
     
     public static void sortLogList(int[] logList) {
@@ -70,22 +64,7 @@ public class GameControl {
     How to create each slot in the map
         2 for-statements are needed
        */ 
-    private static void createMap() {
-        IslandLocation[][] map = new IslandLocation[Constant.MAP_ROW_COUNT][Constant.MAP_COLUMN_COUNT];
-        
-        for (int row = 0; row < Constant.MAP_ROW_COUNT; row++) {
-        
-            for (int column = 0; column < Constant.MAP_COLUMN_COUNT; column++) {
-            
-            IslandLocation location = new IslandLocation();
-            location.setColumn(column);
-            location.setRow(row);
-            location.setVisited(false);
-            map[row][column] = location;
-            }
-        }
-        
-    }
+   
 }
        
 

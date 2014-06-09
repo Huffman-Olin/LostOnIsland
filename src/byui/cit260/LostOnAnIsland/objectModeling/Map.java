@@ -15,34 +15,64 @@ import java.util.Objects;
  */
 public class Map implements Serializable {
     
-    public Map(){
-        
-    }
-
-      private String playerLocation;
-    private boolean displayMap;
+    private int row;
+    private int column;
+    private boolean visited;
+    /*private Scene scene;*/
     
-    public String getPlayerLocation() {
-        return playerLocation;
+    private String location;
+    
+    public Map(){
+    }
+    
+    public Map(int row, int column){
+        this.row = row;
+        this.column = column;
+    
+    
+    if (row < 1 || column < 1) {
+    System.out.println("number of row and columns must be > zero");
+    return;
+    }
+    
+    this.row = row;
+    this.column = column;
+    
+    //this.IslandLocation = new IslandLocation[row][column];
+    
     }
 
-    public void setPlayerLocation(String playerLocation) {
-        this.playerLocation = playerLocation;
+    public int getRow() {
+        return row;
     }
 
-    public boolean isDisplayMap() {
-        return displayMap;
+    public void setRow(int row) {
+        this.row = row;
     }
 
-    public void setDisplayMap(boolean displayMap) {
-        this.displayMap = displayMap;
+    public int getColumn() {
+        return column;
     }
 
+    public void setColumn(int column) {
+        this.column = column;
+    }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+
+
+    
+    
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 53 * hash + Objects.hashCode(this.playerLocation);
-        hash = 53 * hash + (this.displayMap ? 1 : 0);
+        int hash = 5;
+        hash = 73 * hash + Objects.hashCode(this.location);
         return hash;
     }
 
@@ -55,10 +85,7 @@ public class Map implements Serializable {
             return false;
         }
         final Map other = (Map) obj;
-        if (!Objects.equals(this.playerLocation, other.playerLocation)) {
-            return false;
-        }
-        if (this.displayMap != other.displayMap) {
+        if (!Objects.equals(this.location, other.location)) {
             return false;
         }
         return true;
@@ -66,7 +93,12 @@ public class Map implements Serializable {
 
     @Override
     public String toString() {
-        return "Map{" + "playerLocation=" + playerLocation + ", displayMap=" + displayMap + '}';
+        return "IslandLocation{" + "location=" + location + '}';
     }
-
+   
+   
+   
+   
+   
+    
 }
