@@ -13,7 +13,7 @@ package byui.cit260.LostOnAnIsland.control;
 
 public class Constant {
     
-   static int MAP_ROW_COUNT = 5;
-   static int MAP_COLUMN_COUNT = 5; 
+   public static int MAP_ROW_COUNT = 5;
+   public static int MAP_COLUMN_COUNT = 5; 
             
 }

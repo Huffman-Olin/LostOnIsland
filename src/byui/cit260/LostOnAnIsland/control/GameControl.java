@@ -2,7 +2,6 @@
 package byui.cit260.LostOnAnIsland.control;
 
 import byui.cit260.LostOnAnIsland.objectModeling.Game;
-import byui.cit260.LostOnAnIsland.objectModeling.Map;
 import byui.cit260.LostOnAnIsland.objectModeling.Player;
 
 
@@ -12,8 +11,8 @@ public class GameControl {
 
     
     public static void createNewGame() {
-        Game game = new Game(); //created timeRemaining, Player, Map
-        Map islandLocation = new Map(); //gets and sets the player's location on the island
+        Game game = new Game(); //created timeRemaininIslandLocatiIslandLocationlayer, Map
+//IslandLocation     Map islandLocation = new Map(); //gets and sets the player's location on the island
     }
     
     public static void createLogList() {
@@ -48,15 +47,16 @@ public class GameControl {
    
     
     public static Player createNewPlayer(String playerName) {
-            System.out.println("\n**** createPlayer function called ****");
+            
+        
+        System.out.println("\n**** createPlayer function called ****");
             return null;
     }
 
     /* 
     Syntax for creating an array
         private static String[] createBlankList() {
-            String[] Blank = new String[Constant.NUMBER_OF_BLANK];
-        }
+            String[] Blank = new String[Constant.NUMBER_OF_BLANKIslandLocation        }
         
     How to create the Map
         Location[][] map = new Location[rows][clumns];

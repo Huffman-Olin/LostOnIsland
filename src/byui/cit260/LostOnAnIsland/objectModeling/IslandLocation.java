@@ -6,6 +6,7 @@
 
 package byui.cit260.LostOnAnIsland.objectModeling;
 
+import byui.cit260.LostOnAnIsland.control.Constant;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -15,34 +16,61 @@ import java.util.Objects;
  */
 public class IslandLocation implements Serializable {
     
-    public IslandLocation(){
-        
-    }
-
-      private String playerLocation;
-    private boolean displayMap;
+    private int row;
+    private int column;
+    private boolean visited;
+    /*private Scene scene;*/
     
-    public String getPlayerLocation() {
-        return playerLocation;
+    private String location;
+    
+    public IslandLocation(){
+    }
+    
+    public IslandLocation(int row, int column){
+     
+    if (row < 1 || column < 1) {
+        System.out.println("Number of row and columns must be > zero");
+        return;
+    }
+    
+    this.row = row;
+    this.column = column;
+    //creates a 2D array
+    IslandLocation map[][] = new IslandLocation[Constant.MAP_ROW_COUNT][Constant.MAP_COLUMN_COUNT];
+    
     }
 
-    public void setPlayerLocation(String playerLocation) {
-        this.playerLocation = playerLocation;
+    public int getRow() {
+        return row;
     }
 
-    public boolean isDisplayMap() {
-        return displayMap;
+    public void setRow(int row) {
+        this.row = row;
     }
 
-    public void setDisplayMap(boolean displayMap) {
-        this.displayMap = displayMap;
+    public int getColumn() {
+        return column;
     }
 
+    public void setColumn(int column) {
+        this.column = column;
+    }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+
+
+    
+    
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 53 * hash + Objects.hashCode(this.playerLocation);
-        hash = 53 * hash + (this.displayMap ? 1 : 0);
+        int hash = 5;
+        hash = 73 * hash + Objects.hashCode(this.location);
         return hash;
     }
 
@@ -55,10 +83,7 @@ public class IslandLocation implements Serializable {
             return false;
         }
         final IslandLocation other = (IslandLocation) obj;
-        if (!Objects.equals(this.playerLocation, other.playerLocation)) {
-            return false;
-        }
-        if (this.displayMap != other.displayMap) {
+        if (!Objects.equals(this.location, other.location)) {
             return false;
         }
         return true;
@@ -66,7 +91,12 @@ public class IslandLocation implements Serializable {
 
     @Override
     public String toString() {
-        return "Map{" + "playerLocation=" + playerLocation + ", displayMap=" + displayMap + '}';
+        return "IslandLocation{" + "location=" + location + '}';
     }
-
+   
+   
+   
+   
+   
+    
 }
