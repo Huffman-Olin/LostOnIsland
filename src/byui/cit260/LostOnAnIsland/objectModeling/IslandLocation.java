@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package byui.cit260.LostOnAnIsland.objectModeling;
 
 import byui.cit260.LostOnAnIsland.control.Constant;
@@ -16,28 +15,38 @@ import java.util.Objects;
  */
 public class IslandLocation implements Serializable {
     
+    private char displayChar; //holds character that will be displayed
     private int row;
     private int column;
     private boolean visited;
     /*private Scene scene;*/
-    
+
     private String location;
-    
-    public IslandLocation(){
+
+    public IslandLocation() {
+        
+        displayChar = '-'; //default character to display on all map locations
+    }
+
+    public IslandLocation(int row, int column) {
+
+        /*if (row < 1 || column < 1) {
+            System.out.println("Number of row and columns must be > zero");
+            return;
+        }*/
+
+        this.row = row;
+        this.column = column;
+        
+        displayChar = '-'; //default character to display on all map locations
     }
     
-    public IslandLocation(int row, int column){
-     
-    if (row < 1 || column < 1) {
-        System.out.println("Number of row and columns must be > zero");
-        return;
+    public char getDisplayChar() {
+        return displayChar;
     }
-    
-    this.row = row;
-    this.column = column;
-    //creates a 2D array
-    IslandLocation map[][] = new IslandLocation[Constant.MAP_ROW_COUNT][Constant.MAP_COLUMN_COUNT];
-    
+
+    public void setDisplayChar(char displayChar) {
+        this.displayChar = displayChar;
     }
 
     public int getRow() {
@@ -64,9 +73,6 @@ public class IslandLocation implements Serializable {
         this.visited = visited;
     }
 
-
-    
-    
     @Override
     public int hashCode() {
         int hash = 5;
@@ -93,10 +99,5 @@ public class IslandLocation implements Serializable {
     public String toString() {
         return "IslandLocation{" + "location=" + location + '}';
     }
-   
-   
-   
-   
-   
-    
+
 }

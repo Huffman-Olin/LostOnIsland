@@ -17,8 +17,9 @@ public class MainMenuView {
     public static void runNewGame() {
 
         MainMenuView.mainMenuDisplay();
-        
-
+        String playerName = MainMenuView.getUserName();
+        MainMenuView.displayDescription();
+        MainMenuView.runMainMenu(); 
     }
 
     public static void mainMenuDisplay() {
@@ -184,10 +185,18 @@ public class MainMenuView {
                 +          "*********************************************************");
     }
 
-   
+   public static void runMapMenu(){
+        displayMap();
+        char choice = getMenuInput();
+        getMapInput(choice);
+        
+    }
 
     public static void displayMap() {
         
+      MapDisplay map = new MapDisplay();
+      map.display();
+      
       System.out.println("******************************"
               +          "\n"
               +          "\tMap Locations"
@@ -199,6 +208,7 @@ public class MainMenuView {
               +          "\n\tC-Cave\t-2hours"
               +          "\n*****************************");
     }
+    
     public static void getMapInput(char choice){
         do{
             switch (choice) {
@@ -228,12 +238,7 @@ public class MainMenuView {
 
         } while (true);
     }
-    public static void runMapMenu(){
-        displayMap();
-        char choice = getMenuInput();
-        getMapInput(choice);
-        
-    }
+    
 
     public static void displayHelp() {
         System.out.println("\n**********************************************************"
