@@ -1,11 +1,8 @@
-
 package byui.cit260.LostOnAnIsland.objectModeling;
 
 /*
  * Lost Game
  */
-
-
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -13,12 +10,32 @@ import java.util.Objects;
  *
  * @author bethanytaylor and Olin Huffman
  */
-public class Game implements Serializable{
-    
-    
+public class Game implements Serializable {
+
     private double timeRemaining;
     private Player player; //Create player object
     private Map gameMap;
+    private int[] logList;
+    //create array to store how many logs are at each location
+    //assign initial numbers to each slot
+    //Shore=0, Cave=5, Forrest=2, Volcano=4, River=3
+      public Game() {
+    }
+
+    public static void createLogList() {
+
+        //logList = new int[]{0, 5, 2, 4, 3};
+
+        /*int shore = logList[0]; 
+         int cave = logList[1];
+         int forrest = logList[2];
+         int volcano = logList[3];
+         int river = logList[4];*/
+    }
+    public int[] getLogList() {
+        return logList;
+    }
+
     public Player getPlayer() {
         return player;
     }
@@ -34,10 +51,8 @@ public class Game implements Serializable{
     public void setGameMap(Map gameMap) {
         this.gameMap = gameMap;
     }
-    
-     public Game() {
-    }
 
+  
 
     public double getTimeRemaining() {
         return timeRemaining;
@@ -81,6 +96,4 @@ public class Game implements Serializable{
         return true;
     }
 
-    
-   
 }

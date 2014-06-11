@@ -15,20 +15,12 @@ public class GameControl {
 //IslandLocation     Map islandLocation = new Map(); //gets and sets the player's location on the island
     }
     
-    public static void createLogList() {
-        
-        int[] logList = new int[]{3, 2, 4, 2, 0};
-        
-        int forrest = logList[0]; 
-        int cave = logList[1];
-        int river = logList[2];
-        int volcano = logList[3];
-        int shore = logList[4];
-    }
+   
     
-    public static void sortLogList(int[] logList) {
+    public static int[] sortLogList(int[] logList) {
      
         int i, j, first, temp; 
+        
         for ( i = logList.length - 1; i > 0; i-- ) 
         {
              first = 0;   //initialize to subscript of first element
@@ -39,8 +31,12 @@ public class GameControl {
             }
             temp = logList[first];   //swap smallest found with element in position i.
             logList[first] = logList[i];
-            logList[i] = temp; 
-        }           
+            logList[i] = temp;
+            
+        }
+        
+    return logList;
+ 
 }
      
     
