@@ -15,24 +15,26 @@ public class Game implements Serializable {
     private double timeRemaining;
     private Player player; //Create player object
     private Map gameMap;
-    private int[] logList;
+    private static int[] logList = new int[]{0, 5, 2, 4, 3};
     //create array to store how many logs are at each location
     //assign initial numbers to each slot
     //Shore=0, Cave=5, Forrest=2, Volcano=4, River=3
       public Game() {
     }
 
-    public static void createLogList() {
+    /*public static void createLogList() {
 
-        //logList = new int[]{0, 5, 2, 4, 3};
+        logList = new int[]{0, 5, 2, 4, 3};
 
         /*int shore = logList[0]; 
          int cave = logList[1];
          int forrest = logList[2];
          int volcano = logList[3];
-         int river = logList[4];*/
+         int river = logList[4];
     }
-    public int[] getLogList() {
+      */
+    
+    public static int[] getLogList() {
         return logList;
     }
 

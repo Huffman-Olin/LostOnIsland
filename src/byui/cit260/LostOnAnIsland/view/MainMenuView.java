@@ -152,6 +152,8 @@ public class MainMenuView {
                     break;
                 case 'H': // Help
                     displayHelp();
+                    System.out.println("Sorted Log List");
+                    StatDisplay.displayLogList();
                     break;
                 case 'C': //change name
                     changeName();
