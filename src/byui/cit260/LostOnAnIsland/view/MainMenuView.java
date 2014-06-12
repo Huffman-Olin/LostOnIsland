@@ -199,16 +199,14 @@ public class MainMenuView {
       MapDisplay map = new MapDisplay();
       map.display();
       
-      System.out.println("******************************"
-              +          "\n"
+      System.out.println("\n"
               +          "\tMap Locations"
               +          "\n"
-              +          "\n\tS-Shore\t-3 hours"
-              +          "\n\tV-Volcano\t-5 hours"
-              +          "\n\tF-Forest\t-.5 hours"
-              +          "\n\tR-River\t-4 hours"
-              +          "\n\tC-Cave\t-2hours"
-              +          "\n*****************************");
+              +          "\n\tS-Shore \t3 hours"
+              +          "\n\tV-Volcano \t5 hours"
+              +          "\n\tF-Forest \t.5 hours"
+              +          "\n\tR-River \t4 hours"
+              +          "\n\tC-Cave          2 hours");
     }
     
     public static void getMapInput(char choice){
