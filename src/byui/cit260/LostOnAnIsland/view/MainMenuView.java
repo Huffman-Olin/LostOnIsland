@@ -5,6 +5,7 @@
  */
 package byui.cit260.LostOnAnIsland.view;
 
+import byui.cit260.LostOnAnIsland.control.GameControl;
 import byui.cit260.LostOnAnIsland.control.MenuControl;
 import java.util.Scanner;
 
@@ -165,7 +166,7 @@ public class MainMenuView {
                     runQuitMenu();
                     break;
                 case 'A'://Average score
-                    StatDisplay.InputScores();
+                    GameControl.findAverageScores();
                     
                 default:
                     System.out.println("\n*** Invalid selection *** Try again");

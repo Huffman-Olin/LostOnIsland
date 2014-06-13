@@ -48,24 +48,27 @@ public class StatDisplayTest {
     /**
      * Test of InputScores method, of class StatDisplay.
      */
+   /*
     @Test
     public void testInputScores() {
         System.out.println("InputScores");
         StatDisplay.InputScores();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
+    */
     }
 
     /**
      * Test of findAverageScore method, of class StatDisplay.
      */
-    @Test
+   /* @Test
     public void testFindAverageScore() {
         System.out.println("findAverageScore");
         StatDisplay instance = new StatDisplay();
         instance.findAverageScore();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
-    }
+    */
     
-}
+    
+

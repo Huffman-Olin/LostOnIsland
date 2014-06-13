@@ -3,6 +3,7 @@ package byui.cit260.LostOnAnIsland.control;
 
 import byui.cit260.LostOnAnIsland.objectModeling.Game;
 import byui.cit260.LostOnAnIsland.objectModeling.Player;
+import java.util.Scanner;
 
 
   /*** @author olinhuffman*/
@@ -53,6 +54,35 @@ public class GameControl {
         
         return average;
     }
+    
+      public static double findAverageScores(){
+        Scanner scores = new Scanner(System.in);
+        int[] playerScores = new int[5];
+        
+        for (int i = 0; i < playerScores.length; i++){
+        int count = i + 1;
+      
+        System.out.println("Enter score # " + count + ": " );
+        playerScores[i] = scores.nextInt();
+        if( playerScores[i] < 0 ||  playerScores[i] > 500){
+            System.out.println("Invalid Score entry");
+        }
+         
+    }
+        //for each loop
+     for (int userScores: playerScores) {
+           
+       System.out.println("Player Score:\t" + userScores);
+        }
+         int sum = 0;
+ for(int printer = 0; printer < playerScores.length; printer++){
+        
+        sum = sum + playerScores[printer];
+}
+ double avg = sum / playerScores.length;
+   
+return avg;
+}
     
    
     
