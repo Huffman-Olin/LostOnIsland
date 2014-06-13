@@ -34,26 +34,35 @@ public class StatDisplay {
         Scanner scores = new Scanner(System.in);
         int[] playerScores = new int[5];
         
-        for (int i = 0; i < playerScores.length + 1; i++){
+        for (int i = 0; i < playerScores.length; i++){
         int count = i + 1;
-        if (count == 6){
-            break;
-        }
+      
         System.out.println("Enter score # " + count + ": " );
         playerScores[i] = scores.nextInt();
         if( playerScores[i] < 0 ||  playerScores[i] > 500){
             System.out.println("Invalid Score entry");
         }
+        System.out.println("");
        
-        
+         
     }
-       
-       }
-        //return playerScores;
-        public void findAverageScore(){
+        //for each loop
+     for (int userScores: playerScores) {
             
+            System.out.println(userScores); 
+           
+       
         }
-    }
+         int sum = 0;
+ for(int printer = 0; printer < playerScores.length; printer++){
+        
+        sum = sum + playerScores[printer];
+    
+       double avg = sum / playerScores[printer];
+  System.out.println("Average player score is " + avg);
+}
+}
+}
 
 
     
