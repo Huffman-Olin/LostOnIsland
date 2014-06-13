@@ -120,6 +120,7 @@ public class MainMenuView {
                 + "\tM-Map\n"
                 + "\tS-Storyline\n"
                 + "\tH-Help\n"
+                + "\tA-Average Score\n"
                 + "\tC-Change Name\n"
                 + "\tQ-Quit");
 
@@ -161,6 +162,9 @@ public class MainMenuView {
                 case 'Q': //quit
                     runQuitMenu();
                     break;
+                case 'A'://Average score
+                    StatDisplay.InputScores();
+                    
                 default:
                     System.out.println("\n*** Invalid selection *** Try again");
                     break;

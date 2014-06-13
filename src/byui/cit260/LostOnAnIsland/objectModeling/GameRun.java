@@ -2,6 +2,7 @@
 package byui.cit260.LostOnAnIsland.objectModeling;
 
 import byui.cit260.LostOnAnIsland.view.MainMenuView;
+import byui.cit260.LostOnAnIsland.view.StatDisplay;
 
 
 public class GameRun {
@@ -10,15 +11,10 @@ public class GameRun {
       
 
      MainMenuView.runNewGame(); 
-     
+    //StatDisplay.InputScores();
 
 
-     
-     /*MainMenuView.getMenuInput();
-     GameControl.createPlayer(null);
 
-     MainMenuView.runMainMenu();
-     */
    
    
     
