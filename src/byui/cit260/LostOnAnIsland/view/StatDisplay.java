@@ -26,9 +26,24 @@ public class StatDisplay {
             System.out.println(list);
         }
         
-           
+    }
+    
+    public static void displayAverageAltitudes() {
         
+        int[] altiList = Game.getAltiList();
+        double average = GameControl.averageAltitudes(altiList);
+
+        for (int altitudes: altiList) {
+            
+            System.out.println(altitudes);
         }
+                
+        System.out.println("This is the average altitude\nfound on the island");
+        System.out.println(average);
+        
+        
+    }
+
     
     public static /*int[]*/void InputScores(){
         Scanner scores = new Scanner(System.in);

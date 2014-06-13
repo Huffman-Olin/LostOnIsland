@@ -16,6 +16,8 @@ public class Game implements Serializable {
     private Player player; //Create player object
     private Map gameMap;
     private static int[] logList = new int[]{0, 5, 2, 4, 3};
+    private static int[] altiList = new int[]{1, 2, 3, 4, 5};
+
     //create array to store how many logs are at each location
     //assign initial numbers to each slot
     //Shore=0, Cave=5, Forrest=2, Volcano=4, River=3
@@ -34,6 +36,11 @@ public class Game implements Serializable {
     }
       */
     
+    public static int[] getAltiList() {
+        return altiList;
+    }
+  
+      
     public static int[] getLogList() {
         return logList;
     }
