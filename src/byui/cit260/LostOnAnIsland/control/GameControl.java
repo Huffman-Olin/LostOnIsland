@@ -57,9 +57,9 @@ public class GameControl {
         return average;
     }
     
-      public static double findAverageScores(){
+      public static double findAverageScore(){
         Scanner scores = new Scanner(System.in);
-        int[] playerScores = new int[5];
+        double[] playerScores = new double[5];
         
         for (int i = 0; i < playerScores.length; i++){
         int count = i + 1;
@@ -68,18 +68,19 @@ public class GameControl {
         playerScores[i] = scores.nextInt();
         if( playerScores[i] < 0 ||  playerScores[i] > 500){
             System.out.println("Invalid Score entry");
+            
         }
-         
     }
         //for each loop
-     for (int userScores: playerScores) {
+        System.out.println("");
+     for (double userScores: playerScores) {
            
-       System.out.println("Player Score:\t" + userScores);
+       System.out.println("Player Score entered:\t" + userScores);
         }
-         int sum = 0;
- for(int printer = 0; printer < playerScores.length; printer++){
+         double sum = 0;
+ for(int counter = 0; counter < playerScores.length; counter++){
         
-        sum = sum + playerScores[printer];
+        sum = sum + playerScores[counter];
 }
  double avg = sum / playerScores.length;
    

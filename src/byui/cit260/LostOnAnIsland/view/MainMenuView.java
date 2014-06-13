@@ -166,7 +166,7 @@ public class MainMenuView {
                     runQuitMenu();
                     break;
                 case 'A'://Average score
-                    GameControl.findAverageScores();
+                    GameControl.findAverageScore();
                     
                 default:
                     System.out.println("\n*** Invalid selection *** Try again");

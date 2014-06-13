@@ -49,7 +49,7 @@ public class StatDisplay {
         
     }
     public static void displayAverageScore(){
-        double avgScore = GameControl.findAverageScores();
+        double avgScore = GameControl.findAverageScore();
         System.out.println("The average score is " + avgScore);
     }
 
