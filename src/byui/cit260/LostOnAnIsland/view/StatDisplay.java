@@ -34,7 +34,7 @@ public class StatDisplay {
         Scanner scores = new Scanner(System.in);
         int[] playerScores = new int[5];
         
-        for (int i = 0; i <playerScores.length + 1; i++){
+        for (int i = 0; i < playerScores.length + 1; i++){
         int count = i + 1;
         if (count == 6){
             break;
@@ -47,10 +47,13 @@ public class StatDisplay {
        
         
     }
+       
+       }
         //return playerScores;
-        
+        public void findAverageScore(){
+            
+        }
     }
-    public void findAverageScore(){
-     
-    }
-    }
+
+
+    
