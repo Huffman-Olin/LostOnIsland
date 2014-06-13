@@ -43,10 +43,10 @@ public class Map implements Serializable {
     
     public char getDisplayCharAt(int row, int column) {
         
-        if (row < 0 || row >= Constant.MAP_ROW_COUNT && 
+        /*if (row < 0 || row >= Constant.MAP_ROW_COUNT && 
             (column < 0 || column >= Constant.MAP_COLUMN_COUNT)) {
             return 0; //out of bounds
-        }
+        }*/
             
             
         return map[row][column].getDisplayChar();

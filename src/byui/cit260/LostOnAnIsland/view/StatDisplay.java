@@ -21,8 +21,9 @@ public class StatDisplay {
         int[] logList = Game.getLogList();
         int[] sortedList = GameControl.sortLogList(logList);
 
-        for (int i = 0; i < sortedList.length; i++) {
-            System.out.println(sortedList[i]);
+        for (int list: sortedList) {
+            
+            System.out.println(list);
         }
         
            
