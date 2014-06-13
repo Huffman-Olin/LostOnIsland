@@ -45,12 +45,14 @@ public class GameControl {
     public static double averageAltitudes(int[] altiList){
         
         int sum = 0;
+        
 
         for (int i = 0; i < altiList.length; i++) {
 
             sum = sum + altiList[i]; 
-            double average = sum / altiList.length;
+            
         }
+        double average = sum / altiList.length;
         
         return average;
     }

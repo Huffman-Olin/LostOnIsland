@@ -23,8 +23,11 @@ public class StatDisplay {
 
         for (int list: sortedList) {
             
-            System.out.println(list);
+            System.out.print(list + " ");
+            
+
         }
+        System.out.print("\n\n");
         
     }
     
@@ -33,12 +36,14 @@ public class StatDisplay {
         int[] altiList = Game.getAltiList();
         double average = GameControl.averageAltitudes(altiList);
 
+        
         for (int altitudes: altiList) {
             
-            System.out.println(altitudes);
+            System.out.print(altitudes + " ");
         }
+        System.out.print("\n\n");
                 
-        System.out.println("This is the average altitude\nfound on the island");
+        System.out.println("This is the average altitude\nfound on the island:");
         System.out.println(average);
         
         
