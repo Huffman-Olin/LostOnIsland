@@ -155,6 +155,8 @@ public class MainMenuView {
                     displayHelp();
                     System.out.println("Sorted Log List");
                     StatDisplay.displayLogList();
+                    System.out.println("List of Map Altitudes");
+                    StatDisplay.displayAverageAltitudes();
                     break;
                 case 'C': //change name
                     changeName();

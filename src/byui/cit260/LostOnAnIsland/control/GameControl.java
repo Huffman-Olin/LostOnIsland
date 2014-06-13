@@ -8,6 +8,8 @@ import byui.cit260.LostOnAnIsland.objectModeling.Player;
   /*** @author olinhuffman*/
  
 public class GameControl {
+    private static double average;
+    
 
     
     public static void createNewGame() {
@@ -39,6 +41,18 @@ public class GameControl {
  
 }
      
+    public static double averageAltitudes(int[] altiList){
+        
+        int sum = 0;
+
+        for (int i = 0; i < altiList.length; i++) {
+
+            sum = sum + altiList[i]; 
+            double average = sum / altiList.length;
+        }
+        
+        return average;
+    }
     
    
     
