@@ -6,9 +6,11 @@
 
 package byui.cit260.LostOnAnIsland.view;
 
+import byui.cit260.LostOnAnIsland.control.ChallengeControl;
+import byui.cit260.LostOnAnIsland.control.GameControl;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -26,28 +28,27 @@ public class StatDisplayTest {
     /**
      * Test of displayLogList method, of class StatDisplay.
      */
-    @Test
-    public void testDisplayLogList() {
-        System.out.println("displayLogList");
-        StatDisplay.displayLogList();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+    
 
     /**
      * Test of displayAverageAltitudes method, of class StatDisplay.
      */
     @Test
     public void testDisplayAverageAltitudes() {
-        System.out.println("displayAverageAltitudes");
+        System.out.println("displayAverageAltitudesTest1");
         StatDisplay.displayAverageAltitudes();
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        int expResult = 3;
+        int[] altiList = null;
+        double result = GameControl.averageAltitudes(altiList);
     }
-
+    
+    
+    
     /**
      * Test of InputScores method, of class StatDisplay.
-     */
+     
     @Test
     public void testInputScores() {
         System.out.println("InputScores");
@@ -58,7 +59,7 @@ public class StatDisplayTest {
 
     /**
      * Test of findAverageScore method, of class StatDisplay.
-     */
+     
     @Test
     public void testFindAverageScore() {
         System.out.println("findAverageScore");
@@ -67,5 +68,5 @@ public class StatDisplayTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-    
+   */ 
 }
