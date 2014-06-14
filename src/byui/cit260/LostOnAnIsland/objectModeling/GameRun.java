@@ -10,9 +10,9 @@ public class GameRun {
   public static void main(String[] args) {
       
 
-     //MainMenuView.runNewGame(); 
+    MainMenuView.runNewGame(); 
     //StatDisplay.InputScores();
-StatDisplay.displayAverageScore();
+    //StatDisplay.displayAverageScore();
 
 
    

@@ -44,11 +44,19 @@ public class GameControl {
      
     public static double averageAltitudes(int[] altiList){
         
+       
         int sum = 0;
-        
-
+ 
         for (int i = 0; i < altiList.length; i++) {
-
+            /*Check to see if all spots in array are full in order to average*/
+            if (altiList[i] == ' '){
+                System.out.println("Some spots in the array are blank\n Can not calculate average");
+            }
+            
+            /*Check to see if any of the numbers in the array are negative*/
+            if (altiList[i] < 0){
+                System.out.println("Some of the numbers are negative\n Can not calculate average");
+            }
             sum = sum + altiList[i]; 
             
         }
