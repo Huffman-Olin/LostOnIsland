@@ -14,6 +14,13 @@ public class GameRun {
     //StatDisplay.InputScores();
     //StatDisplay.displayAverageScore();
      StatDisplay.displayAverageScore();
+     
+     /*
+     When the displayAverageScore function is the only function called in main, 
+     it will display the average score. However, when runNewGame and 
+     displayAverageScore functions are run in main together, the average score
+     is not printed out.
+     */
 
    
    
