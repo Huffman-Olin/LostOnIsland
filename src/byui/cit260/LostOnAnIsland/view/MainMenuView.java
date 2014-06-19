@@ -13,57 +13,8 @@ import java.util.Scanner;
  *
  * @author bethanytaylor
  */
-public class MainMenuView {
+public class MainMenuView{
 
-    public static void runNewGame() {
-
-        MainMenuView.mainMenuDisplay();
-        String playerName = MainMenuView.getUserName();
-        MainMenuView.displayDescription();
-        MainMenuView.runMainMenu(); 
-    }
-
-    public static void mainMenuDisplay() {
-
-        System.out.println("\n****************************\n"
-                + "Welcome to Lost on an Island\n"
-                + "****************************");
-
-    }
-
-    public static String getUserName() {
-
-        boolean valid = false;
-        String playerName = null;
-        Scanner keyboard = new Scanner(System.in);
-
-        while (!valid) {
-
-            System.out.println("Please enter your name:");
-
-            playerName = keyboard.nextLine();
-            playerName = playerName.trim();
-
-            if (playerName.toUpperCase().equals("Q")) {
-
-                return null;
-            }
-
-            if (playerName.length() < 2) {
-
-                System.out.println("Invalid input, please enter your name.  The "
-                        + "name must be greater than one character in length.");
-
-            } else {
-                valid = true;
-            }
-            System.out.println("\n"
-                    + "Welcome, " + playerName + "!");
-        }
-
-        return playerName;
-
-    }
 
     public static void displayDescription() {
 
@@ -102,83 +53,12 @@ public class MainMenuView {
 
     }
 
-    public static void runMainMenu() {
-        printMainMenu();
 
-        char choice = getMenuInput();
-        mainMenuChoices(choice);
+   
 
-    }
 
-    public static void printMainMenu() {
 
-        System.out.println("\n*****************************\n"
-                + "          Main Menu\n"
-                + "*****************************"
-                + "\n");
-
-        System.out.println("\tI-Instructions \n"
-                + "\tM-Map\n"
-                + "\tS-Storyline\n"
-                + "\tH-Help\n"
-                + "\tA-Average Score\n"
-                + "\tC-Change Name\n"
-                + "\tQ-Quit");
-
-    }
-
-    public static char getMenuInput() {
-        System.out.println("Please enter your choice:");
-
-        Scanner input = new Scanner(System.in);
-        String menuInput = input.nextLine();
-        menuInput = menuInput.toUpperCase(); //string function 1
-
-        char choice = menuInput.charAt(0); //string function 2
-
-        return choice;
-    }
-
-    public static void mainMenuChoices(char choice) {
-
-        do {
-            switch (choice) {
-                case 'I': //instructions
-                    displayInstructions(); //displays instructions
-                    break;
-                case 'M': //map
-                    runMapMenu(); //displays the map menu options, calls getMenuInput(), then calls changeMapLocation()
-                    break;
-                case 'S':  //story line
-                    displayDescription(); //displays story line
-                    break;
-                case 'H': // Help
-                    displayHelp();
-                    System.out.println("Sorted Log List");
-                    StatDisplay.displayLogList();
-                    System.out.println("List of Map Altitudes");
-                    StatDisplay.displayAverageAltitudes();
-                    break;
-                case 'C': //change name
-                    changeName();
-                    break;
-                case 'Q': //quit
-                    runQuitMenu();
-                    break;
-                case 'A'://Average score
-                    GameControl.findAverageScore();
-                    
-                default:
-                    System.out.println("\n*** Invalid selection *** Try again");
-                    break;
-
-            }
-            printMainMenu();
-            choice = getMenuInput();
-
-        } while (true);
-    }
-
+   
     public static void displayInstructions() {
         System.out.println("*********************************************************"
         +                  "\nThe objective of the game is to collect enough wood "
@@ -191,7 +71,19 @@ public class MainMenuView {
                 +          "\nwood pile has a time amount assigned to it. If your time"
                 +          "\nruns out before you have collected the right amount of"
                 +          "\nwood, then you will loose the game."
-                +          "*********************************************************");
+                +          "\n*********************************************************");
+    }
+    
+    public static char getMenuInput() {
+        System.out.println("Please enter your choice:");
+
+        Scanner input = new Scanner(System.in);
+        String menuInput = input.nextLine();
+        menuInput = menuInput.toUpperCase(); //string function 1
+
+        char choice = menuInput.charAt(0); //string function 2
+
+        return choice;
     }
 
    public static void runMapMenu(){

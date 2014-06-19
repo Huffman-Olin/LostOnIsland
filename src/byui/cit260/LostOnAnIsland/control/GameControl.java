@@ -3,6 +3,10 @@ package byui.cit260.LostOnAnIsland.control;
 
 import byui.cit260.LostOnAnIsland.objectModeling.Game;
 import byui.cit260.LostOnAnIsland.objectModeling.Player;
+import byui.cit260.LostOnAnIsland.view.MainMenu;
+import byui.cit260.LostOnAnIsland.view.MainMenuView;
+import byui.cit260.LostOnAnIsland.view.NewGameView;
+import byui.cit260.LostOnAnIsland.view.View;
 import java.util.Scanner;
 
 
@@ -104,17 +108,6 @@ return avg;
             return null;
     }
 
-    /* 
-    Syntax for creating an array
-        private static String[] createBlankList() {
-            String[] Blank = new String[Constant.NUMBER_OF_BLANKIslandLocation        }
-        
-    How to create the Map
-        Location[][] map = new Location[rows][clumns];
-        
-    How to create each slot in the map
-        2 for-statements are needed
-       */ 
    
 }
        
