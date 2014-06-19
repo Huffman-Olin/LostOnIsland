@@ -1,11 +1,8 @@
 
 package byui.cit260.LostOnAnIsland.Lost;
 
-import byui.cit260.LostOnAnIsland.control.GameControl;
 import byui.cit260.LostOnAnIsland.view.MainMenu;
-import byui.cit260.LostOnAnIsland.view.MainMenuView;
 import byui.cit260.LostOnAnIsland.view.NewGameView;
-import byui.cit260.LostOnAnIsland.view.StatDisplay;
 
 
 public class GameRun {
@@ -19,7 +16,7 @@ public class GameRun {
     public static void runNewGame() {
         NewGameView.mainMenuDisplay();
         String playerName = NewGameView.getUserName();
-        MainMenuView.displayDescription();
+        MainMenu.displayDescription();
         //MainMenu.runMainMenu();
         MainMenu menu = new MainMenu();
         menu.runMainMenu();
