@@ -67,7 +67,8 @@ public class MainMenu extends View{
                     displayInstructions(); //displays instructions
                     break;
                 case 'M': //map
-                    runMapMenu(); //displays the map menu options, calls getMenuInput(), then calls changeMapLocation()
+                    MapMenu mapView = new MapMenu();
+                    mapView.runMapMenu(); //displays the map menu options, calls getMenuInput(), then calls changeMapLocation()
                     break;
                 case 'S':  //story line
                     displayDescription(); //displays story line
