@@ -4,7 +4,7 @@ package byui.cit260.LostOnAnIsland.control;
 import byui.cit260.LostOnAnIsland.objectModeling.Game;
 import byui.cit260.LostOnAnIsland.objectModeling.Player;
 import byui.cit260.LostOnAnIsland.view.MainMenu;
-import byui.cit260.LostOnAnIsland.view.MainMenuView;
+
 import byui.cit260.LostOnAnIsland.view.NewGameView;
 import byui.cit260.LostOnAnIsland.view.View;
 import java.util.Scanner;
