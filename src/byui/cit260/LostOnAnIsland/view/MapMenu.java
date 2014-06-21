@@ -6,7 +6,7 @@ import static byui.cit260.LostOnAnIsland.view.MainMenuView.getMenuInput;
 
 public class MapMenu extends View {
 
-    public MapMenu(){
+    public MapMenu() {
 
     }
 
@@ -39,7 +39,7 @@ public class MapMenu extends View {
 
     @Override
     public void doAction(char choice) {
-       do{
+        do {
             switch (choice) {
                 case 'S':
                     ChallengeDisplay.displayShoreChallenge();
@@ -56,14 +56,14 @@ public class MapMenu extends View {
                 case 'C':
                     ChallengeDisplay.displayCaveChallenge();
                     break;
-                case 'M': 
+                case 'M':
                     return;
                 default:
                     System.out.println("Invalid selection. Try again or go away!");
             }
-        
-          displayMap();
-            choice = getMenuInput();
+
+            display();
+            choice = getInput();
 
         } while (true);
     }
