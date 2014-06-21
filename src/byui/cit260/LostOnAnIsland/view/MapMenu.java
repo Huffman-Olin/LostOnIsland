@@ -1,8 +1,7 @@
 package byui.cit260.LostOnAnIsland.view;
 
   // @author olinhuffma
-import static byui.cit260.LostOnAnIsland.view.MainMenuView.displayMap;
-import static byui.cit260.LostOnAnIsland.view.MainMenuView.getMenuInput;
+
 
 public class MapMenu extends View {
 
@@ -34,6 +33,7 @@ public class MapMenu extends View {
         char choice = super.getInput();
 
         return choice;
+       
 
     }
 
@@ -63,6 +63,7 @@ public class MapMenu extends View {
             }
 
             display();
+
             choice = getInput();
 
         } while (true);
