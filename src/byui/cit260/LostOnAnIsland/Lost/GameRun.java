@@ -3,7 +3,7 @@ package byui.cit260.LostOnAnIsland.Lost;
 
 import byui.cit260.LostOnAnIsland.view.MainMenu;
 import byui.cit260.LostOnAnIsland.view.NewGameView;
-import byui.cit260.LostOnAnIsland.view.QuestionView;
+import byui.cit260.LostOnAnIsland.view.ForrestChallenge;
 
 
 public class GameRun {
@@ -15,14 +15,14 @@ public class GameRun {
 
    
     public static void runNewGame() {
-      QuestionView question = new QuestionView();
+      /*ForrestChallenge question = new ForrestChallenge();
       
       question.display();
       char input = question.getInput();
-      question.doAction(input);
+      question.doAction(input);*/
   
         
-        /*
+        
         NewGameView.mainMenuDisplay();
         String playerName = NewGameView.getUserName();
         MainMenu.displayDescription();
@@ -30,7 +30,7 @@ public class GameRun {
         MainMenu menu = new MainMenu();
         menu.runMainMenu();
                 
-                */
+                
         
     }
 }

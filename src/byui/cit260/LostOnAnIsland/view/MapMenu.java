@@ -54,7 +54,8 @@ public class MapMenu extends View {
                     ChallengeDisplay.displayRiverChallenge();
                     break;
                 case 'C':
-                    ChallengeDisplay.displayCaveChallenge();
+                    CaveChallenge cc = new CaveChallenge();
+                    cc.runCaveChallenge();
                     break;
                 case 'M':
                     return;

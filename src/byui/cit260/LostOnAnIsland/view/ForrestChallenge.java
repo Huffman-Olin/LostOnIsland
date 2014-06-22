@@ -1,16 +1,18 @@
 package byui.cit260.LostOnAnIsland.view;
 
   // @author olinhuffman
-public class QuestionView extends View {
+public class ForrestChallenge extends View {
 
-    public QuestionView() {
+    public ForrestChallenge() {
 
     }
+    
+    
 
     @Override
     public void display() {
         System.out.println("In your island adventures, you have stumbled across"
-                + " a dlicious berry bush. Being very hungry, you stuff\n"
+                + " a delicious berry bush. Being very hungry, you stuff\n"
                 + " your mouth full of them. It is only after you eat\n"
                 + " them that you realize that they are poisonous. The\n"
                 + " only chance of survival that you have is to dillute\n"
