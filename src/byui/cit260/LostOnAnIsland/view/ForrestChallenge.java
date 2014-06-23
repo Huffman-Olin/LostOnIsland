@@ -8,6 +8,7 @@ public class ForrestChallenge extends View {
     }
     
     
+    
 
     @Override
     public void display() {
@@ -54,7 +55,6 @@ public class ForrestChallenge extends View {
                     break;
                 default:
                     System.out.println("Invalid selection");
-
             }
 
             //display();

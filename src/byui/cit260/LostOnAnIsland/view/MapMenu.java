@@ -51,11 +51,12 @@ public class MapMenu extends View {
                     ChallengeDisplay.displayForestChallenge();
                     break;
                 case 'R':
-                    ChallengeDisplay.displayRiverChallenge();
+                    RiverChallenge rc = new RiverChallenge();
+                    rc.run();
                     break;
                 case 'C':
                     CaveChallenge cc = new CaveChallenge();
-                    cc.runCaveChallenge();
+                    cc.run();
                     break;
                 case 'M':
                     return;

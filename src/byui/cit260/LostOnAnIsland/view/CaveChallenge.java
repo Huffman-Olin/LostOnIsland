@@ -19,7 +19,7 @@ public class CaveChallenge extends View{
         
     }
     
-    public void runCaveChallenge(){
+    public void run(){
         int speed, distance;
         do {
             speed = (int) (Math.random() * 10);

@@ -82,7 +82,7 @@ public class MainMenu extends View{
                     break;
                 case 'Q': //quit
                     QuitMenu menu = new QuitMenu();
-                    menu.runQuitMenu();
+                    menu.run();
                     break;
                 case 'A'://Average score
                     StatDisplay.displayAverageScore();
