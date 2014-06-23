@@ -9,10 +9,8 @@ public class MapMenu extends View {
 
     }
 
-    public void runMapMenu() {
-        display();
-        char choice = getInput();
-        doAction(choice);
+    public void run() {
+       super.run();
     }
 
     @Override
@@ -48,7 +46,8 @@ public class MapMenu extends View {
                     ChallengeDisplay.displayVolcanoChallenge();
                     break;
                 case 'F':
-                    ChallengeDisplay.displayForestChallenge();
+                    ForrestChallenge fc = new ForrestChallenge();
+                    fc.run();
                     break;
                 case 'R':
                     RiverChallenge rc = new RiverChallenge();

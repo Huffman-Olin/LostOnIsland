@@ -33,7 +33,6 @@ public class CaveChallenge extends View{
 
         float choice = getInputFloat();
         doAction(choice, speed, distance);
-        
     }
     
     

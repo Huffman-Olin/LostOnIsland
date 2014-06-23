@@ -18,9 +18,7 @@ public class RiverChallenge extends View{
     
     
      public void run(){
-         display();
-        char choice = getInput();
-        doAction(choice);
+        super.run();
         
     }
 
@@ -48,13 +46,15 @@ public class RiverChallenge extends View{
 
     public void doAction(char choice) {
         
-       /* 
-        do {
-            System.out.println("Invalid selection");
-            getInput();
-        } while (choice != 'f');
+       
+        while (choice != 'F' && choice != 'T'){
+             System.out.println("Invalid selection");
+             choice = getInput();
+        }
+ 
+       
         
-        if (choice == 'f' || choice == 'F'){
+        if (choice == 'F'){
             System.out.println("Congratulations, that is the correct answer!");
         }
         
@@ -62,8 +62,9 @@ public class RiverChallenge extends View{
          System.out.println("Sorry, that is the wrong answer.");   
         }
             
-             */       
-                
-                   
+               
+        
     }
+                   
+    
 }

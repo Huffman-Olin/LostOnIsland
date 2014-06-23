@@ -43,6 +43,7 @@ public abstract class View implements ViewInterface{
     
     
     public void doAction(char choice){  
+        
     }
     
 }
