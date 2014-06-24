@@ -46,9 +46,12 @@ public class MapMenu extends View {
                     return;
                     
                 case 'V':
-                    ChallengeDisplay.displayVolcanoChallenge();
+                    VolcanoChallenge vc = new VolcanoChallenge();
+                   vc.run();
                     break;
                 case 'F':
+
+
                     ForrestChallenge fc = new ForrestChallenge();
                     fc.run();
                     break;

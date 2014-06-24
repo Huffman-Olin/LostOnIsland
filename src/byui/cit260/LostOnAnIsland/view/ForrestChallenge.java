@@ -6,12 +6,12 @@ public class ForrestChallenge extends View {
     public ForrestChallenge() {
 
     }
-    
-     public void run(){
+
+    public void run() {
         super.run();
-        
+
     }
-    
+
 
     @Override
     public void display() {
@@ -42,6 +42,18 @@ public class ForrestChallenge extends View {
     }
 
     public void doAction(char choice) {
+
+        while (choice != 'A' && choice != 'B' && choice != 'C' && choice != 'D') {
+            System.out.println("Invalid selection");
+            choice = getInput();
+        }
+
+        if (choice == 'B') {
+            System.out.println("Congratulations, that is the correct answer!");
+        } else {
+            System.out.println("Sorry, that is the wrong answer.");
+        }
+
         do {
             switch (choice) {
                 case 'A':
@@ -63,9 +75,6 @@ public class ForrestChallenge extends View {
             //display();
             choice = getInput();
 
-        } 
-       while (true); 
+        }while (true);
     }
 }
-
-

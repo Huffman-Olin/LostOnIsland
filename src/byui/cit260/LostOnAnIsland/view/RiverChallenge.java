@@ -3,23 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package byui.cit260.LostOnAnIsland.view;
 
 /**
  *
  * @author bethanytaylor
  */
-public class RiverChallenge extends View{
-     
+public class RiverChallenge extends View {
+
     public RiverChallenge() {
 
     }
-    
-    
-     public void run(){
-        super.run();
-        
+
+    public void run() {
+
+        display();
+        char choice = getInput();
+        doAction(choice);
+
     }
 
     @Override
@@ -32,8 +33,6 @@ public class RiverChallenge extends View{
                 + "T) True\n"
                 + "F) False\n");
     }
-    
-
 
     @Override
     public char getInput() {
@@ -45,26 +44,18 @@ public class RiverChallenge extends View{
     }
 
     public void doAction(char choice) {
-        
-       
-        while (choice != 'F' && choice != 'T'){
-             System.out.println("Invalid selection");
-             choice = getInput();
+
+        while (choice != 'F' && choice != 'T') {
+            System.out.println("Invalid selection");
+            choice = getInput();
         }
- 
-       
-        
-        if (choice == 'F'){
+
+        if (choice == 'F') {
             System.out.println("Congratulations, that is the correct answer!");
+        } else {
+            System.out.println("Sorry, that is the wrong answer.");
         }
-        
-        else{
-         System.out.println("Sorry, that is the wrong answer.");   
-        }
-            
-               
-        
+
     }
-                   
-    
+
 }

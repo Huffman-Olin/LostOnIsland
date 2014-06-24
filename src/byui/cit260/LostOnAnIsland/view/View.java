@@ -26,6 +26,7 @@ public abstract class View implements ViewInterface{
     }
     
   
+
     
     public char getInput(){
       

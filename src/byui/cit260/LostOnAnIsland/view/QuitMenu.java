@@ -20,7 +20,17 @@ public class QuitMenu extends View{
     }
     
     public void run(){
+
+
+        display();
+        char choice = getInput();
+        doAction(choice);
+
         super.run();
+
+
+        super.run();
+
         
     }
     
