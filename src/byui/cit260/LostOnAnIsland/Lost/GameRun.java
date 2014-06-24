@@ -21,14 +21,12 @@ public class GameRun {
       char input = question.getInput();
       question.doAction(input);*/
   
-        
-        
         NewGameView.mainMenuDisplay();
         String playerName = NewGameView.getUserName();
         MainMenu.displayDescription();
         //MainMenu.runMainMenu();
         MainMenu menu = new MainMenu();
-        menu.runMainMenu();
+        menu.run();
                 
                 
         

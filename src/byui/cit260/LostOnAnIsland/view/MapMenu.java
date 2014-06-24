@@ -22,7 +22,8 @@ public class MapMenu extends View {
                 + "\n\tV-Volcano \t5 hours"
                 + "\n\tF-Forest \t.5 hours"
                 + "\n\tR-River \t4 hours"
-                + "\n\tC-Cave          2 hours");
+                + "\n\tC-Cave          2 hours"
+                + "\n\tM-Main Menu");
     }
 
     @Override
@@ -40,8 +41,10 @@ public class MapMenu extends View {
         do {
             switch (choice) {
                 case 'S':
-                    ChallengeDisplay.displayShoreChallenge();
-                    break;
+                    ShoreView sv = new ShoreView();
+                    sv.run();
+                    return;
+                    
                 case 'V':
                     ChallengeDisplay.displayVolcanoChallenge();
                     break;

@@ -18,10 +18,8 @@ public class MainMenu extends View{
         
     }
 
-    public void runMainMenu() {
-        display();
-        char choice = getInput();
-        doAction(choice);
+    public void run() {
+        super.run();
     }
 
     @Override

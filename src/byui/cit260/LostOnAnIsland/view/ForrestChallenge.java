@@ -7,7 +7,10 @@ public class ForrestChallenge extends View {
 
     }
     
-    
+     public void run(){
+        super.run();
+        
+    }
     
 
     @Override
