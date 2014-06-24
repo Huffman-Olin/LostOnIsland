@@ -8,6 +8,7 @@ public class ForrestChallenge extends View {
     }
     
 
+
     public void run(){
         super.run();
        
@@ -43,28 +44,24 @@ public class ForrestChallenge extends View {
     }
 
     public void doAction(char choice) {
-        do {
-            switch (choice) {
-                case 'A':
-                    System.out.println("Sorry, that is the wrong answer.");
-                    break;
-                case 'B':
-                    System.out.println("Congratulations, that is the correct answer!");
-                    break;
-                case 'C':
-                    System.out.println("Sorry, that is the wrong answer.");
-                    break;
-                case 'D':
-                    System.out.println("Sorry, that is the wrong answer.");
-                    break;
-                default:
-                    System.out.println("Invalid selection");
-            }
+       while (choice != 'A' && choice != 'B'&& choice != 'C'&& choice != 'D'){
+             System.out.println("Invalid selection");
+             choice = getInput();
+        }
+ 
+       
+        
+        if (choice == 'B'){
+            System.out.println("Congratulations, that is the correct answer!");
+        }
+        
+        else{
+         System.out.println("Sorry, that is the wrong answer.");   
+        }
 
        
         } 
-       while (true); 
+      
     }
-}
 
 

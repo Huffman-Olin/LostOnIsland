@@ -61,7 +61,7 @@ public class MainMenu extends View{
                 case 'M': //map
 
                     MapMenu mapView = new MapMenu();
-                    mapView.runMapMenu(); //displays the map menu options, calls getMenuInput(), then calls changeMapLocation()
+                    mapView.run(); //displays the map menu options, calls getMenuInput(), then calls changeMapLocation()
 
                     /*MapMenu mapView = new MapMenu();
                     mapView.runMapMenu();*/ //displays the map menu options, calls getMenuInput(), then calls changeMapLocation()

@@ -28,6 +28,8 @@ public abstract class View implements ViewInterface{
     
   
     
+  
+    
     public char getInput(){
       
         System.out.println("Please enter your choice:");
@@ -44,6 +46,7 @@ public abstract class View implements ViewInterface{
     
     
     public void doAction(char choice){  
+        
     }
     
 }
