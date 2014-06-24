@@ -6,14 +6,11 @@ public class ForrestChallenge extends View {
     public ForrestChallenge() {
 
     }
-    
 
-
-    public void run(){
+    public void run() {
         super.run();
-       
-}
 
+    }
 
     @Override
     public void display() {
@@ -44,24 +41,39 @@ public class ForrestChallenge extends View {
     }
 
     public void doAction(char choice) {
-       while (choice != 'A' && choice != 'B'&& choice != 'C'&& choice != 'D'){
-             System.out.println("Invalid selection");
-             choice = getInput();
+
+        while (choice != 'A' && choice != 'B' && choice != 'C' && choice != 'D') {
+            System.out.println("Invalid selection");
+            choice = getInput();
         }
- 
-       
-        
-        if (choice == 'B'){
+
+        if (choice == 'B') {
             System.out.println("Congratulations, that is the correct answer!");
-        }
-        
-        else{
-         System.out.println("Sorry, that is the wrong answer.");   
+        } else {
+            System.out.println("Sorry, that is the wrong answer.");
         }
 
-       
-        } 
-      
+        do {
+            switch (choice) {
+                case 'A':
+                    System.out.println("Sorry, that is the wrong answer.");
+                    break;
+                case 'B':
+                    System.out.println("Congratulations, that is the correct answer!");
+                    break;
+                case 'C':
+                    System.out.println("Sorry, that is the wrong answer.");
+                    break;
+                case 'D':
+                    System.out.println("Sorry, that is the wrong answer.");
+                    break;
+                default:
+                    System.out.println("Invalid selection");
+            }
+
+            //display();
+            choice = getInput();
+
+        }while (true);
     }
-
-
+}

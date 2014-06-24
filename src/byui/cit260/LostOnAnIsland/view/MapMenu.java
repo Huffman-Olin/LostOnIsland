@@ -47,8 +47,10 @@ public class MapMenu extends View {
                    vc.run();
                     break;
                 case 'F':
-                   ForrestChallenge fc = new ForrestChallenge();
-                   fc.run();
+
+
+                    ForrestChallenge fc = new ForrestChallenge();
+                    fc.run();
                     break;
                 case 'R':
                     RiverChallenge rc = new RiverChallenge();

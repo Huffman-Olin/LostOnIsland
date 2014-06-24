@@ -18,7 +18,6 @@ public abstract class View implements ViewInterface{
         display();
         char choice = getInput();
         doAction(choice);
-
     }
     
     public void display(){
@@ -27,8 +26,7 @@ public abstract class View implements ViewInterface{
     }
     
   
-    
-  
+
     
     public char getInput(){
       
