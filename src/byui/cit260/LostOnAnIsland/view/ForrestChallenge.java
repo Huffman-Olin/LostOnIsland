@@ -57,6 +57,6 @@ public class ForrestChallenge extends View {
             System.out.println("Sorry, that is the wrong answer.");
         }
 
-     
+
     }
 }

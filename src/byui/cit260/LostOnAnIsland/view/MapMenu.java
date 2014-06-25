@@ -23,6 +23,7 @@ public class MapMenu extends View {
                 + "\n\tF-Forest \t.5 hours"
                 + "\n\tR-River \t4 hours"
                 + "\n\tC-Cave          2 hours"
+                + "\n\tP-Swamp \t1 hour"
                 + "\n\tM-Main Menu");
     }
 
@@ -42,16 +43,13 @@ public class MapMenu extends View {
             switch (choice) {
                 case 'S':
                     ShoreView sv = new ShoreView();
-                    sv.run();
-                    return;
-                    
+                    sv.run();  
+                    break;
                 case 'V':
                     VolcanoChallenge vc = new VolcanoChallenge();
-                   vc.run();
+                    vc.run();
                     break;
                 case 'F':
-
-
                     ForrestChallenge fc = new ForrestChallenge();
                     fc.run();
                     break;
@@ -63,6 +61,10 @@ public class MapMenu extends View {
                     CaveChallenge cc = new CaveChallenge();
                     cc.run();
                     break;
+                case 'P':
+                    SwampChallenge pc = new SwampChallenge();
+                    pc.run();
+                    break;    
                 case 'M':
                     return;
                 default:
