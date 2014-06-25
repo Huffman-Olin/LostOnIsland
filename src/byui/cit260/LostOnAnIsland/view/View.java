@@ -14,6 +14,9 @@ import java.util.Scanner;
  */
 public abstract class View implements ViewInterface{
     
+    
+    
+    
     public void run(){
         display();
         char choice = getInput();

@@ -12,6 +12,15 @@ import java.util.Objects;
  */
 public class Game implements Serializable {
 
+    private int logs;
+
+    public void setLogs(int logs) {
+        this.logs = logs;
+    }
+
+    public int getLogs() {
+        return logs;
+    }
     private double timeRemaining;
     private Player player; //Create player object
     private Map gameMap;

@@ -25,11 +25,10 @@ public class ShoreView extends View{
     public void display() {
         System.out.println("************************************************\n"
                 + "You're at the shore.  What would you like to do?\n"
-                + "\nP-Map"
+                + "\nM-Map"
                 + "\nD-Drop off Logs"
                 + "\nB-Build Fire"
-                + "\nI-Inventory"
-                + "\nM-Main Menu\n");
+                + "\nI-Inventory");
     }
     
 
@@ -48,10 +47,8 @@ public class ShoreView extends View{
        
         do {
             switch (choice) {
-                case 'P':
-                    MapMenu mapView = new MapMenu();
-                    mapView.run();
-                    break;
+                case 'M':
+                    return;
                 case 'D':
                     System.out.println("You are not carrying any logs");
                     break;    
@@ -61,10 +58,6 @@ public class ShoreView extends View{
                 case 'I':
                     System.out.println("This function needs to display inventory");
                     break;
-                case 'M':
-                    return;
-                    
-                
                 default:
                     System.out.println("Invalid selection");
             }
