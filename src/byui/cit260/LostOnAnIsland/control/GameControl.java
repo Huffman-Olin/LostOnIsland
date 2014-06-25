@@ -2,6 +2,7 @@ package byui.cit260.LostOnAnIsland.control;
 
 import byui.cit260.LostOnAnIsland.objectModeling.Game;
 import byui.cit260.LostOnAnIsland.objectModeling.Player;
+import byui.cit260.LostOnAnIsland.view.ForrestChallenge;
 import byui.cit260.LostOnAnIsland.view.MainMenu;
 
 import byui.cit260.LostOnAnIsland.view.NewGameView;
@@ -98,6 +99,29 @@ public class GameControl {
 
         System.out.println("\n**** createPlayer function called ****");
         return null;
+    }
+    
+    public static double calcTimeRemaining(double currentTime){
+        double remainingTime = 12;
+        remainingTime = remainingTime - currentTime;
+        return remainingTime;
+        
+    }
+    
+    public static void displayTimeRemaining(){
+       double time = calcTimeRemaining(ForrestChallenge.playerTime);
+       System.out.println("You have " + time + " hours until you are dead.");
+       
+    }
+    public static void checkTime(){
+        double time = calcTimeRemaining(ForrestChallenge.playerTime);
+        if (time <= 0){
+            System.out.println("Sorry, time has ran out and you ar dead.");
+            
+        }
+        else {
+            System.out.println("You're still alive. Too bad.");
+        }
     }
 
 }

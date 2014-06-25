@@ -68,6 +68,7 @@ public class Player implements Serializable{
         hash = 29 * hash + this.woodCarrying;
         return hash;
     }
+    
 
     @Override
     public boolean equals(Object obj) {

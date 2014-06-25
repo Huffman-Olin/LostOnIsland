@@ -6,6 +6,8 @@
 
 package byui.cit260.LostOnAnIsland.view;
 
+import byui.cit260.LostOnAnIsland.control.GameControl;
+import byui.cit260.LostOnAnIsland.objectModeling.Player;
 import java.util.Scanner;
 
 /**
@@ -13,11 +15,25 @@ import java.util.Scanner;
  * @author bethanytaylor
  */
 public abstract class View implements ViewInterface{
+    public double playerTime;
+
+    public void setPlayerTime(double playerTime) {
+        this.playerTime = 3;
+    }
+
+    public double getPlayerTime() { 
+        return playerTime;
+    }
+    
     
     public void run(){
         display();
         char choice = getInput();
         doAction(choice);
+        GameControl.calcTimeRemaining(3.5);
+        GameControl.displayTimeRemaining();
+        GameControl.checkTime();
+        
     }
     
     public void display(){
