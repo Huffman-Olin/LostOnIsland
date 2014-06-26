@@ -10,16 +10,15 @@ package byui.cit260.LostOnAnIsland.view;
  * @author bethanytaylor
  */
 public class RiverChallenge extends View {
+    
+       public static double playerTime = 4.5;
 
     public RiverChallenge() {
 
     }
 
-    public void run() {
-
-        display();
-        char choice = getInput();
-        doAction(choice);
+      public void run() {
+        super.run();
 
     }
 

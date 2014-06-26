@@ -2,6 +2,9 @@ package byui.cit260.LostOnAnIsland.view;
 
   // @author olinhuffman
 public class ForrestChallenge extends View {
+    
+    
+   public static double playerTime = 3;
 
     public ForrestChallenge() {
 
@@ -54,6 +57,6 @@ public class ForrestChallenge extends View {
             System.out.println("Sorry, that is the wrong answer.");
         }
 
-       
+
     }
 }
