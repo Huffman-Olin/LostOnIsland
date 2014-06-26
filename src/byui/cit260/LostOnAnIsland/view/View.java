@@ -35,14 +35,22 @@ public abstract class View implements ViewInterface{
         display();
         char choice = getInput();
         doAction(choice);
-        double remainTime = ChallengeControl.calcTimeRemaining(12);
-        if(remainTime <= 0){
+    }
+       
+        
+        
+        public int time(){
+           int remainTime = 6;
+            
+            if(remainTime <= 0){
             System.out.println("Time has run out and you have died. Too bad...");
         }
         else{
             System.out.println("Lucky you, you still have time.");
         }
+           
         
+       return remainTime; 
         
     }
     

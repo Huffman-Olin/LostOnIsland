@@ -21,7 +21,7 @@ public class Game implements Serializable {
     public int getLogs() {
         return logs;
     }
-    private double timeRemaining;
+    private double currentTime;
     private Player player; //Create player object
     private Map gameMap;
     private static int[] logList = new int[]{0, 5, 2, 4, 3};
@@ -72,23 +72,24 @@ public class Game implements Serializable {
 
   
 
-    public double getTimeRemaining() {
-        return timeRemaining;
+    public double getCurrentTime() {
+        return currentTime;
     }
 
-    public void setTimeRemaining(double timeRemaining) {
-        this.timeRemaining = timeRemaining;
+    public void setCurrentTime(double remainingTime) {
+        
+        this.currentTime = remainingTime;
     }
 
     @Override
     public String toString() {
-        return "Game{" + "timeRemaining=" + timeRemaining + ", player=" + player + ", gameMap=" + gameMap + '}';
+        return "Game{" + "timeRemaining=" + currentTime + ", player=" + player + ", gameMap=" + gameMap + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.timeRemaining) ^ (Double.doubleToLongBits(this.timeRemaining) >>> 32));
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.currentTime) ^ (Double.doubleToLongBits(this.currentTime) >>> 32));
         hash = 29 * hash + Objects.hashCode(this.player);
         return hash;
     }
@@ -102,7 +103,7 @@ public class Game implements Serializable {
             return false;
         }
         final Game other = (Game) obj;
-        if (Double.doubleToLongBits(this.timeRemaining) != Double.doubleToLongBits(other.timeRemaining)) {
+        if (Double.doubleToLongBits(this.currentTime) != Double.doubleToLongBits(other.currentTime)) {
             return false;
         }
         if (!Objects.equals(this.player, other.player)) {

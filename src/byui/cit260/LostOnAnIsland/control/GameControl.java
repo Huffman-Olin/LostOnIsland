@@ -19,7 +19,7 @@ public class GameControl {
 
     public static void createNewGame() {
         Game game = new Game(); //created timeRemaininIslandLocatiIslandLocationlayer, Map
-        game.setTimeRemaining(12);
+        game.setCurrentTime(12);
         //create map
         //save map in game
         GameRun.setGame(game);

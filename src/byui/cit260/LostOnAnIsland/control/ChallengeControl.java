@@ -111,10 +111,11 @@ public class ChallengeControl {
         return result;
     }
     
-    public static double calcTimeRemaining(double currentTime){
-        double remainingTime = GameRun.getGame().getTimeRemaining();
-        remainingTime = remainingTime - currentTime;
-        GameRun.getGame().setTimeRemaining(remainingTime);
+    public static double calcTimeRemaining(double currentTime, double challengeTime){
+        
+        double remainingTime = GameRun.getGame().getCurrentTime();
+        remainingTime = currentTime - challengeTime;
+        GameRun.getGame().setCurrentTime(remainingTime);
         return remainingTime;
         
     }
