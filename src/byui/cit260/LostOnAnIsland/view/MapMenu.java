@@ -20,10 +20,12 @@ public class MapMenu extends View {
                 + "\n"
                 + "\n\tS-Shore \t3 hours"
                 + "\n\tV-Volcano \t5 hours"
-                + "\n\tF-Forest \t.5 hours"
+                + "\n\tF-Forest \t1 hours"
                 + "\n\tR-River \t4 hours"
                 + "\n\tC-Cave          2 hours"
                 + "\n\tP-Swamp \t1 hour"
+                + "\n\tL-Valley \t6 hours"
+                + "\n\tT-Tree House \t2 hours"
                 + "\n\tM-Main Menu");
     }
 
@@ -64,7 +66,15 @@ public class MapMenu extends View {
                 case 'P':
                     SwampChallenge pc = new SwampChallenge();
                     pc.run();
-                    break;    
+                    break;
+                case 'L':
+                    ValleyChallenge lc = new ValleyChallenge();
+                    lc.run();
+                    break;
+                case 'T':
+                    TreehouseChallenge tc = new TreehouseChallenge();
+                    tc.run(); 
+                    break;
                 case 'M':
                     return;
                 default:

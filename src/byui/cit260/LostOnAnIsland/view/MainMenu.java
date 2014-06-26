@@ -35,7 +35,9 @@ public class MainMenu extends View{
                 + "\tS-Storyline\n"
                 + "\tH-Help\n"
                 + "\tA-Average Score\n"
-                + "\tC-Change Name\n"
+                + "\tC-Change Player Name\n"
+                + "\tV-Inventory\n"
+                + "\tT-Show the time\n"
                 + "\tQ-Quit");
     }
 
@@ -77,6 +79,12 @@ public class MainMenu extends View{
                     break;
                 case 'C': //change name
                     changeName();
+                    break;
+                case 'V': //change name
+                    System.out.println("Show inventory");
+                    break;
+                case 'T': //change name
+                    System.out.println("Show time i.e. 9:00 AM You have 12 hours to build a fire");
                     break;
                 case 'Q': //quit
                     QuitMenu menu = new QuitMenu();
@@ -123,11 +131,11 @@ public class MainMenu extends View{
                 + "\n"
                 + "\n The game is over when one of the following occurs :"
                 + "\n"
-                + "\n A)\tYou are able to collect enough wood in the allotted time (You win)"
-                + "\n B)\tYou are attacked and killed by a wild animal (You lose)"
-                + "\n C)\tYour timer exceeds 12 hours (You lose)"
-                + "\n D)\tYou are poisoned by wild berries"
-                + "\n E)\tYou run out of lives"
+                + "\n \tYou are able to collect enough wood in the allotted time (You win)"
+                + "\n \tYou are attacked and killed by a wild animal (You lose)"
+                + "\n \tYour timer exceeds 12 hours (You lose)"
+                + "\n \tYou are poisoned by wild berries"
+                + "\n \tYou run out of lives"
                 + "\n**************************************************************************************");
 
     }

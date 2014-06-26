@@ -15,10 +15,6 @@ package byui.cit260.LostOnAnIsland.objectModeling;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
-
-
 import java.io.Serializable;
 import java.util.Objects;
 
