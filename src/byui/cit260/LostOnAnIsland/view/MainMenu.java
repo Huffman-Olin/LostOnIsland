@@ -131,11 +131,11 @@ public class MainMenu extends View{
                 + "\n"
                 + "\n The game is over when one of the following occurs :"
                 + "\n"
-                + "\n A)\tYou are able to collect enough wood in the allotted time (You win)"
-                + "\n B)\tYou are attacked and killed by a wild animal (You lose)"
-                + "\n C)\tYour timer exceeds 12 hours (You lose)"
-                + "\n D)\tYou are poisoned by wild berries"
-                + "\n E)\tYou run out of lives"
+                + "\n \tYou are able to collect enough wood in the allotted time (You win)"
+                + "\n \tYou are attacked and killed by a wild animal (You lose)"
+                + "\n \tYour timer exceeds 12 hours (You lose)"
+                + "\n \tYou are poisoned by wild berries"
+                + "\n \tYou run out of lives"
                 + "\n**************************************************************************************");
 
     }

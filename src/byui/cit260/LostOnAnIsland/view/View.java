@@ -18,10 +18,15 @@ public abstract class View implements ViewInterface{
     
     
     public void run(){
+        /*int challengeTime = run();*/
         display();
         char choice = getInput();
         doAction(choice);
     }
+    
+  
+    
+
     
     public void display(){
        

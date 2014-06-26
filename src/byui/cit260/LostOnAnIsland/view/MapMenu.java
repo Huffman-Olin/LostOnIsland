@@ -20,7 +20,7 @@ public class MapMenu extends View {
                 + "\n"
                 + "\n\tS-Shore \t3 hours"
                 + "\n\tV-Volcano \t5 hours"
-                + "\n\tF-Forest \t.5 hours"
+                + "\n\tF-Forest \t1 hours"
                 + "\n\tR-River \t4 hours"
                 + "\n\tC-Cave          2 hours"
                 + "\n\tP-Swamp \t1 hour"

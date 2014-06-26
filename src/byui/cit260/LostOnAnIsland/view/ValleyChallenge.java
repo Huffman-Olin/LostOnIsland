@@ -14,10 +14,15 @@ public class ValleyChallenge extends View{
     public ValleyChallenge() {
 
     }
-
+    
+    
     public void run() {
+        
         super.run();
+        
     }
+    
+    
 
 
     @Override
