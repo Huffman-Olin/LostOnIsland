@@ -1,5 +1,6 @@
 package byui.cit260.LostOnAnIsland.control;
 
+import byui.cit260.LostOnAnIsland.Lost.GameRun;
 import byui.cit260.LostOnAnIsland.objectModeling.Game;
 import byui.cit260.LostOnAnIsland.objectModeling.Player;
 import byui.cit260.LostOnAnIsland.view.ForrestChallenge;
@@ -18,9 +19,12 @@ public class GameControl {
 
     public static void createNewGame() {
         Game game = new Game(); //created timeRemaininIslandLocatiIslandLocationlayer, Map
-                                //IslandLocation  Map islandLocation = new Map(); //gets and sets the player's location on the island
+        game.setTimeRemaining(12);
+        //create map
+        //save map in game
+        GameRun.setGame(game);
     }
-
+    
     public static int[] sortLogList(int[] logList) {
 
         int i, j, first, temp;
@@ -100,28 +104,7 @@ public class GameControl {
         System.out.println("\n**** createPlayer function called ****");
         return null;
     }
-    
-    public static double calcTimeRemaining(double currentTime){
-        double remainingTime = 12;
-        remainingTime = remainingTime - currentTime;
-        return remainingTime;
-        
-    }
-    
-    public static void displayTimeRemaining(){
-       double time = calcTimeRemaining(ForrestChallenge.playerTime);
-       System.out.println("You have " + time + " hours until you are dead.");
-       
-    }
-    public static void checkTime(){
-        double time = calcTimeRemaining(ForrestChallenge.playerTime);
-        if (time <= 0){
-            System.out.println("Sorry, time has ran out and you ar dead.");
-            
-        }
-        else {
-            System.out.println("You're still alive. Too bad.");
-        }
+
     }
 
-}
+

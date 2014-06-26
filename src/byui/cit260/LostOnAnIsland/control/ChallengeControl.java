@@ -1,5 +1,7 @@
 package byui.cit260.LostOnAnIsland.control;
 
+import byui.cit260.LostOnAnIsland.Lost.GameRun;
+
 /**
  * * @author olinhuffman
  */
@@ -107,6 +109,14 @@ public class ChallengeControl {
 
         }
         return result;
+    }
+    
+    public static double calcTimeRemaining(double currentTime){
+        double remainingTime = GameRun.getGame().getTimeRemaining();
+        remainingTime = remainingTime - currentTime;
+        GameRun.getGame().setTimeRemaining(remainingTime);
+        return remainingTime;
+        
     }
 
 }

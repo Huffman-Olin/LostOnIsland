@@ -6,6 +6,8 @@
 
 package byui.cit260.LostOnAnIsland.view;
 
+import byui.cit260.LostOnAnIsland.Lost.GameRun;
+import byui.cit260.LostOnAnIsland.control.ChallengeControl;
 import byui.cit260.LostOnAnIsland.control.GameControl;
 import byui.cit260.LostOnAnIsland.objectModeling.Player;
 import java.util.Scanner;
@@ -33,9 +35,14 @@ public abstract class View implements ViewInterface{
         display();
         char choice = getInput();
         doAction(choice);
-        GameControl.calcTimeRemaining(3.5);
-        GameControl.displayTimeRemaining();
-        GameControl.checkTime();
+        double remainTime = ChallengeControl.calcTimeRemaining(12);
+        if(remainTime <= 0){
+            System.out.println("Time has run out and you have died. Too bad...");
+        }
+        else{
+            System.out.println("Lucky you, you still have time.");
+        }
+        
         
     }
     

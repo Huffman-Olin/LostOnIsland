@@ -1,17 +1,30 @@
 
 package byui.cit260.LostOnAnIsland.Lost;
 
+import byui.cit260.LostOnAnIsland.objectModeling.Game;
+import byui.cit260.LostOnAnIsland.view.ForrestChallenge;
 import byui.cit260.LostOnAnIsland.view.MainMenu;
 import byui.cit260.LostOnAnIsland.view.NewGameView;
-import byui.cit260.LostOnAnIsland.view.ForrestChallenge;
 
 
 public class GameRun {
+    private static Game game;
+
+    public static Game getGame() {
+        return game;
+    }
+
+    public static void setGame(Game game) {
+        GameRun.game = game;
+    }
+    
+    
 
   public static void main(String[] args) {
       
         runNewGame(); 
     }
+  
 
    
     public static void runNewGame() {
@@ -30,5 +43,9 @@ public class GameRun {
                 
                 
         
+    }
+
+    public static double calcTimeRemaining() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
