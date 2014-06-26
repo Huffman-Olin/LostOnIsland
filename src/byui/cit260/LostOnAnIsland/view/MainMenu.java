@@ -35,7 +35,9 @@ public class MainMenu extends View{
                 + "\tS-Storyline\n"
                 + "\tH-Help\n"
                 + "\tA-Average Score\n"
-                + "\tC-Change Name\n"
+                + "\tC-Change Player Name\n"
+                + "\tV-Inventory\n"
+                + "\tT-Show the time\n"
                 + "\tQ-Quit");
     }
 
@@ -77,6 +79,12 @@ public class MainMenu extends View{
                     break;
                 case 'C': //change name
                     changeName();
+                    break;
+                case 'V': //change name
+                    System.out.println("Show inventory");
+                    break;
+                case 'T': //change name
+                    System.out.println("Show time i.e. 9:00 AM You have 12 hours to build a fire");
                     break;
                 case 'Q': //quit
                     QuitMenu menu = new QuitMenu();
