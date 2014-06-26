@@ -15,20 +15,12 @@ public class GameRun {
 
    
     public static void runNewGame() {
-      /*ForrestChallenge question = new ForrestChallenge();
-      
-      question.display();
-      char input = question.getInput();
-      question.doAction(input);*/
-  
+    
         NewGameView.mainMenuDisplay();
         String playerName = NewGameView.getUserName();
         MainMenu.displayDescription();
         //MainMenu.runMainMenu();
         MainMenu menu = new MainMenu();
         menu.run();
-                
-                
-        
     }
 }
