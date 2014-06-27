@@ -21,7 +21,6 @@ public class GameRun {
     
 
   public static void main(String[] args) {
-      
         runNewGame(); 
     }
   
@@ -37,7 +36,5 @@ public class GameRun {
         menu.run();
     }
 
-    public static double calcTimeRemaining() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 }
