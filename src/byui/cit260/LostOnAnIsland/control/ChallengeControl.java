@@ -119,5 +119,10 @@ public class ChallengeControl {
         return remainingTime;
         
     }
+    public void printTime(){
+        double time = calcTimeRemaining(9,4.5);
+        
+       System.out.println("You have " + time + " hours left.");
+    }
 
 }

@@ -1,6 +1,7 @@
 
 package byui.cit260.LostOnAnIsland.Lost;
 
+import byui.cit260.LostOnAnIsland.control.ChallengeControl;
 import byui.cit260.LostOnAnIsland.objectModeling.Game;
 import byui.cit260.LostOnAnIsland.view.ForrestChallenge;
 import byui.cit260.LostOnAnIsland.view.MainMenu;
@@ -21,7 +22,8 @@ public class GameRun {
     
 
   public static void main(String[] args) {
-        runNewGame(); 
+        runNewGame();
+      
     }
   
 
