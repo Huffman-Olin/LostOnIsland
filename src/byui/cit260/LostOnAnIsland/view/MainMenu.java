@@ -84,7 +84,7 @@ public class MainMenu extends View{
                     System.out.println("Show inventory");
                     break;
                 case 'T': //change name
-                    System.out.println("Show time i.e. 9:00 AM You have 12 hours to build a fire");
+                    super.printTime();
                     break;
                 case 'Q': //quit
                     QuitMenu menu = new QuitMenu();

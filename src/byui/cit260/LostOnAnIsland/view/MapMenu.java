@@ -1,12 +1,16 @@
 package byui.cit260.LostOnAnIsland.view;
 
-  // @author olinhuffma
+  // @author olinhuffm
+import byui.cit260.LostOnAnIsland.control.ChallengeControl;
+
 
 
 public class MapMenu extends View {
 
+    private int time[];
+    
     public MapMenu() {
-
+        time = new int[]{3, 5, 1, 4, 2, 1, 6, 2};
     }
 
     public void run() {
@@ -18,16 +22,19 @@ public class MapMenu extends View {
         System.out.println("\n"
                 + "\tMap Locations"
                 + "\n"
-                + "\n\tS-Shore \t3 hours"
-                + "\n\tV-Volcano \t5 hours"
-                + "\n\tF-Forest \t1 hours"
-                + "\n\tR-River \t4 hours"
-                + "\n\tC-Cave          2 hours"
-                + "\n\tP-Swamp \t1 hour"
-                + "\n\tL-Valley \t6 hours"
-                + "\n\tT-Tree House \t2 hours"
+                + "\n\tS-Shore \t "+ time[0] +" hours"
+                + "\n\tV-Volcano \t "+ time[1] +" hours"
+                + "\n\tF-Forest \t "+ time[2] +" hours"
+                + "\n\tR-River \t "+ time[3] +" hours"
+                + "\n\tC-Cave           "+ time[4] +" hours"
+                + "\n\tP-Swamp \t "+ time[5] +" hour"
+                + "\n\tL-Valley \t "+ time[6] +" hours"
+                + "\n\tT-Tree House \t "+ time[7] +" hours"
                 + "\n\tM-Main Menu");
+        super.printTime();
     }
+    
+    
 
     @Override
     public char getInput() {
@@ -44,34 +51,42 @@ public class MapMenu extends View {
         do {
             switch (choice) {
                 case 'S':
+                    ChallengeControl.calcTimeRemaining(time[0]);
                     ShoreView sv = new ShoreView();
-                    sv.run();  
+                    sv.run();
                     break;
                 case 'V':
+                    ChallengeControl.calcTimeRemaining(time[1]);
                     VolcanoChallenge vc = new VolcanoChallenge();
                     vc.run();
                     break;
                 case 'F':
+                    ChallengeControl.calcTimeRemaining(time[2]);
                     ForrestChallenge fc = new ForrestChallenge();
                     fc.run();
                     break;
                 case 'R':
+                    ChallengeControl.calcTimeRemaining(time[3]);
                     RiverChallenge rc = new RiverChallenge();
                     rc.run();
                     break;
                 case 'C':
+                    ChallengeControl.calcTimeRemaining(time[4]);
                     CaveChallenge cc = new CaveChallenge();
                     cc.run();
                     break;
                 case 'P':
+                    ChallengeControl.calcTimeRemaining(time[5]);
                     SwampChallenge pc = new SwampChallenge();
                     pc.run();
                     break;
                 case 'L':
+                    ChallengeControl.calcTimeRemaining(time[6]);
                     ValleyChallenge lc = new ValleyChallenge();
                     lc.run();
                     break;
                 case 'T':
+                    ChallengeControl.calcTimeRemaining(time[7]);
                     TreehouseChallenge tc = new TreehouseChallenge();
                     tc.run(); 
                     break;

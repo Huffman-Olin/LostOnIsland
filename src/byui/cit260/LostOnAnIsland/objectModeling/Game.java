@@ -21,7 +21,7 @@ public class Game implements Serializable {
     public int getLogs() {
         return logs;
     }
-    private double currentTime;
+    private int currentTime;
     private Player player; //Create player object
     private Map gameMap;
     private static int[] logList = new int[]{0, 5, 2, 4, 3};
@@ -31,8 +31,8 @@ public class Game implements Serializable {
     //assign initial numbers to each slot
     //Shore=0, Cave=5, Forrest=2, Volcano=4, River=3
       public Game() {
-    }
-
+          currentTime = 12;
+      }
     /*public static void createLogList() {
 
         logList = new int[]{0, 5, 2, 4, 3};
@@ -69,14 +69,13 @@ public class Game implements Serializable {
     public void setGameMap(Map gameMap) {
         this.gameMap = gameMap;
     }
-
   
 
-    public double getCurrentTime() {
+    public int getCurrentTime() {
         return currentTime;
     }
 
-    public void setCurrentTime(double remainingTime) {
+    public void setCurrentTime(int remainingTime) {
         
         this.currentTime = remainingTime;
     }

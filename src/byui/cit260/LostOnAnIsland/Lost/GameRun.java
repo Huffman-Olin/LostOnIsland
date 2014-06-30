@@ -9,10 +9,10 @@ import byui.cit260.LostOnAnIsland.view.NewGameView;
 
 
 public class GameRun {
-    private static Game game;
+    private static Game game = new Game();
 
     public static Game getGame() {
-        return game;
+        return GameRun.game;
     }
 
     public static void setGame(Game game) {

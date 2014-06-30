@@ -15,6 +15,7 @@ public class MenuControl {
     public static void quitGame(){
     
         System.out.println("Quitting game...");
+        System.exit(1);
     }
 }
 

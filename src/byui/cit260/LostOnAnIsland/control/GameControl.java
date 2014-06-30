@@ -17,6 +17,7 @@ public class GameControl {
 
     private static double average;
 
+    /*
     public static void createNewGame() {
         Game game = new Game(); //created timeRemaininIslandLocatiIslandLocationlayer, Map
         game.setCurrentTime(12);
@@ -24,7 +25,7 @@ public class GameControl {
         //save map in game
         GameRun.setGame(game);
     }
-    
+    */
     public static int[] sortLogList(int[] logList) {
 
         int i, j, first, temp;

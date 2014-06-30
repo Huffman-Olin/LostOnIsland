@@ -111,18 +111,23 @@ public class ChallengeControl {
         return result;
     }
     
-    public static double calcTimeRemaining(double currentTime, double challengeTime){
+    public static int calcTimeRemaining(int challengeTime){
+       
+        int currentTime = GameRun.getGame().getCurrentTime();
+        currentTime -= challengeTime;
+        GameRun.getGame().setCurrentTime(currentTime);
         
-        double remainingTime = GameRun.getGame().getCurrentTime();
-        remainingTime = currentTime - challengeTime;
-        GameRun.getGame().setCurrentTime(remainingTime);
-        return remainingTime;
+       
+            
+        if(currentTime <= 0){
+            System.out.println("You ran out of time on the way to your destination and died.");
+            MenuControl.quitGame();
+        }
+        
+        
+        return currentTime;
         
     }
-    public void printTime(){
-        double time = calcTimeRemaining(9,4.5);
-        
-       System.out.println("You have " + time + " hours left.");
-    }
-
+    
+    
 }
