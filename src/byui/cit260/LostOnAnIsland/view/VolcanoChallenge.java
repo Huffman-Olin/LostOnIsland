@@ -49,8 +49,7 @@ public class VolcanoChallenge extends View {
              choice = getInput();
         }
  
-       
-        
+ 
         if (choice == 'C'){
             System.out.println("Congratulations, that is the correct answer!");
         }

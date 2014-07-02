@@ -24,10 +24,7 @@ public abstract class View implements ViewInterface {
         doAction(choice);
     }
 
-    public void printTime() {
-        int time = GameRun.getGame().getCurrentTime();
-        System.out.println("You have " + time + " hours left.");
-    }
+    
 
     public void display() {
 
@@ -38,6 +35,7 @@ public abstract class View implements ViewInterface {
         boolean valid = true;
         String menuInput;
         do {
+            valid = true;
             System.out.println("Please enter your choice:");
 
             Scanner input = new Scanner(System.in);
@@ -48,9 +46,7 @@ public abstract class View implements ViewInterface {
                 valid = false;
 
             }
-            else {
-                valid = true;
-            }
+            
 
         } while (!valid);
 
@@ -64,6 +60,11 @@ public abstract class View implements ViewInterface {
 
     public void doAction(char choice) {
 
+    }
+    
+    public void printTime() {
+        int time = GameRun.getGame().getCurrentTime();
+        System.out.println("You have " + time + " hours left.");
     }
 
 }

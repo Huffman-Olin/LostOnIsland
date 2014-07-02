@@ -12,16 +12,8 @@ import java.util.Objects;
  */
 public class Game implements Serializable {
 
-    private int logs;
-
-    public void setLogs(int logs) {
-        this.logs = logs;
-    }
-
-    public int getLogs() {
-        return logs;
-    }
     private int currentTime;
+    private int logs;
     private Player player; //Create player object
     private Map gameMap;
     private static int[] logList = new int[]{0, 5, 2, 4, 3};
@@ -30,26 +22,34 @@ public class Game implements Serializable {
     //create array to store how many logs are at each location
     //assign initial numbers to each slot
     //Shore=0, Cave=5, Forrest=2, Volcano=4, River=3
-      public Game() {
-          currentTime = 12;
-      }
+    public Game() {
+        currentTime = 12;
+        logs = 0;
+    }
+
+    public void setLogs(int logs) {
+        this.logs = logs;
+    }
+
+    public int getLogs() {
+        return logs;
+    }
     /*public static void createLogList() {
 
-        logList = new int[]{0, 5, 2, 4, 3};
+     logList = new int[]{0, 5, 2, 4, 3};
 
-        /*int shore = logList[0]; 
-         int cave = logList[1];
-         int forrest = logList[2];
-         int volcano = logList[3];
-         int river = logList[4];
-    }
-      */
-    
+     /*int shore = logList[0]; 
+     int cave = logList[1];
+     int forrest = logList[2];
+     int volcano = logList[3];
+     int river = logList[4];
+     }
+     */
+
     public static int[] getAltiList() {
         return altiList;
     }
-  
-      
+
     public static int[] getLogList() {
         return logList;
     }
@@ -69,14 +69,13 @@ public class Game implements Serializable {
     public void setGameMap(Map gameMap) {
         this.gameMap = gameMap;
     }
-  
 
     public int getCurrentTime() {
         return currentTime;
     }
 
     public void setCurrentTime(int remainingTime) {
-        
+
         this.currentTime = remainingTime;
     }
 
