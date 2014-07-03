@@ -27,7 +27,7 @@ public class ValleyChallenge extends View{
 
     @Override
     public void display() {
-        System.out.println("It took you over 6 hours to hike to the valley."
+        System.out.println("It took you over 4 hours to hike to the valley."
                 + "\nYou just passed out on the soft grass and are dreaming."
                 + "\nWhich chemical in the brain causes dreams?"
                 + "\n"

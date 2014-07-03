@@ -119,7 +119,7 @@ public class ChallengeControl {
         
        
             
-        if(currentTime <= 0){
+        if(currentTime < 0){
             System.out.println("You ran out of time on the way to your destination and died.");
             MenuControl.quitGame();
         }

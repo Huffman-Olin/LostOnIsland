@@ -24,8 +24,6 @@ public abstract class View implements ViewInterface {
         doAction(choice);
     }
 
-    
-
     public void display() {
 
     }
@@ -46,7 +44,6 @@ public abstract class View implements ViewInterface {
                 valid = false;
 
             }
-            
 
         } while (!valid);
 
@@ -61,10 +58,17 @@ public abstract class View implements ViewInterface {
     public void doAction(char choice) {
 
     }
-    
+
     public void printTime() {
         int time = GameRun.getGame().getCurrentTime();
-        System.out.println("You have " + time + " hours left.");
+
+        if (time == 1) {
+            System.out.println("You have " + time + " hour left.");
+        } else {
+            System.out.println("You have " + time + " hours left.");
+
+        }
+
     }
 
 }

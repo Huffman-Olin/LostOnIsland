@@ -10,7 +10,7 @@ public class MapMenu extends View {
     private int time[];
     
     public MapMenu() {
-        time = new int[]{3, 5, 1, 4, 2, 1, 6, 2};
+        time = new int[]{1, 3, 1, 3, 2, 1, 4, 2};
     }
 
     public void run() {
@@ -22,9 +22,9 @@ public class MapMenu extends View {
         System.out.println("\n"
                 + "\tMap Locations"
                 + "\n"
-                + "\n\tS-Shore \t "+ time[0] +" hours"
+                + "\n\tS-Shore \t "+ time[0] +" hour"
                 + "\n\tV-Volcano \t "+ time[1] +" hours"
-                + "\n\tF-Forest \t "+ time[2] +" hours"
+                + "\n\tF-Forest \t "+ time[2] +" hour"
                 + "\n\tR-River \t "+ time[3] +" hours"
                 + "\n\tC-Cave           "+ time[4] +" hours"
                 + "\n\tP-Swamp \t "+ time[5] +" hour"
