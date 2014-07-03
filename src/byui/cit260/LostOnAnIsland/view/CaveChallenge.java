@@ -7,7 +7,10 @@
 package byui.cit260.LostOnAnIsland.view;
 
 import byui.cit260.LostOnAnIsland.control.ChallengeControl;
+import byui.cit260.LostOnAnIsland.exceptionHandling.ChallengeControlExceptions;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -19,6 +22,7 @@ public class CaveChallenge extends View{
         
     }
     
+     @Override
     public void run(){
         int speed, distance;
         do {
@@ -30,11 +34,22 @@ public class CaveChallenge extends View{
         } while (distance == 0);
 
         display(speed, distance);
-
-        float choice = getInputFloat();
-        doAction(choice, speed, distance);
+        
+        boolean valid = false;
+        do{
+            
+            
+            try {
+                float choice = getInputFloat();
+                
+                doAction(choice, speed, distance);
+                valid = true;
+            } catch (ChallengeControlExceptions ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+        while (!valid);
     }
-    
     
     
      public void display(int speed, int distance){
@@ -62,7 +77,7 @@ public class CaveChallenge extends View{
     }
     
     
-    public void doAction(float choice, int speed, int distance){  
+    public void doAction(float choice, int speed, int distance) throws ChallengeControlExceptions{  
      
         boolean correct = ChallengeControl.calcTime(choice, speed, distance);
         if (correct){

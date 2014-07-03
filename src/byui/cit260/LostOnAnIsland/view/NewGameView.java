@@ -6,6 +6,8 @@
 
 package byui.cit260.LostOnAnIsland.view;
 
+import byui.cit260.LostOnAnIsland.control.MenuControl;
+import byui.cit260.LostOnAnIsland.exceptionHandling.MainExceptions;
 import java.util.Scanner;
 
 /**
@@ -20,7 +22,7 @@ public class NewGameView {
         System.out.println("\n****************************\n" + "Welcome to Lost on an Island\n" + "****************************");
     }
     
-    public static String getUserName() {
+    public static String getUserName() throws MainExceptions {
         boolean valid = false;
         String playerName = null;
         Scanner keyboard = new Scanner(System.in);
@@ -29,10 +31,11 @@ public class NewGameView {
             playerName = keyboard.nextLine();
             playerName = playerName.trim();
             if (playerName.toUpperCase().equals("Q")) {
-                return null;
+                MenuControl.quitGame();
             }
             if (playerName.length() < 2) {
-                System.out.println("Invalid input, please enter your name.  The " + "name must be greater than one character in length.");
+                throw new MainExceptions("Invalid input, please enter your name.  "
+                        + "The " + "name must be greater than two character in length.");
             } else {
                 valid = true;
             }

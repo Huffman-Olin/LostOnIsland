@@ -1,13 +1,14 @@
 package byui.cit260.LostOnAnIsland.control;
 
 import byui.cit260.LostOnAnIsland.Lost.GameRun;
+import byui.cit260.LostOnAnIsland.exceptionHandling.ChallengeControlExceptions;
 
 /**
  * * @author olinhuffman
  */
 public class ChallengeControl {
 
-    public static boolean calcTime(float playerGuess, int speed, int distance) {
+    public static boolean calcTime(float playerGuess, int speed, int distance) throws ChallengeControlExceptions {
 
         /**
          * * @author olinhuffman
@@ -26,8 +27,8 @@ public class ChallengeControl {
          */
         boolean result;
 
-        if (playerGuess <= 0 || playerGuess > 500) {
-            result = false;
+        if (playerGuess < 0 || playerGuess > 500) {
+            throw new ChallengeControlExceptions("Invalid answer");
         } else {
 
             //Generate random numbers for distance and speed   
