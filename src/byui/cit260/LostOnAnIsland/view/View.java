@@ -20,26 +20,25 @@ public abstract class View implements ViewInterface {
     public void run() {
         /*int challengeTime = run();*/
         display();
-        char choice = getInput();
-        doAction(choice);
+        String value = getInput();
+        doAction(value);
     }
 
     public void display() {
 
     }
 
-    public char getInput() {
+    public String getInput() {
 
         boolean valid = true;
         String menuInput;
         do {
             valid = true;
-            System.out.println("Please enter your choice:");
 
             Scanner input = new Scanner(System.in);
 
             menuInput = input.nextLine();
-            if (menuInput.length() != 1) {
+            if (menuInput.length() < 1) {
                 System.out.println("Invalid input.");
                 valid = false;
 
@@ -49,15 +48,12 @@ public abstract class View implements ViewInterface {
 
         menuInput = menuInput.toUpperCase(); //string function 1
 
-        char choice = menuInput.charAt(0); //string function 2
+        String choice = menuInput; //string function 2
 
         return choice;
 
     }
 
-    public void doAction(char choice) {
-
-    }
 
     public void printTime() {
         int time = GameRun.getGame().getCurrentTime();

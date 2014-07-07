@@ -36,20 +36,13 @@ public class SwampChallenge extends View{
 
     }
 
-    @Override
-    public char getInput() {
-
-        char choice = super.getInput();
-
-        return choice;
-
-    }
-
-    public void doAction(char choice) {
+    public void doAction(String value) {
+        
+        char choice = value.toUpperCase().charAt(0);
 
         while (choice != 'A' && choice != 'B' && choice != 'C' && choice != 'D') {
             System.out.println("Invalid selection");
-            choice = getInput();
+            choice = getInput().toUpperCase().charAt(0);
         }
 
         if (choice == 'B') {

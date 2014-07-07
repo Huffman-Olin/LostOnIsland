@@ -35,20 +35,15 @@ public class ForrestChallenge extends View {
 
     }
 
-    @Override
-    public char getInput() {
 
-        char choice = super.getInput();
 
-        return choice;
+    public void doAction(String value) {
 
-    }
-
-    public void doAction(char choice) {
-
+        char choice = value.toUpperCase().charAt(0);
         while (choice != 'A' && choice != 'B' && choice != 'C' && choice != 'D') {
             System.out.println("Invalid selection");
-            choice = getInput();
+            value = getInput();
+            choice = value.toUpperCase().charAt(0);
         }
 
         if (choice == 'B') {

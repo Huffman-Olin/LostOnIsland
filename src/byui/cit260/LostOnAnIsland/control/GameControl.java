@@ -1,5 +1,7 @@
 package byui.cit260.LostOnAnIsland.control;
 
+import byui.cit260.LostOnAnIsland.exceptionHandling.ChallengeControlExceptions;
+import byui.cit260.LostOnAnIsland.exceptionHandling.GameControlException;
 import byui.cit260.LostOnAnIsland.objectModeling.Player;
 import java.util.Scanner;
 
@@ -11,14 +13,14 @@ public class GameControl {
     private static double average;
 
     /*
-    public static void createNewGame() {
-        Game game = new Game(); //created timeRemaininIslandLocatiIslandLocationlayer, Map
-        game.setCurrentTime(12);
-        //create map
-        //save map in game
-        GameRun.setGame(game);
-    }
-    */
+     public static void createNewGame() {
+     Game game = new Game(); //created timeRemaininIslandLocatiIslandLocationlayer, Map
+     game.setCurrentTime(12);
+     //create map
+     //save map in game
+     GameRun.setGame(game);
+     }
+     */
     public static int[] sortLogList(int[] logList) {
 
         int i, j, first, temp;
@@ -63,35 +65,17 @@ public class GameControl {
         return average;
     }
 
-    public static double findAverageScore() {
-        Scanner scores = new Scanner(System.in);
-        double[] playerScores = new double[5];
-
+    public static double findAverageScore(double[] playerScores)  {
+        
+        double totalScores = 0;
         for (int i = 0; i < playerScores.length; i++) {
-            int count = i + 1;
-
-            System.out.println("Enter score # " + count + ": ");
-            playerScores[i] = scores.nextInt();
-            if (playerScores[i] < 0 || playerScores[i] > 500) {
-                System.out.println("Invalid Score entry");
-
-            }
+            totalScores += playerScores[i];
         }
-        //for each loop
-        System.out.println("");
-        for (double userScores : playerScores) {
-
-            System.out.println("Player Score entered:\t" + userScores);
-        }
-        double sum = 0;
-        for (int counter = 0; counter < playerScores.length; counter++) {
-
-            sum = sum + playerScores[counter];
-        }
-        double avg = sum / playerScores.length;
-
-        return avg;
+        double average = totalScores / playerScores.length;
+        return average;        
     }
+        
+      
 
     public static Player createNewPlayer(String playerName) {
 
@@ -99,6 +83,4 @@ public class GameControl {
         return null;
     }
 
-    }
-
-
+}

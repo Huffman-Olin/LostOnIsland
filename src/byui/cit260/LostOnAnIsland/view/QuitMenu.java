@@ -13,7 +13,7 @@ import static byui.cit260.LostOnAnIsland.view.MainMenu.displayCredits;
  *
  * @author bethanytaylor
  */
-public class QuitMenu extends View{
+public class QuitMenu extends View {
     
     public QuitMenu(){
         
@@ -23,7 +23,7 @@ public class QuitMenu extends View{
 
 
         display();
-        char choice = getInput();
+        String choice = getInput();
         doAction(choice);
 
         super.run();
@@ -47,17 +47,11 @@ public class QuitMenu extends View{
                 + "        C-Credits\n");
     }
     
-     @Override
-    public char getInput() {
-        
-       char choice = super.getInput();
-       
-       return choice;
-    }
-    
+
     
     @Override
-     public void doAction(char choice) {
+     public void doAction(String value) {
+        char choice = value.toUpperCase().charAt(0);
 
         do {
             switch (choice) {
@@ -80,7 +74,7 @@ public class QuitMenu extends View{
 
             }
 
-            choice = getInput();
+            choice = getInput().toUpperCase().charAt(0);
 
         } while (true);
 

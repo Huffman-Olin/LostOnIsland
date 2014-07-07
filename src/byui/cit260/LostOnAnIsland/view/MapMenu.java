@@ -37,17 +37,9 @@ public class MapMenu extends View {
     
 
     @Override
-    public char getInput() {
-
-        char choice = super.getInput();
-
-        return choice;
-       
-
-    }
-
-    @Override
-    public void doAction(char choice) {
+    public void doAction(String value) {
+        
+        char choice = value.toUpperCase().charAt(0);
         do {
             switch (choice) {
                 case 'S':
@@ -98,7 +90,7 @@ public class MapMenu extends View {
 
             display();
 
-            choice = getInput();
+            choice = getInput().toUpperCase().charAt(0);
 
         } while (true);
     }

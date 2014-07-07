@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  *
  * @author bethanytaylor
  */
-public class CaveChallenge extends View{
+public class CaveChallenge extends View {
  
      public CaveChallenge(){
         
@@ -88,5 +88,11 @@ public class CaveChallenge extends View{
             
 
         }
+    }
+
+
+    @Override
+    public void doAction(String choice) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

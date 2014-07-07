@@ -41,17 +41,10 @@ public class MainMenu extends View{
                 + "\tQ-Quit");
     }
 
-    @Override
-    public char getInput() {
-        
-       char choice = super.getInput();
-       
-       return choice;
-          
-    }
 
     @Override
-    public void doAction(char choice) {
+    public void doAction(String value) {
+        char choice = value.toUpperCase().charAt(0);
        
         do {
             switch (choice) {
@@ -68,9 +61,11 @@ public class MainMenu extends View{
                 case 'H': // Help
                     displayHelp();
                     System.out.println("Sorted Log List");
-                    StatDisplay.displayLogList();
+                    StatDisplay Loglist = new StatDisplay();
+                    Loglist.doAction("DLL");
                     System.out.println("List of Map Altitudes");
-                    StatDisplay.displayAverageAltitudes();
+                    StatDisplay Alts = new StatDisplay();
+                    Alts.doAction("DAA");
                     break;
                 case 'C': //change name
                     changeName();
@@ -86,14 +81,15 @@ public class MainMenu extends View{
                     menu.run();
                     break;
                 case 'A'://Average score
-                    StatDisplay.displayAverageScore();
+                    StatDisplay statDisplay = new StatDisplay();
+                    statDisplay.doAction("DAS");
                 default:
                     System.out.println("\n*** Invalid selection *** Try again");
                     break;
 
             }
             display();
-            choice = getInput();
+            choice = getInput().toUpperCase().charAt(0);
 
         } while (true);
     }

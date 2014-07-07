@@ -13,7 +13,7 @@ package byui.cit260.LostOnAnIsland.view;
 public interface ViewInterface {
     
     public void display();
-    public char getInput();
-    public void doAction(char choice);
+    public String getInput();
+    public void doAction(String value);
     
 }

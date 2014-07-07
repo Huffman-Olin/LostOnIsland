@@ -28,25 +28,14 @@ public class VolcanoChallenge extends View {
                 + "C) Plastic\n"
                 + "D) Volcanic rock\n");
     }
-    
 
 
-    @Override
-    public char getInput() {
-
-        char choice = super.getInput();
-
-        return choice;
-
-    }
-
-
-    public void doAction(char choice) {
-        
+    public void doAction(String value) {
+        char choice = value.toUpperCase().charAt(0);
        
         while (choice != 'A' && choice != 'B' && choice != 'C'&& choice != 'D'){
              System.out.println("Invalid selection");
-             choice = getInput();
+             choice = getInput().toUpperCase().charAt(0);
         }
  
  
