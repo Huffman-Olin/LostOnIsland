@@ -61,7 +61,7 @@ public class StatDisplay extends View {
             try {
                 score = Integer.parseInt(value);    
             } catch (Exception e) {
-                throw new GameControlException("Invalid. Number must be between 1 and 499");
+                throw new GameControlException("Invalid. You must enter a number between 1 and 499");
             }
  
             if (playerScores[i] < 0 || playerScores[i] > 500) {

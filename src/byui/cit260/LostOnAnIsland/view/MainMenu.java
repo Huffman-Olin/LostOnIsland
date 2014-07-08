@@ -195,9 +195,10 @@ public class MainMenu extends View{
             } else {
                 valid = true;
             }
-            System.out.println("\n"
-                    + "Thank you, " + playerName + "!");
+            
         }
+        System.out.println("\n"
+                    + "Thank you, " + playerName + "!");
         
         //this sets the new name of the player
        //Player.setName(playerName);
