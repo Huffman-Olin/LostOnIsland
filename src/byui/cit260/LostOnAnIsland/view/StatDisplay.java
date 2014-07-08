@@ -8,8 +8,7 @@ package byui.cit260.LostOnAnIsland.view;
 import byui.cit260.LostOnAnIsland.control.GameControl;
 import byui.cit260.LostOnAnIsland.exceptionHandling.GameControlException;
 import byui.cit260.LostOnAnIsland.objectModeling.Game;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -32,7 +31,7 @@ public class StatDisplay extends View {
 
     }
 
-    public void displayAverageAltitudes() {
+    public static void displayAverageAltitudes() {
 
         int[] altiList = Game.getAltiList();
         double average = GameControl.averageAltitudes(altiList);
