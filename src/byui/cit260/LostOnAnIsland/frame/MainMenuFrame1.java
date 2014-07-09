@@ -1,3 +1,5 @@
+package byui.cit260.LostOnAnIsland.frame;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -29,14 +31,9 @@ public class MainMenuFrame1 extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jlTitle = new javax.swing.JLabel();
         jlSubTitle = new javax.swing.JLabel();
-        jtf = new javax.swing.JTextField();
         jlImage = new javax.swing.JLabel();
-        jlPlayerName = new javax.swing.JLabel();
-        jtfplayerName = new javax.swing.JTextField();
-        jbStart = new javax.swing.JButton();
-        jbQuit = new javax.swing.JButton();
-        jbSaveGame = new javax.swing.JButton();
-        jbLoadGame = new javax.swing.JButton();
+        jpImage = new javax.swing.JPanel();
+        jlPlaneImage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lost on an Island");
@@ -71,104 +68,60 @@ public class MainMenuFrame1 extends javax.swing.JFrame {
                 .addGap(14, 14, 14))
         );
 
-        jtf.setText("Certain Death will come if you do not get off!");
-        jtf.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfActionPerformed(evt);
-            }
-        });
-
         jlImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/LostOnAnIsland/images/LostIslands.JPG"))); // NOI18N
 
-        jlPlayerName.setText("Player Name");
+        jlPlaneImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/LostOnAnIsland/images/Plane-crash-Indian-River-jpg.jpg"))); // NOI18N
+        jlPlaneImage.setToolTipText("");
 
-        jbStart.setBackground(new java.awt.Color(51, 153, 0));
-        jbStart.setText("Start adventure");
-        jbStart.setToolTipText("Start Game");
-
-        jbQuit.setBackground(new java.awt.Color(255, 0, 0));
-        jbQuit.setText("Accept death");
-        jbQuit.setToolTipText("Quit Game");
-
-        jbSaveGame.setBackground(new java.awt.Color(0, 153, 0));
-        jbSaveGame.setText("Save Game");
-        jbSaveGame.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbSaveGameActionPerformed(evt);
-            }
-        });
-
-        jbLoadGame.setBackground(new java.awt.Color(51, 153, 0));
-        jbLoadGame.setText("Load Game");
+        javax.swing.GroupLayout jpImageLayout = new javax.swing.GroupLayout(jpImage);
+        jpImage.setLayout(jpImageLayout);
+        jpImageLayout.setHorizontalGroup(
+            jpImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpImageLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlPlaneImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jpImageLayout.setVerticalGroup(
+            jpImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpImageLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlPlaneImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(216, 216, 216)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jbStart, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jbSaveGame))
-                        .addGap(60, 60, 60)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jbLoadGame, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jbQuit)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(188, 188, 188)
-                        .addComponent(jlPlayerName)
-                        .addGap(18, 18, 18)
-                        .addComponent(jtfplayerName, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jlImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jtf, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(381, 381, 381))
+                .addContainerGap()
+                .addComponent(jlImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(11, 11, 11)
+                .addComponent(jpImage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(505, 505, 505))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jtf)
-                    .addComponent(jlImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlPlayerName)
-                    .addComponent(jtfplayerName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jbQuit, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jbLoadGame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(98, 98, 98))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jbStart, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jbSaveGame)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(194, 194, 194)
+                        .addComponent(jlImage, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jpImage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jbSaveGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSaveGameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbSaveGameActionPerformed
-
-    private void jtfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfActionPerformed
 
     /**
      * @param args the command line arguments
@@ -207,15 +160,10 @@ public class MainMenuFrame1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton jbLoadGame;
-    private javax.swing.JButton jbQuit;
-    private javax.swing.JButton jbSaveGame;
-    private javax.swing.JButton jbStart;
     private javax.swing.JLabel jlImage;
-    private javax.swing.JLabel jlPlayerName;
+    private javax.swing.JLabel jlPlaneImage;
     private javax.swing.JLabel jlSubTitle;
     private javax.swing.JLabel jlTitle;
-    private javax.swing.JTextField jtf;
-    private javax.swing.JTextField jtfplayerName;
+    private javax.swing.JPanel jpImage;
     // End of variables declaration//GEN-END:variables
 }
