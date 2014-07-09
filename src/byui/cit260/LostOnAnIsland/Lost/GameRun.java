@@ -1,5 +1,6 @@
 package byui.cit260.LostOnAnIsland.Lost;
 
+import Frames.MainMenuFrame2;
 import byui.cit260.LostOnAnIsland.control.ChallengeControl;
 import byui.cit260.LostOnAnIsland.exceptionHandling.MainExceptions;
 import byui.cit260.LostOnAnIsland.objectModeling.Game;
@@ -22,7 +23,17 @@ public class GameRun {
     }
 
     public static void main(String[] args) {
-        runNewGame();
+        
+        java.awt.EventQueue.invokeLater(
+            new Runnable() {
+                public void run() {
+                    MainMenuFrame2 MMF = new MainMenuFrame2();
+                    MMF.setVisible(true);
+                    
+                }
+            });
+        
+        //runNewGame();
 
     }
 
