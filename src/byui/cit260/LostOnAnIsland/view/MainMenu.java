@@ -96,10 +96,10 @@ public class MainMenu extends View{
     
     public static void displayDescription() {
 
-        System.out.println("\n"
-                + "\n"
-                + "\n"
-                + "\n************************************************************************************"
+      
+              
+                
+                 String jtaGameDesc= "\n************************************************************************************"
                 + "\n You are an experienced pilot who was traveling to your cabin several hundred "
                 + "        \n miles from home. Unfortunately, you experienced plane troubles and had to make"
                 + "        \n an emergency landing on a remote island. With only a small knife and a limited "
@@ -127,9 +127,10 @@ public class MainMenu extends View{
                 + "\n \tYour timer exceeds 12 hours (You lose)"
                 + "\n \tYou are poisoned by wild berries"
                 + "\n \tYou run out of lives"
-                + "\n**************************************************************************************");
+                + "\n**************************************************************************************";
 
     }
+    
 
 
    

@@ -7,6 +7,7 @@
 package Frames;
 
 import byui.cit260.LostOnAnIsland.control.GameControl;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 
@@ -111,30 +112,41 @@ public class StartGameFrame extends javax.swing.JFrame {
         jlTitle.setForeground(new java.awt.Color(255, 255, 255));
         jlTitle.setText("Lost on an Island");
 
-        jtaGameDesc.setEditable(false);
-        jtaGameDesc.setColumns(20);
-        jtaGameDesc.setRows(5);
-        jspGameDesc.setViewportView(jtaGameDesc);
+        jPanel3.setBackground(new java.awt.Color(0, 153, 204));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jspGameDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(0, 367, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jspGameDesc))
+            .addGap(0, 7, Short.MAX_VALUE)
         );
+
+        jspGameDesc.setBackground(new java.awt.Color(0, 153, 255));
+        jspGameDesc.setForeground(new java.awt.Color(255, 255, 255));
+
+        jtaGameDesc.setEditable(false);
+        jtaGameDesc.setBackground(new java.awt.Color(0, 153, 204));
+        jtaGameDesc.setColumns(20);
+        jtaGameDesc.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        jtaGameDesc.setForeground(new java.awt.Color(255, 255, 255));
+        jtaGameDesc.setRows(5);
+        jtaGameDesc.setText("You were flying to your remote cabin \nwhen you had to make an emergency\nlanding on an island. Your plane was\ndestroyed in the process. Search the\nisland for logs to make a signal fire\nand notify rescuers of your location.\nHurry up, you \nyou only have 12 hours!");
+        jtaGameDesc.setAutoscrolls(false);
+        jtaGameDesc.setBorder(null);
+        jspGameDesc.setViewportView(jtaGameDesc);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(112, 112, 112)
+                .addComponent(jlTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(76, 76, 76))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -153,12 +165,11 @@ public class StartGameFrame extends javax.swing.JFrame {
                         .addComponent(jbQuit))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(112, 112, 112)
-                .addComponent(jlTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 434, Short.MAX_VALUE)
-                .addGap(76, 76, 76))
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jspGameDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,14 +177,19 @@ public class StartGameFrame extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addComponent(jlTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jlimage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jlEnterName)
-                    .addComponent(tfPlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jlimage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlEnterName)
+                            .addComponent(tfPlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jspGameDesc, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbStart)
                     .addComponent(jbQuit))
@@ -218,7 +234,7 @@ public class StartGameFrame extends javax.swing.JFrame {
 
         MainMenuFrame MMF = new MainMenuFrame();
         MMF.getJlWelcome().setText("Welcome, " + playerName);
-       // MMF.getJtaGameDesc().setText("");
+        //MMF.getJtaGameDesc().setText("");
         
     
         
@@ -264,13 +280,16 @@ public class StartGameFrame extends javax.swing.JFrame {
             }
         });
     }
-       public JTextArea getJtaGameDesc() {
+    
+    
+        public JTextArea getJtaGameDesc() {
         return jtaGameDesc;
     }
 
     public void setJtaGameDesc(JTextArea jtaGameDesc) {
         this.jtaGameDesc = jtaGameDesc;
     }
+ 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLayeredPane jLayeredPane1;
