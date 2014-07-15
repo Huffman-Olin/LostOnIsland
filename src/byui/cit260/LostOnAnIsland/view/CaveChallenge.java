@@ -7,18 +7,21 @@
 package byui.cit260.LostOnAnIsland.view;
 
 import Frames.CaveFrame;
+import Frames.CaveFrame;
 import byui.cit260.LostOnAnIsland.control.ChallengeControl;
 import byui.cit260.LostOnAnIsland.exceptionHandling.ChallengeControlExceptions;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author bethanytaylor
  */
 public class CaveChallenge extends View {
- 
+    private CaveFrame CF = null;
+    
      public CaveChallenge(){
         
     }
@@ -26,9 +29,17 @@ public class CaveChallenge extends View {
      // MapMenu mm = new MapMenu();
        //mm.doAction("C");
      
+     
+     public void displayStartFrame() {
+
+       
+     }
     
      @Override
     public void run(){
+         CF = new CaveFrame();
+         CF.setVisible(true);
+       
         int speed, distance;
         do {
             speed = (int) (Math.random() * 10);
@@ -50,16 +61,18 @@ public class CaveChallenge extends View {
                 doAction(choice, speed, distance);
                 valid = true;
             } catch (ChallengeControlExceptions ex) {
-                System.out.println(ex.getMessage());
+                JOptionPane.showMessageDialog(CF, "The disatance must be a number", "Invlaid distance", JOptionPane.ERROR_MESSAGE);
+                return;
             }
         }
         while (!valid);
+        
+        
     }
     
     
      public void display(int speed, int distance){
-       CaveFrame CF = new CaveFrame();
-       CF.setVisible(true);
+       
        
          String caveDesc = "Rain just started pouring down on you! "
                             + "\nHow long will it take for you to get "
@@ -69,7 +82,7 @@ public class CaveChallenge extends View {
                             + "\nEnter your anwer in minutes and round "
                             + "\nyour answer to one decimal place";
          
-         CF.caveDesc.setText(caveDesc);
+         CF.getCaveDesc().setText(caveDesc);
          
      }
      
@@ -77,24 +90,27 @@ public class CaveChallenge extends View {
     
     public float getInputFloat() {
 
-        System.out.println("Please enter your answer:");
+        //System.out.println("Please enter your answer:");
 
         //get input
-        Scanner input = new Scanner(System.in);
+        String value = CF.getCaveInput().getText();
         //round answer to one decimal place
-        return Float.parseFloat(input.nextLine());
+        return Float.parseFloat(value);
 
     }
     
     
-    public void doAction(float choice, int speed, int distance) throws ChallengeControlExceptions{  
+    public void doAction(float value, int speed, int distance) throws ChallengeControlExceptions{  
      
-        boolean correct = ChallengeControl.calcTime(choice, speed, distance);
+        boolean correct = ChallengeControl.calcTime(value, speed, distance);
         if (correct){
-            System.out.println("Correct! You just earned 4 logs!");
+            String message = "Correct! You just earned 4 logs!";
+            CF.getMessage().setText(message);
+            
         }
         else{
-            System.out.println("Wrong. Sorry, you have to walk back to the shore without any more logs");
+            String message = "Wrong. Sorry, you have to walk back to the shore without any more logs";
+            CF.getMessage().setText(message);
             
 
         }

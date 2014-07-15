@@ -7,7 +7,10 @@
 package Frames;
 
 import byui.cit260.LostOnAnIsland.control.GameControl;
+import byui.cit260.LostOnAnIsland.view.CaveChallenge;
+import java.awt.TextField;
 import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -22,6 +25,33 @@ public class CaveFrame extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JTextArea getCaveDesc() {
+        return caveDesc;
+    }
+
+    public void setCaveDesc(JTextArea caveDesc) {
+        this.caveDesc = caveDesc;
+    }
+
+    public TextField getCaveInput() {
+        return caveInput;
+    }
+
+    public void setCaveInput(TextField caveInput) {
+        this.caveInput = caveInput;
+    }
+
+    public JTextArea getMessage() {
+        return message;
+    }
+
+    public void setMessage(JTextArea message) {
+        this.message = message;
+    }
+
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -39,6 +69,9 @@ public class CaveFrame extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         caveDesc = new javax.swing.JTextArea();
         caveInput = new java.awt.TextField();
+        map = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        message = new javax.swing.JTextArea();
 
         jLayeredPane1.setBackground(new java.awt.Color(0, 102, 255));
         jLayeredPane1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -72,6 +105,11 @@ public class CaveFrame extends javax.swing.JFrame {
 
         submit.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 0, 18)); // NOI18N
         submit.setText("Submit");
+        submit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Alpha Echo", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -87,6 +125,18 @@ public class CaveFrame extends javax.swing.JFrame {
             }
         });
 
+        map.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 0, 18)); // NOI18N
+        map.setText("Map");
+        map.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mapActionPerformed(evt);
+            }
+        });
+
+        message.setColumns(20);
+        message.setRows(5);
+        jScrollPane2.setViewportView(message);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -100,10 +150,14 @@ public class CaveFrame extends javax.swing.JFrame {
                         .addGap(136, 136, 136)
                         .addComponent(caveInput, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(25, 25, 25)
-                        .addComponent(submit))
+                        .addComponent(submit)
+                        .addGap(18, 18, 18)
+                        .addComponent(map))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(69, 69, 69)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(75, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -115,9 +169,13 @@ public class CaveFrame extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(submit)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(submit)
+                        .addComponent(map))
                     .addComponent(caveInput, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -137,6 +195,14 @@ public class CaveFrame extends javax.swing.JFrame {
     private void caveInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caveInputActionPerformed
         this.dispose();
     }//GEN-LAST:event_caveInputActionPerformed
+
+    private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
+      
+    }//GEN-LAST:event_submitActionPerformed
+
+    private void mapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mapActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mapActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,6 +247,9 @@ public class CaveFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JButton map;
+    private javax.swing.JTextArea message;
     private javax.swing.JButton submit;
     // End of variables declaration//GEN-END:variables
 }
