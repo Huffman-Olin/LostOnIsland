@@ -1,6 +1,7 @@
 package byui.cit260.LostOnAnIsland.view;
 
   // @author olinhuffm
+import Frames.MapFrame;
 import byui.cit260.LostOnAnIsland.control.ChallengeControl;
 
 
@@ -19,19 +20,22 @@ public class MapMenu extends View {
 
     @Override
     public void display() {
-        System.out.println("\n"
-                + "\tMap Locations"
-                + "\n"
-                + "\n\tS-Shore \t "+ time[0] +" hour"
-                + "\n\tV-Volcano \t "+ time[1] +" hours"
-                + "\n\tF-Forest \t "+ time[2] +" hour"
-                + "\n\tR-River \t "+ time[3] +" hours"
-                + "\n\tC-Cave           "+ time[4] +" hours"
-                + "\n\tP-Swamp \t "+ time[5] +" hour"
-                + "\n\tL-Valley \t "+ time[6] +" hours"
-                + "\n\tT-Tree House \t "+ time[7] +" hours"
-                + "\n\tM-Main Menu");
-        super.printTime();
+        
+        MapFrame MF = new MapFrame();
+        MF.setVisible(true);
+//        System.out.println("\n"
+//                + "\tMap Locations"
+//                + "\n"
+//                + "\n\tS-Shore \t "+ time[0] +" hour"
+//                + "\n\tV-Volcano \t "+ time[1] +" hours"
+//                + "\n\tF-Forest \t "+ time[2] +" hour"
+//                + "\n\tR-River \t "+ time[3] +" hours"
+//                + "\n\tC-Cave           "+ time[4] +" hours"
+//                + "\n\tP-Swamp \t "+ time[5] +" hour"
+//                + "\n\tL-Valley \t "+ time[6] +" hours"
+//                + "\n\tT-Tree House \t "+ time[7] +" hours"
+//                + "\n\tM-Main Menu");
+//        super.printTime();
     }
     
     

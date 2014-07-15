@@ -7,6 +7,7 @@
 package Frames;
 
 import byui.cit260.LostOnAnIsland.control.GameControl;
+import byui.cit260.LostOnAnIsland.view.MainMenu;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
@@ -231,14 +232,9 @@ public class StartGameFrame extends javax.swing.JFrame {
         //create the player
         GameControl.createNewPlayer(playerName);
         
-
-        MainMenuFrame MMF = new MainMenuFrame();
-        MMF.getJlWelcome().setText("Welcome, " + playerName);
-        //MMF.getJtaGameDesc().setText("");
+        MainMenu mm = new MainMenu();
+        mm.displayMainMenuFrame(playerName);
         
-    
-        
-        MMF.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jbStartActionPerformed
 

@@ -6,6 +6,7 @@
 
 package Frames;
 
+import byui.cit260.LostOnAnIsland.view.MapMenu;
 import javax.swing.JLabel;
 
 /**
@@ -142,8 +143,11 @@ public class MainMenuFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jbInstructionsActionPerformed
 
     private void jbMapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMapActionPerformed
-        MapFrame MF = new MapFrame();
-        MF.setVisible(true);
+        this.dispose();
+        MapMenu mm = new MapMenu();
+        mm.run();
+        
+        
     }//GEN-LAST:event_jbMapActionPerformed
 
     private void jbQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbQuitActionPerformed

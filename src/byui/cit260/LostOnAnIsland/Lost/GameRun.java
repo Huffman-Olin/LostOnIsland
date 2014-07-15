@@ -23,18 +23,18 @@ public class GameRun {
     }
 
     public static void main(String[] args) {
-        
-        java.awt.EventQueue.invokeLater(
-            new Runnable() {
-                public void run() {
-                    StartGameFrame MMF = new StartGameFrame();
-                    MMF.setVisible(true);
-                    
-                }
-            });
-        
-        //runNewGame();
 
+        java.awt.EventQueue.invokeLater(
+                new Runnable() {
+                    public void run() {
+                        MainMenu menu = new MainMenu();
+                        menu.displayStartFrame();
+                        
+
+                    }
+                });
+
+        //runNewGame();
     }
 
     public static void runNewGame() {

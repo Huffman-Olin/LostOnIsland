@@ -3,49 +3,64 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package byui.cit260.LostOnAnIsland.view;
 
+import Frames.MainMenuFrame;
+import Frames.StartGameFrame;
 import java.util.Scanner;
 
 /**
  *
  * @author bethanytaylor
  */
-public class MainMenu extends View{
-    
-    public MainMenu(){
-        
+public class MainMenu extends View {
+
+    public MainMenu() {
+
     }
 
     public void run() {
         super.run();
     }
 
-    @Override
-    public void display() {
-        
-        System.out.println("\n*****************************\n"
-                + "          Main Menu\n"
-                + "*****************************"
-                + "\n");
-
-        System.out.println("\tI-Instructions \n"
-                + "\tM-Map\n"
-                + "\tS-Storyline\n"
-                + "\tH-Help\n"
-                + "\tA-Average Score\n"
-                + "\tC-Change Player Name\n"
-                + "\tV-Inventory\n"
-                + "\tT-Show the time\n"
-                + "\tQ-Quit");
+    
+    public void displayStartFrame() {
+        StartGameFrame MMF = new StartGameFrame();
+        MMF.setVisible(true);
+        //display menu frame here
+//        System.out.println("\n*****************************\n"
+//                + "          Main Menu\n"
+//                + "*****************************"
+//                + "\n");
+//
+//        System.out.println("\tI-Instructions \n"
+//                + "\tM-Map\n"
+//                + "\tS-Storyline\n"
+//                + "\tH-Help\n"
+//                + "\tA-Average Score\n"
+//                + "\tC-Change Player Name\n"
+//                + "\tV-Inventory\n"
+//                + "\tT-Show the time\n"
+//                + "\tQ-Quit");
     }
-
-
+    public void displayMainMenuFrame(String playerName) {
+        MainMenuFrame MMF = new MainMenuFrame();
+        MMF.getJlWelcome().setText("Welcome, " + playerName);
+        //MMF.getJtaGameDesc().setText("");
+    
+        MMF.setVisible(true);
+    }
+    
+     public void display() {
+        
+    }
+    
+    
+    
     @Override
     public void doAction(String value) {
         char choice = value.toUpperCase().charAt(0);
-       
+
         do {
             switch (choice) {
                 case 'I': //instructions
@@ -93,13 +108,10 @@ public class MainMenu extends View{
 
         } while (true);
     }
-    
+
     public static void displayDescription() {
 
-      
-              
-                
-                 String jtaGameDesc= "\n************************************************************************************"
+        String jtaGameDesc = "\n************************************************************************************"
                 + "\n You are an experienced pilot who was traveling to your cabin several hundred "
                 + "        \n miles from home. Unfortunately, you experienced plane troubles and had to make"
                 + "        \n an emergency landing on a remote island. With only a small knife and a limited "
@@ -130,31 +142,23 @@ public class MainMenu extends View{
                 + "\n**************************************************************************************";
 
     }
-    
 
-
-   
-
-
-
-   
     public static void displayInstructions() {
         System.out.println("*********************************************************"
-        +                  "\nThe objective of the game is to collect enough wood "
-        +                  "\nto start a signal fire and be rescued. Decide on a "
-        +                  "\nmap location to go to. Once there, attempt to collect"
-                +          "\nthe wood. In order to collect that wood, you must"
-                +          "\nanswer the trivia question correctly. If you are able "
-                +          "\nto answer the question correctly, you will pick up that"
-                +          "\npiece of wood. Your timer starts at 12 hours, and each"
-                +          "\nwood pile has a time amount assigned to it. If your time"
-                +          "\nruns out before you have collected the right amount of"
-                +          "\nwood, then you will loose the game."
-                +          "\n*********************************************************");
+                + "\nThe objective of the game is to collect enough wood "
+                + "\nto start a signal fire and be rescued. Decide on a "
+                + "\nmap location to go to. Once there, attempt to collect"
+                + "\nthe wood. In order to collect that wood, you must"
+                + "\nanswer the trivia question correctly. If you are able "
+                + "\nto answer the question correctly, you will pick up that"
+                + "\npiece of wood. Your timer starts at 12 hours, and each"
+                + "\nwood pile has a time amount assigned to it. If your time"
+                + "\nruns out before you have collected the right amount of"
+                + "\nwood, then you will loose the game."
+                + "\n*********************************************************");
     }
-    
-    
-      public static void displayHelp() {
+
+    public static void displayHelp() {
         System.out.println("\n**********************************************************"
                 + "\nEach menu will take you through the game.  By selecting "
                 + "\na choice, you will be prompted to give more "
@@ -167,11 +171,11 @@ public class MainMenu extends View{
                 + "\n**************************************************************");
 
     }
- 
-      public static void changeName() {
+
+    public static void changeName() {
         System.out.println("We understand that some people suffer from multiple "
                 + "personality disorder. Which one are you?");
-        
+
         boolean valid = false;
         String playerName = null;
         Scanner keyboard = new Scanner(System.in);
@@ -196,17 +200,16 @@ public class MainMenu extends View{
             } else {
                 valid = true;
             }
-            
+
         }
         System.out.println("\n"
-                    + "Thank you, " + playerName + "!");
-        
-        //this sets the new name of the player
-       //Player.setName(playerName);
+                + "Thank you, " + playerName + "!");
 
+        //this sets the new name of the player
+        //Player.setName(playerName);
     }
-      
-       public static void displayCredits() {
+
+    public static void displayCredits() {
 
         System.out.println("\nThis game is the property of Olin Huffman and Bethany Larsen."
                 + "\nIn no way, shape, or form can this game be tampered with."

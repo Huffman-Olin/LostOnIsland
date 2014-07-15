@@ -6,6 +6,7 @@
 
 package byui.cit260.LostOnAnIsland.view;
 
+import Frames.CaveFrame;
 import byui.cit260.LostOnAnIsland.control.ChallengeControl;
 import byui.cit260.LostOnAnIsland.exceptionHandling.ChallengeControlExceptions;
 import java.util.Scanner;
@@ -21,6 +22,10 @@ public class CaveChallenge extends View {
      public CaveChallenge(){
         
     }
+     //private MapMenu mm;
+     // MapMenu mm = new MapMenu();
+       //mm.doAction("C");
+     
     
      @Override
     public void run(){
@@ -53,14 +58,19 @@ public class CaveChallenge extends View {
     
     
      public void display(int speed, int distance){
+       CaveFrame CF = new CaveFrame();
+       CF.setVisible(true);
        
-         System.out.println("Rain just started pouring down on you! "
+         String caveDesc = "Rain just started pouring down on you! "
                             + "\nHow long will it take for you to get "
                             + "\nto the cave, " + distance + " miles away, if you "
                             + "\nare running at " + speed + " mph?\n\n"
                             + "**************************************"
                             + "\nEnter your anwer in minutes and round "
-                            + "\nyour answer to one decimal place");
+                            + "\nyour answer to one decimal place";
+         
+         CF.caveDesc.setText(caveDesc);
+         
      }
      
      

@@ -20,14 +20,15 @@ public abstract class View implements ViewInterface {
     public void run() {
         /*int challengeTime = run();*/
         display();
-        String value = getInput();
-        doAction(value);
+        
+        //String value = getInput();
+        //doAction(value);
     }
 
     public void display() {
 
     }
-
+    //Do not need to get input for GUI, using buttons instead
     public String getInput() {
 
         boolean valid = true;

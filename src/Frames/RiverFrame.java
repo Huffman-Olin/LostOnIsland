@@ -13,12 +13,12 @@ import javax.swing.JOptionPane;
  *
  * @author bethanytaylor
  */
-public class CaveFrame extends javax.swing.JFrame {
+public class RiverFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form MainMenuFrame2
      */
-    public CaveFrame() {
+    public RiverFrame() {
         initComponents();
     }
 
@@ -75,7 +75,7 @@ public class CaveFrame extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Alpha Echo", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Cave");
+        jLabel2.setText("RIVER");
 
         caveDesc.setColumns(20);
         caveDesc.setRows(5);

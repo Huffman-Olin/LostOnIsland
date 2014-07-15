@@ -6,18 +6,27 @@
 
 package Frames;
 
+import byui.cit260.LostOnAnIsland.view.CaveChallenge;
+import byui.cit260.LostOnAnIsland.view.MapMenu;
+
 /**
  *
  * @author bethanytaylor
  */
 public class MapFrame extends javax.swing.JFrame {
+    
+    
 
     /**
      * Creates new form MapFrame
      */
     public MapFrame() {
         initComponents();
+       
+
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -127,9 +136,8 @@ public class MapFrame extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(CaveFrame)
                                     .addComponent(jButton3)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jButton5)
-                                        .addComponent(jButton2)))
+                                    .addComponent(jButton5)
+                                    .addComponent(jButton2))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButton8)
@@ -189,9 +197,9 @@ public class MapFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CaveFrameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CaveFrameActionPerformed
-       CaveFrame CF = new CaveFrame();
-       CF.setVisible(true);
        this.dispose();
+       CaveChallenge cc = new CaveChallenge();
+       cc.run();
     }//GEN-LAST:event_CaveFrameActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
