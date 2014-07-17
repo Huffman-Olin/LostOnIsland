@@ -21,8 +21,8 @@ public abstract class View implements ViewInterface {
         /*int challengeTime = run();*/
         display();
         
-        //String value = getInput();
-        //doAction(value);
+        String value = getInput();
+        doAction(value);
     }
 
     public void display() {

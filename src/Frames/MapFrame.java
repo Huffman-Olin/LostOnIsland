@@ -8,6 +8,7 @@ package Frames;
 
 import byui.cit260.LostOnAnIsland.view.CaveChallenge;
 import byui.cit260.LostOnAnIsland.view.MapMenu;
+import byui.cit260.LostOnAnIsland.view.RiverChallenge;
 
 /**
  *
@@ -43,7 +44,7 @@ public class MapFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         CaveFrame = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        riverFrame = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -69,11 +70,11 @@ public class MapFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("River");
-        jButton2.setToolTipText("3 Hours");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        riverFrame.setText("River");
+        riverFrame.setToolTipText("3 Hours");
+        riverFrame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                riverFrameActionPerformed(evt);
             }
         });
 
@@ -128,7 +129,7 @@ public class MapFrame extends javax.swing.JFrame {
                                     .addComponent(CaveFrame)
                                     .addComponent(jButton3)
                                     .addComponent(jButton5)
-                                    .addComponent(jButton2))
+                                    .addComponent(riverFrame))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButton8)
@@ -160,7 +161,7 @@ public class MapFrame extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton3)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2)
+                        .addComponent(riverFrame)
                         .addGap(18, 18, 18)
                         .addComponent(jButton5)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -186,9 +187,11 @@ public class MapFrame extends javax.swing.JFrame {
        cc.run();
     }//GEN-LAST:event_CaveFrameActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void riverFrameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riverFrameActionPerformed
+        this.dispose();
+        RiverChallenge rc = new RiverChallenge();
+        rc.run();
+    }//GEN-LAST:event_riverFrameActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -242,7 +245,6 @@ public class MapFrame extends javax.swing.JFrame {
     private javax.swing.JButton CaveFrame;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -252,5 +254,6 @@ public class MapFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton riverFrame;
     // End of variables declaration//GEN-END:variables
 }

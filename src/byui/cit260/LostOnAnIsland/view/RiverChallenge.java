@@ -5,32 +5,40 @@
  */
 package byui.cit260.LostOnAnIsland.view;
 
+import Frames.CaveFrame;
+import Frames.RiverFrame;
+
 /**
  *
  * @author bethanytaylor
  */
 public class RiverChallenge extends View {
+       
+    private RiverFrame rc = null;
     
-       public static double playerTime = 4.5;
+    public static double playerTime = 4.5;
 
     public RiverChallenge() {
 
     }
 
       public void run() {
-        super.run();
-
+         RiverFrame rc = new RiverFrame();
+         rc.setVisible(true);
+         display();
     }
 
     @Override
     public void display() {
-        System.out.println("You just tripped over a bunny and fell into"
+        String riverDesc = "You just tripped over a bunny and fell into"
                 + "\nthe river.  True or False, the river will help you "
                 + "\nfloat better, than if you had fallen into the ocean."
                 + "\n"
                 + "\n"
                 + "T) True\n"
-                + "F) False\n");
+                + "F) False\n";
+        
+        rc.getRiverDesc().setText(riverDesc);
     }
 
 
