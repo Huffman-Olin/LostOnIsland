@@ -6,6 +6,7 @@
 
 package Frames;
 
+import byui.cit260.LostOnAnIsland.control.ChallengeControl;
 import byui.cit260.LostOnAnIsland.view.CaveChallenge;
 import byui.cit260.LostOnAnIsland.view.MapMenu;
 
@@ -48,7 +49,7 @@ public class MapFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         CaveFrame = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        RiverFrame = new javax.swing.JButton();
         jbSwamp = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -74,11 +75,11 @@ public class MapFrame extends javax.swing.JFrame {
             }
         });
 
-        riverFrame.setText("River");
-        riverFrame.setToolTipText("3 Hours");
-        riverFrame.addActionListener(new java.awt.event.ActionListener() {
+        RiverFrame.setText("River");
+        RiverFrame.setToolTipText("3 Hours");
+        RiverFrame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                riverFrameActionPerformed(evt);
+                RiverFrameActionPerformed(evt);
             }
         });
 
@@ -133,7 +134,7 @@ public class MapFrame extends javax.swing.JFrame {
                                     .addComponent(CaveFrame)
                                     .addComponent(jbSwamp)
                                     .addComponent(jButton5)
-                                    .addComponent(riverFrame))
+                                    .addComponent(RiverFrame))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButton8)
@@ -165,7 +166,7 @@ public class MapFrame extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jbSwamp)
                         .addGap(18, 18, 18)
-                        .addComponent(riverFrame)
+                        .addComponent(RiverFrame)
                         .addGap(18, 18, 18)
                         .addComponent(jButton5)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -191,11 +192,15 @@ public class MapFrame extends javax.swing.JFrame {
        cc.run();
     }//GEN-LAST:event_CaveFrameActionPerformed
 
-    private void riverFrameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riverFrameActionPerformed
+    private void RiverFrameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RiverFrameActionPerformed
         this.dispose();
+        //MapMenu.doAction('R');
+        //CF.getCaveDesc().setText(caveDesc);
+        //int hour = MapMenu.getTime(3);
+        //ChallengeControl.calcTimeRemaining(hour);
         RiverChallenge rc = new RiverChallenge();
         rc.run();
-    }//GEN-LAST:event_riverFrameActionPerformed
+    }//GEN-LAST:event_RiverFrameActionPerformed
 
     private void jbSwampActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSwampActionPerformed
      SwampChallenge sc = new SwampChallenge();
@@ -248,9 +253,9 @@ public class MapFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CaveFrame;
+    private javax.swing.JButton RiverFrame;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton7;

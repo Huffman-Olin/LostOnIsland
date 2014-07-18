@@ -17,12 +17,13 @@ import java.util.Scanner;
  */
 public abstract class View implements ViewInterface {
 
+    //String value;
+    
     public void run() {
         /*int challengeTime = run();*/
-        display();
-        
-        String value = getInput();
-        doAction(value);
+        display();    
+        //String value = getInput();
+        //doAction(value);
     }
 
     public void display() {
@@ -55,6 +56,9 @@ public abstract class View implements ViewInterface {
 
     }
 
+    public void doAction(String value){
+        
+    }
 
     public void printTime() {
         int time = GameRun.getGame().getCurrentTime();

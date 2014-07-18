@@ -14,6 +14,16 @@ public class MapMenu extends View {
         time = new int[]{1, 3, 1, 3, 2, 1, 4, 2};
     }
 
+    public int[] getTime() {
+        return time;
+    }
+
+    public void setTime(int[] time) {
+        this.time = time;
+    }
+    
+    
+
     public void run() {
        super.run();
     }
@@ -89,7 +99,9 @@ public class MapMenu extends View {
                 case 'M':
                     return;
                 default:
-                    System.out.println("Invalid selection. Try again or go away!");
+                     //String message = "Invalid selection. Try again or go away!";
+                     //mm.getMessage().setText(message);
+                    
             }
 
             display();

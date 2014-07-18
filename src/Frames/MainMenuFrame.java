@@ -6,7 +6,9 @@
 
 package Frames;
 
+import byui.cit260.LostOnAnIsland.view.MainMenu;
 import byui.cit260.LostOnAnIsland.view.MapMenu;
+import byui.cit260.LostOnAnIsland.view.View;
 import javax.swing.JLabel;
 
 /**

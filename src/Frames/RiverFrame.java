@@ -7,6 +7,7 @@
 package Frames;
 
 import byui.cit260.LostOnAnIsland.control.GameControl;
+import byui.cit260.LostOnAnIsland.view.MapMenu;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 
@@ -48,9 +49,11 @@ public class RiverFrame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         riverDesc = new javax.swing.JTextArea();
-        caveInput = new java.awt.TextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         message = new javax.swing.JTextArea();
+        map = new javax.swing.JButton();
+        jbTrue = new javax.swing.JButton();
+        jbFalse = new javax.swing.JButton();
 
         jLayeredPane1.setBackground(new java.awt.Color(0, 102, 255));
         jLayeredPane1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -94,15 +97,21 @@ public class RiverFrame extends javax.swing.JFrame {
         riverDesc.setRows(5);
         jScrollPane1.setViewportView(riverDesc);
 
-        caveInput.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                caveInputActionPerformed(evt);
-            }
-        });
-
         message.setColumns(20);
         message.setRows(5);
         jScrollPane2.setViewportView(message);
+
+        map.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 0, 18)); // NOI18N
+        map.setText("Back to Map");
+        map.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mapActionPerformed(evt);
+            }
+        });
+
+        jbTrue.setText("True");
+
+        jbFalse.setText("False");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -114,16 +123,21 @@ public class RiverFrame extends javax.swing.JFrame {
                         .addGap(241, 241, 241)
                         .addComponent(jLabel2))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
-                        .addComponent(caveInput, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(86, 86, 86)
-                        .addComponent(submit))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(69, 69, 69)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jbTrue)
+                                .addGap(26, 26, 26)
+                                .addComponent(jbFalse)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(map))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
                             .addComponent(jScrollPane2))))
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(submit)
+                .addGap(99, 99, 99))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -132,22 +146,22 @@ public class RiverFrame extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(submit)
-                    .addComponent(caveInput, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(21, 21, 21)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(map)
+                    .addComponent(jbTrue)
+                    .addComponent(jbFalse))
+                .addGap(28, 28, 28)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(submit))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 77, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,9 +171,11 @@ public class RiverFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void caveInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caveInputActionPerformed
+    private void mapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mapActionPerformed
         this.dispose();
-    }//GEN-LAST:event_caveInputActionPerformed
+        MapMenu mm = new MapMenu();
+        mm.run();
+    }//GEN-LAST:event_mapActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,13 +213,15 @@ public class RiverFrame extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public java.awt.TextField caveInput;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JButton jbFalse;
+    private javax.swing.JButton jbTrue;
+    private javax.swing.JButton map;
     private javax.swing.JTextArea message;
     public javax.swing.JTextArea riverDesc;
     private javax.swing.JButton submit;

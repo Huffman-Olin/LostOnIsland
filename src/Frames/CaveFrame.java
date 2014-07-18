@@ -8,6 +8,7 @@ package Frames;
 
 import byui.cit260.LostOnAnIsland.control.GameControl;
 import byui.cit260.LostOnAnIsland.view.CaveChallenge;
+import byui.cit260.LostOnAnIsland.view.MapMenu;
 import java.awt.TextField;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
@@ -201,7 +202,9 @@ public class CaveFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_submitActionPerformed
 
     private void mapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mapActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
+        MapMenu mm = new MapMenu();
+        mm.run();
     }//GEN-LAST:event_mapActionPerformed
 
     /**

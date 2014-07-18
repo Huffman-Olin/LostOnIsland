@@ -13,19 +13,19 @@ import Frames.RiverFrame;
  * @author bethanytaylor
  */
 public class RiverChallenge extends View {
-       
+
     private RiverFrame rc = null;
-    
+
     public static double playerTime = 4.5;
 
     public RiverChallenge() {
 
     }
 
-      public void run() {
-         RiverFrame rc = new RiverFrame();
-         rc.setVisible(true);
-         display();
+    public void run() {
+        RiverFrame rc = new RiverFrame();
+        rc.setVisible(true);
+        display();
     }
 
     @Override
@@ -37,10 +37,9 @@ public class RiverChallenge extends View {
                 + "\n"
                 + "T) True\n"
                 + "F) False\n";
-        
+
         rc.getRiverDesc().setText(riverDesc);
     }
-
 
     public void doAction(String value) {
         char choice = value.toUpperCase().charAt(0);

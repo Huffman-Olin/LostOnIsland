@@ -95,6 +95,7 @@ public class CaveChallenge extends View {
         //get input
         String value = CF.getCaveInput().getText();
         //round answer to one decimal place
+        
         return Float.parseFloat(value);
 
     }

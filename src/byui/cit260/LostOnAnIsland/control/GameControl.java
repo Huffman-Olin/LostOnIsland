@@ -79,7 +79,7 @@ public class GameControl {
 
     public static Player createNewPlayer(String playerName) {
 
-        System.out.println("\n**** createPlayer function called ****");
+        //System.out.println("\n**** createPlayer function called ****");
         return null;
     }
 
