@@ -6,25 +6,31 @@
 
 package byui.cit260.LostOnAnIsland.view;
 
+import Frames.CaveFrame;
+import Frames.SwampFrame;
+
 /**
  *
  * @author bethanytaylor
  */
 public class SwampChallenge extends View{
+    private SwampFrame sf = null;
     
     public SwampChallenge() {
 
     }
 
     public void run() {
-        super.run();
+      SwampFrame sf = new SwampFrame();
+         sf.setVisible(true);
+         display();
 
     }
 
 
     @Override
     public void display() {
-        System.out.println("You tried to get over the swamp by walking on a small"
+       String jtmessage = ("You tried to get over the swamp by walking on a small"
                 + "\nlog but you slipped and now your feet are stuck in the mud."
                 + "\nIf you want to free yourself quickly, you must sacrifice one of"
                 + "\nyour inventory items. If you wish to keep your items it will"
@@ -33,6 +39,8 @@ public class SwampChallenge extends View{
                 + "\n"
                 + "A) Sacrifie a log, kindling, or stone and free yourself now.\n"
                 + "B) Don't use an item and take 2 hours to free yourself.\n");
+       
+        sf.getJtmessage().setText(jtmessage);
 
     }
 

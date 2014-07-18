@@ -8,7 +8,11 @@ package Frames;
 
 import byui.cit260.LostOnAnIsland.view.CaveChallenge;
 import byui.cit260.LostOnAnIsland.view.MapMenu;
+
 import byui.cit260.LostOnAnIsland.view.RiverChallenge;
+
+import byui.cit260.LostOnAnIsland.view.SwampChallenge;
+
 
 /**
  *
@@ -44,8 +48,8 @@ public class MapFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         CaveFrame = new javax.swing.JButton();
-        riverFrame = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jbSwamp = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
@@ -78,11 +82,11 @@ public class MapFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Swamp");
-        jButton3.setToolTipText("1 Hour");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jbSwamp.setText("Swamp");
+        jbSwamp.setToolTipText("1 Hour");
+        jbSwamp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jbSwampActionPerformed(evt);
             }
         });
 
@@ -127,7 +131,7 @@ public class MapFrame extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(CaveFrame)
-                                    .addComponent(jButton3)
+                                    .addComponent(jbSwamp)
                                     .addComponent(jButton5)
                                     .addComponent(riverFrame))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -159,7 +163,7 @@ public class MapFrame extends javax.swing.JFrame {
                         .addComponent(jButton9)
                         .addGap(56, 56, 56))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(jbSwamp)
                         .addGap(18, 18, 18)
                         .addComponent(riverFrame)
                         .addGap(18, 18, 18)
@@ -193,9 +197,10 @@ public class MapFrame extends javax.swing.JFrame {
         rc.run();
     }//GEN-LAST:event_riverFrameActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void jbSwampActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSwampActionPerformed
+     SwampChallenge sc = new SwampChallenge();
+       sc.run();
+    }//GEN-LAST:event_jbSwampActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
@@ -245,7 +250,7 @@ public class MapFrame extends javax.swing.JFrame {
     private javax.swing.JButton CaveFrame;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton7;
@@ -254,6 +259,6 @@ public class MapFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton riverFrame;
+    private javax.swing.JButton jbSwamp;
     // End of variables declaration//GEN-END:variables
 }
