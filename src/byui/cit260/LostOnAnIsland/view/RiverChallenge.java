@@ -5,7 +5,6 @@
  */
 package byui.cit260.LostOnAnIsland.view;
 
-import Frames.CaveFrame;
 import Frames.RiverFrame;
 
 /**
@@ -14,19 +13,16 @@ import Frames.RiverFrame;
  */
 public class RiverChallenge extends View {
 
-    private RiverFrame rc = null;
+    private RiverFrame rf;
 
     public static double playerTime = 4.5;
 
     public RiverChallenge() {
-
+        rf = new RiverFrame();
+        rf.setVisible(true);
     }
 
-    public void run() {
-        RiverFrame rc = new RiverFrame();
-        rc.setVisible(true);
-        display();
-    }
+   
 
     @Override
     public void display() {
@@ -38,7 +34,7 @@ public class RiverChallenge extends View {
                 + "T) True\n"
                 + "F) False\n";
 
-        rc.getRiverDesc().setText(riverDesc);
+        rf.riverDesc.setText(riverDesc);
     }
 
     public void doAction(String value) {
@@ -56,5 +52,8 @@ public class RiverChallenge extends View {
         }
 
     }
+    
+    
+    
 
 }

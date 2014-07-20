@@ -2,6 +2,7 @@ package byui.cit260.LostOnAnIsland.view;
 
   // @author olinhuffm
 import Frames.MapFrame;
+import byui.cit260.LostOnAnIsland.Lost.GameRun;
 import byui.cit260.LostOnAnIsland.control.ChallengeControl;
 
 
@@ -10,8 +11,10 @@ public class MapMenu extends View {
 
     private int time[];
     
+    
     public MapMenu() {
         time = new int[]{1, 3, 1, 3, 2, 1, 4, 2};
+        
     }
 
     public int[] getTime() {
@@ -33,6 +36,11 @@ public class MapMenu extends View {
         
         MapFrame MF = new MapFrame();
         MF.setVisible(true);
+        
+        MF.getTime1().setText(Integer.toString(GameRun.getGame().getCurrentTime()));
+        MF.getLogs().setText(Integer.toString(GameRun.getGame().getLogs()));
+
+        
 //        System.out.println("\n"
 //                + "\tMap Locations"
 //                + "\n"
@@ -100,14 +108,10 @@ public class MapMenu extends View {
                     return;
                 default:
                      //String message = "Invalid selection. Try again or go away!";
-                     //mm.getMessage().setText(message);
-                    
+                     //mm.getMessage().setText(message);               
             }
-
-            display();
-
-            choice = getInput().toUpperCase().charAt(0);
-
-        } while (true);
+            //display();
+            //choice = getInput().toUpperCase().charAt(0);
+        } while (false);
     }
 }

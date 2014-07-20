@@ -6,8 +6,11 @@
 
 package Frames;
 
+import byui.cit260.LostOnAnIsland.Lost.GameRun;
+import byui.cit260.LostOnAnIsland.control.ChallengeControl;
 import byui.cit260.LostOnAnIsland.control.GameControl;
 import byui.cit260.LostOnAnIsland.view.MapMenu;
+import byui.cit260.LostOnAnIsland.view.RiverChallenge;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 
@@ -32,7 +35,15 @@ public class RiverFrame extends javax.swing.JFrame {
         this.riverDesc = riverDesc;
     }
 
+    public JTextArea getMessage() {
+        return message;
+    }
 
+    public void setMessage(JTextArea message) {
+        this.message = message;
+    }
+
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -45,7 +56,6 @@ public class RiverFrame extends javax.swing.JFrame {
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        submit = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         riverDesc = new javax.swing.JTextArea();
@@ -85,9 +95,6 @@ public class RiverFrame extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 204));
 
-        submit.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 0, 18)); // NOI18N
-        submit.setText("Submit");
-
         jLabel2.setFont(new java.awt.Font("Alpha Echo", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("RIVER");
@@ -110,8 +117,18 @@ public class RiverFrame extends javax.swing.JFrame {
         });
 
         jbTrue.setText("True");
+        jbTrue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbTrueActionPerformed(evt);
+            }
+        });
 
         jbFalse.setText("False");
+        jbFalse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbFalseActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -134,10 +151,6 @@ public class RiverFrame extends javax.swing.JFrame {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
                             .addComponent(jScrollPane2))))
                 .addContainerGap(106, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(submit)
-                .addGap(99, 99, 99))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,10 +164,9 @@ public class RiverFrame extends javax.swing.JFrame {
                     .addComponent(map)
                     .addComponent(jbTrue)
                     .addComponent(jbFalse))
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                .addComponent(submit))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -176,6 +188,27 @@ public class RiverFrame extends javax.swing.JFrame {
         MapMenu mm = new MapMenu();
         mm.run();
     }//GEN-LAST:event_mapActionPerformed
+
+    private void jbTrueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbTrueActionPerformed
+        
+        String message = "Congratulations, that is the correct answer!";
+        getMessage().setText(message);
+        GameRun.getGame().addLogs(3);
+        jbFalse.setEnabled(false);
+        jbTrue.setEnabled(false);
+        //ChallengeControl.addLogs(logs[0]);
+        
+
+    }//GEN-LAST:event_jbTrueActionPerformed
+
+    private void jbFalseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbFalseActionPerformed
+        
+        String message = "Sorry, that is the wrong answer.";
+        getMessage().setText(message);
+        jbFalse.setEnabled(false);
+        jbTrue.setEnabled(false);
+
+    }//GEN-LAST:event_jbFalseActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,6 +257,5 @@ public class RiverFrame extends javax.swing.JFrame {
     private javax.swing.JButton map;
     private javax.swing.JTextArea message;
     public javax.swing.JTextArea riverDesc;
-    private javax.swing.JButton submit;
     // End of variables declaration//GEN-END:variables
 }

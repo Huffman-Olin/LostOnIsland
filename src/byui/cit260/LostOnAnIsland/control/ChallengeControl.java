@@ -129,6 +129,11 @@ public class ChallengeControl {
         return currentTime;
         
     }
+
+    public static void addLogs(int i) {
+        
+        GameRun.getGame().setLogs(GameRun.getGame().getLogs() + i);
+    }
     
     
 }

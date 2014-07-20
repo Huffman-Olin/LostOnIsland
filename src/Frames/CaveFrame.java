@@ -116,6 +116,7 @@ public class CaveFrame extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Cave");
 
+        caveDesc.setEditable(false);
         caveDesc.setColumns(20);
         caveDesc.setRows(5);
         jScrollPane1.setViewportView(caveDesc);
@@ -194,11 +195,13 @@ public class CaveFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void caveInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caveInputActionPerformed
-        this.dispose();
+        //this.dispose();
     }//GEN-LAST:event_caveInputActionPerformed
 
     private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
-      
+        CaveChallenge cc = new CaveChallenge();
+        cc.checkInput();
+        
     }//GEN-LAST:event_submitActionPerformed
 
     private void mapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mapActionPerformed

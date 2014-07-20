@@ -16,8 +16,10 @@ public class Game implements Serializable {
     private int logs;
     private Player player; //Create player object
     private Map gameMap;
-    private static int[] logList = new int[]{0, 5, 2, 4, 3};
+    private static int[] logList = new int[]{0, 1, 1, 1, 2, 1, 2, 2};
     private static int[] altiList = new int[]{0, 2093, 456, 12, 330};
+    private boolean[] visited = new boolean[]{false, false, false, false, false, false, false, false};
+   
 
     //create array to store how many logs are at each location
     //assign initial numbers to each slot
@@ -34,6 +36,20 @@ public class Game implements Serializable {
     public int getLogs() {
         return logs;
     }
+    
+    public void addLogs(int i){
+        logs += logList[i];
+    }
+
+    public boolean getVisited(int i) {
+        return visited[i];
+    }
+
+    public void setVisited(int i) {
+        visited[i] = true;
+    }
+    
+    
     /*public static void createLogList() {
 
      logList = new int[]{0, 5, 2, 4, 3};
