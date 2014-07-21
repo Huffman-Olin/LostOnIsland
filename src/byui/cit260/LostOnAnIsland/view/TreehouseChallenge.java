@@ -6,23 +6,31 @@
 
 package byui.cit260.LostOnAnIsland.view;
 
+import Frames.TreehouseFrame;
+
 /**
  *
  * @author bethanytaylor
  */
 public class TreehouseChallenge extends View{
+    
+     private TreehouseFrame tf; 
+    
        public TreehouseChallenge() {
 
     }
 
     public void run() {
-        super.run();
+        tf = new TreehouseFrame();
+        this.display();
+        tf.setVisible(true);
+        
     }
 
 
     @Override
     public void display() {
-        System.out.println("You are inside a tree house you found on the island."
+        String treeDesc = "You are inside a tree house you found on the island."
                 + "\nYou found a cantine half filled with water and an old flashlight."
                 + "\nThe tree house is made of wood you can use to burn, back at the"
                 + "\nshore. As you tried prying some wood off the house, you got a "
@@ -33,7 +41,9 @@ public class TreehouseChallenge extends View{
                 + "A) Pouring water on the cut\n"
                 + "B) Take the flashlight and shine the light into the cut\n"
                 + "C) Put your hand over the cut to cover it\n"
-                + "D) Rip a piece of your shirt and bandage your arm above the elbow\n");
+                + "D) Rip a piece of your shirt and bandage your arm above the elbow\n";
+                
+        tf.getTreeDesc().setText(treeDesc);
 
     }
 
