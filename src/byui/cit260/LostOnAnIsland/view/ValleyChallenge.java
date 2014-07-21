@@ -6,11 +6,16 @@
 
 package byui.cit260.LostOnAnIsland.view;
 
+import Frames.ValleyFrame;
+
 /**
  *
  * @author bethanytaylor
  */
 public class ValleyChallenge extends View{
+    
+    private ValleyFrame vf;
+    
     public ValleyChallenge() {
 
     }
@@ -18,7 +23,9 @@ public class ValleyChallenge extends View{
     
     public void run() {
         
-        super.run();
+        vf = new ValleyFrame();
+        this.display();
+        vf.setVisible(true);
         
     }
     
@@ -27,7 +34,7 @@ public class ValleyChallenge extends View{
 
     @Override
     public void display() {
-        System.out.println("It took you over 4 hours to hike to the valley."
+        String valleyDesc = "It took you over 4 hours to hike to the valley."
                 + "\nYou just passed out on the soft grass and are dreaming."
                 + "\nWhich chemical in the brain causes dreams?"
                 + "\n"
@@ -35,7 +42,9 @@ public class ValleyChallenge extends View{
                 + "A) Dimethyltryptamine\n"
                 + "B) Hydrocortisone\n"
                 + "C) Testosterone\n"
-                + "D) Morphine\n");
+                + "D) Morphine\n";
+        
+         vf.getValleyDesc().setText(valleyDesc);
 
     }
 

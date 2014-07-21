@@ -15,18 +15,23 @@ import java.util.Scanner;
  */
 public class MainMenu extends View {
 
+    private MainMenuFrame MMF;
+    
     public MainMenu() {
 
     }
+    
+    
 
     public void run() {
         super.run();
     }
 
     
+    
     public void displayStartFrame() {
-        StartGameFrame MMF = new StartGameFrame();
-        MMF.setVisible(true);
+        StartGameFrame SGF = new StartGameFrame();
+        SGF.setVisible(true);
         //display menu frame here
 //        System.out.println("\n*****************************\n"
 //                + "          Main Menu\n"
@@ -144,7 +149,7 @@ public class MainMenu extends View {
     }
 
     public static void displayInstructions() {
-        System.out.println("*********************************************************"
+        String message = "*********************************************************"
                 + "\nThe objective of the game is to collect enough wood "
                 + "\nto start a signal fire and be rescued. Decide on a "
                 + "\nmap location to go to. Once there, attempt to collect"
@@ -155,7 +160,9 @@ public class MainMenu extends View {
                 + "\nwood pile has a time amount assigned to it. If your time"
                 + "\nruns out before you have collected the right amount of"
                 + "\nwood, then you will loose the game."
-                + "\n*********************************************************");
+                + "\n*********************************************************";
+        //MMF.getMessage().setText(message);
+        
     }
 
     public static void displayHelp() {
