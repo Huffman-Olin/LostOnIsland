@@ -1,9 +1,13 @@
 package byui.cit260.LostOnAnIsland.view;
 
-  // @author olinhuffman
+  // @author olinhuffma
+import Frames.ForrestFrame;
+import Frames.RiverFrame;
+
+
 public class ForrestChallenge extends View {
     
-    
+   private ForrestFrame ff; 
    public static double playerTime = 3;
 
     public ForrestChallenge() {
@@ -11,14 +15,15 @@ public class ForrestChallenge extends View {
     }
 
     public void run() {
-        super.run();
+        ff = new ForrestFrame();
+        this.display();
+        ff.setVisible(true);
 
     }
 
-
     @Override
     public void display() {
-        System.out.println("In your island adventures, you have stumbled across"
+        String forestDesc = "In your island adventures, you have stumbled across"
                 + " a delicious berry bush. Being very hungry, you stuff\n"
                 + " your mouth full of them. It is only after you eat\n"
                 + " them that you realize that they are poisonous. The\n"
@@ -31,7 +36,10 @@ public class ForrestChallenge extends View {
                 + "A) 10 mouthfuls of water\n"
                 + "B) 20 mouthfuls of water\n"
                 + "C) 15 mouthfuls of water\n"
-                + "D) 25 mouthfuls of water\n");
+                + "D) 25 mouthfuls of water\n";
+        
+      
+        ff.getForestDesc().setText(forestDesc);
 
     }
 

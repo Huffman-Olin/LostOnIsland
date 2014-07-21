@@ -153,7 +153,7 @@ public class MainMenuFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jbMapActionPerformed
 
     private void jbQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbQuitActionPerformed
-        // TODO add your handling code here:
+        this.dispose();        
     }//GEN-LAST:event_jbQuitActionPerformed
 
     /**

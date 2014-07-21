@@ -6,7 +6,9 @@
 
 package Frames;
 
+import byui.cit260.LostOnAnIsland.Lost.GameRun;
 import byui.cit260.LostOnAnIsland.view.MapMenu;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -21,6 +23,23 @@ public class ForrestFrame extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JTextArea getMessage() {
+        return message;
+    }
+
+    public void setMessage(JTextArea message) {
+        this.message = message;
+    }
+
+     public JTextArea getForestDesc() {
+        return forestDesc;
+    }
+
+    public void setForestDesc(JTextArea forestDesc) {
+        this.forestDesc = forestDesc;
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,10 +52,14 @@ public class ForrestFrame extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        forrestDesc = new javax.swing.JTextArea();
+        forestDesc = new javax.swing.JTextArea();
         map = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         message = new javax.swing.JTextArea();
+        A = new javax.swing.JButton();
+        B = new javax.swing.JButton();
+        C = new javax.swing.JButton();
+        D = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,9 +69,10 @@ public class ForrestFrame extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Forest");
 
-        forrestDesc.setColumns(20);
-        forrestDesc.setRows(5);
-        jScrollPane1.setViewportView(forrestDesc);
+        forestDesc.setEditable(false);
+        forestDesc.setColumns(20);
+        forestDesc.setRows(5);
+        jScrollPane1.setViewportView(forestDesc);
 
         map.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 0, 18)); // NOI18N
         map.setText("Map");
@@ -62,12 +86,48 @@ public class ForrestFrame extends javax.swing.JFrame {
         message.setRows(5);
         jScrollPane2.setViewportView(message);
 
+        A.setText("A");
+        A.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AActionPerformed(evt);
+            }
+        });
+
+        B.setText("B");
+        B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BActionPerformed(evt);
+            }
+        });
+
+        C.setText("C");
+        C.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CActionPerformed(evt);
+            }
+        });
+
+        D.setText("D");
+        D.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(430, 430, 430)
+                .addGap(80, 80, 80)
+                .addComponent(A)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(B)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(C)
+                .addGap(4, 4, 4)
+                .addComponent(D)
+                .addGap(18, 18, 18)
                 .addComponent(map)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
@@ -91,10 +151,15 @@ public class ForrestFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
-                .addComponent(map)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(map)
+                    .addComponent(A)
+                    .addComponent(B)
+                    .addComponent(C)
+                    .addComponent(D))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -116,6 +181,46 @@ public class ForrestFrame extends javax.swing.JFrame {
         MapMenu mm = new MapMenu();
         mm.run();
     }//GEN-LAST:event_mapActionPerformed
+
+    private void AActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AActionPerformed
+        String message = "Sorry that is the wrong answer!";
+        getMessage().setText(message);
+        
+        A.setEnabled(false);
+        B.setEnabled(false);
+        C.setEnabled(false);
+        D.setEnabled(false);
+    }//GEN-LAST:event_AActionPerformed
+
+    private void BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BActionPerformed
+        String message = "Congratulations, that is the correct answer!";
+        getMessage().setText(message);
+        GameRun.getGame().addLogs(3);
+        A.setEnabled(false);
+        B.setEnabled(false);
+        C.setEnabled(false);
+        D.setEnabled(false);
+    }//GEN-LAST:event_BActionPerformed
+
+    private void CActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CActionPerformed
+         String message = "Sorry that is the wrong answer!";
+        getMessage().setText(message);
+        
+        A.setEnabled(false);
+        B.setEnabled(false);
+        C.setEnabled(false);
+        D.setEnabled(false);
+    }//GEN-LAST:event_CActionPerformed
+
+    private void DActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DActionPerformed
+        String message = "Sorry that is the wrong answer!";
+        getMessage().setText(message);
+        
+        A.setEnabled(false);
+        B.setEnabled(false);
+        C.setEnabled(false);
+        D.setEnabled(false);
+    }//GEN-LAST:event_DActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,7 +258,11 @@ public class ForrestFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JTextArea forrestDesc;
+    private javax.swing.JButton A;
+    private javax.swing.JButton B;
+    private javax.swing.JButton C;
+    private javax.swing.JButton D;
+    public javax.swing.JTextArea forestDesc;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

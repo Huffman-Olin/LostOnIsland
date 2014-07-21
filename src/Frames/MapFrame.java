@@ -9,12 +9,14 @@ package Frames;
 import byui.cit260.LostOnAnIsland.Lost.GameRun;
 import byui.cit260.LostOnAnIsland.control.ChallengeControl;
 import byui.cit260.LostOnAnIsland.view.CaveChallenge;
+import byui.cit260.LostOnAnIsland.view.ForrestChallenge;
 import byui.cit260.LostOnAnIsland.view.MapMenu;
 
 import byui.cit260.LostOnAnIsland.view.RiverChallenge;
 
 import byui.cit260.LostOnAnIsland.view.SwampChallenge;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 
 
@@ -40,10 +42,21 @@ public class MapFrame extends javax.swing.JFrame {
                 case 1: 
                     break;
                 case 2: 
-                    break; 
+                    forestFrame.setEnabled(false);
+                    break;
                 case 3:
                     RiverFrame.setEnabled(false);
-                    break;    
+                    break; 
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6: 
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    break;
                 case 0: 
                 default: 
                     continue;
@@ -92,15 +105,16 @@ public class MapFrame extends javax.swing.JFrame {
         RiverFrame = new javax.swing.JButton();
         jbSwamp = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        forestFrame = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        shoreFrame = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         time = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         logs = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -144,11 +158,11 @@ public class MapFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setText("Forrest");
-        jButton5.setToolTipText("1 Hour");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        forestFrame.setText("Forrest");
+        forestFrame.setToolTipText("1 Hour");
+        forestFrame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                forestFrameActionPerformed(evt);
             }
         });
 
@@ -158,8 +172,13 @@ public class MapFrame extends javax.swing.JFrame {
         jButton8.setText("Valley");
         jButton8.setToolTipText("4 Hours");
 
-        jButton9.setText("Shore");
-        jButton9.setToolTipText("1Hour");
+        shoreFrame.setText("Shore");
+        shoreFrame.setToolTipText("1Hour");
+        shoreFrame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                shoreFrameActionPerformed(evt);
+            }
+        });
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Hours Remaining:");
@@ -171,6 +190,9 @@ public class MapFrame extends javax.swing.JFrame {
 
         logs.setForeground(new java.awt.Color(255, 255, 255));
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("/10");
+
         javax.swing.GroupLayout blahLayout = new javax.swing.GroupLayout(blah);
         blah.setLayout(blahLayout);
         blahLayout.setHorizontalGroup(
@@ -178,57 +200,69 @@ public class MapFrame extends javax.swing.JFrame {
             .addGroup(blahLayout.createSequentialGroup()
                 .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(blahLayout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jLabel3))
-                    .addGroup(blahLayout.createSequentialGroup()
                         .addGap(273, 273, 273)
                         .addComponent(jLabel1)
-                        .addGap(47, 47, 47)
+                        .addGap(98, 98, 98)
                         .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(time, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                        .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(time, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                            .addComponent(logs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(56, 56, 56))
+                    .addGroup(blahLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jLabel4)
                 .addContainerGap())
             .addGroup(blahLayout.createSequentialGroup()
                 .addGap(64, 64, 64)
                 .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton5)
-                    .addComponent(jbSwamp)
+                    .addComponent(forestFrame)
                     .addComponent(CaveFrame)
-                    .addComponent(RiverFrame))
+                    .addComponent(RiverFrame)
+                    .addComponent(jbSwamp))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton7)
                     .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jButton8)
-                        .addComponent(jButton9))
+                        .addComponent(shoreFrame))
                     .addComponent(jButton4))
                 .addGap(143, 143, 143))
-            .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blahLayout.createSequentialGroup()
-                    .addContainerGap(520, Short.MAX_VALUE)
-                    .addComponent(logs, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(33, 33, 33)))
         );
         blahLayout.setVerticalGroup(
             blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(blahLayout.createSequentialGroup()
                 .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(blahLayout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4)
-                            .addComponent(time, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel5))
-                    .addGroup(blahLayout.createSequentialGroup()
+                        .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(blahLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(blahLayout.createSequentialGroup()
+                                .addGap(68, 68, 68)
+                                .addComponent(jLabel4)
+                                .addGap(0, 6, Short.MAX_VALUE)))
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blahLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                        .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(blahLayout.createSequentialGroup()
+                                .addComponent(time, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(logs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)))
+                            .addGroup(blahLayout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(10, 10, 10)))
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -244,21 +278,16 @@ public class MapFrame extends javax.swing.JFrame {
                     .addComponent(jButton8))
                 .addGap(18, 18, 18)
                 .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton9))
-                .addContainerGap(56, Short.MAX_VALUE))
-            .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(blahLayout.createSequentialGroup()
-                    .addGap(60, 60, 60)
-                    .addComponent(logs, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(700, Short.MAX_VALUE)))
+                    .addComponent(forestFrame)
+                    .addComponent(shoreFrame))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(blah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(blah, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 633, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -268,9 +297,12 @@ public class MapFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void forestFrameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_forestFrameActionPerformed
+        this.dispose();
+        MapMenu mm = new MapMenu();
+        mm.doAction("F");
+        GameRun.getGame().setVisited(2);
+    }//GEN-LAST:event_forestFrameActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
@@ -293,6 +325,22 @@ public class MapFrame extends javax.swing.JFrame {
         CaveChallenge cc = new CaveChallenge();
         cc.run();
     }//GEN-LAST:event_CaveFrameActionPerformed
+
+    private void shoreFrameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shoreFrameActionPerformed
+        
+        int log = GameRun.getGame().getLogs();
+        if (log == 10){
+            this.dispose();
+            ShoreFrame sf = new ShoreFrame();
+            sf.setVisible(true);
+            
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "You do not have 10 or more logs yet.",
+            "Not enough logs", JOptionPane.ERROR_MESSAGE);
+            //return;
+                }
+    }//GEN-LAST:event_shoreFrameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -336,18 +384,19 @@ public class MapFrame extends javax.swing.JFrame {
     private javax.swing.JPanel blah;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JButton forestFrame;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JButton jbSwamp;
     private javax.swing.JLabel logs;
+    private javax.swing.JButton shoreFrame;
     private javax.swing.JLabel time;
     // End of variables declaration//GEN-END:variables
 }

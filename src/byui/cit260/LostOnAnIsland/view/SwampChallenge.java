@@ -7,22 +7,22 @@
 package byui.cit260.LostOnAnIsland.view;
 
 import Frames.CaveFrame;
-import Frames.SwampFrame;
+
 
 /**
  *
  * @author bethanytaylor
  */
 public class SwampChallenge extends View{
-    private SwampFrame sf = null;
+    //private SwampFrame sf = null;
     
     public SwampChallenge() {
 
     }
 
     public void run() {
-      SwampFrame sf = new SwampFrame();
-         sf.setVisible(true);
+      //SwampFrame sf = new SwampFrame();
+         //sf.setVisible(true);
          display();
 
     }
@@ -40,7 +40,7 @@ public class SwampChallenge extends View{
                 + "A) Sacrifie a log, kindling, or stone and free yourself now.\n"
                 + "B) Don't use an item and take 2 hours to free yourself.\n");
        
-        sf.getJtmessage().setText(jtmessage);
+        //sf.getJtmessage().setText(jtmessage);
 
     }
 
