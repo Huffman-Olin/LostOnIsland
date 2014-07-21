@@ -16,7 +16,8 @@ public class Game implements Serializable {
     private int logs;
     private Player player; //Create player object
     private Map gameMap;
-    private static int[] logList = new int[]{0, 1, 1, 1, 2, 1, 2, 2};
+    //Treehouse is 7, Forrest is 2, River is 3
+    private static int[] logList = new int[]{0, 1, 2, 4, 2, 1, 2, 5};
     private static int[] altiList = new int[]{0, 2093, 456, 12, 330};
     private boolean[] visited = new boolean[]{false, false, false, false, false, false, false, false};
    
