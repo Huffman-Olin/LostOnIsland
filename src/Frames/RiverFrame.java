@@ -191,9 +191,8 @@ public class RiverFrame extends javax.swing.JFrame {
 
     private void jbTrueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbTrueActionPerformed
         
-        String message = "Congratulations, that is the correct answer!";
+        String message = "Sorry that is not the right answer";
         getMessage().setText(message);
-        GameRun.getGame().addLogs(3);
         jbFalse.setEnabled(false);
         jbTrue.setEnabled(false);
         //ChallengeControl.addLogs(logs[0]);
@@ -203,8 +202,9 @@ public class RiverFrame extends javax.swing.JFrame {
 
     private void jbFalseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbFalseActionPerformed
         
-        String message = "Sorry, that is the wrong answer.";
+        String message = "Congratulations, that is the correct answer!";
         getMessage().setText(message);
+        GameRun.getGame().addLogs(3);
         jbFalse.setEnabled(false);
         jbTrue.setEnabled(false);
 

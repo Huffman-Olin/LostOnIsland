@@ -54,6 +54,7 @@ public class MapFrame extends javax.swing.JFrame {
                 case 6: 
                     break;
                 case 7:
+                    TreehouseFrame.setEnabled(false);
                     break;
                 case 8:
                     break;
@@ -84,7 +85,7 @@ public class MapFrame extends javax.swing.JFrame {
     }
 
     
-    
+   
     
 
     /**
@@ -106,7 +107,7 @@ public class MapFrame extends javax.swing.JFrame {
         jbSwamp = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         forestFrame = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        TreehouseFrame = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         shoreFrame = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -166,8 +167,13 @@ public class MapFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton7.setText("Tree House");
-        jButton7.setToolTipText("2 Hours");
+        TreehouseFrame.setText("Tree House");
+        TreehouseFrame.setToolTipText("2 Hours");
+        TreehouseFrame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TreehouseFrameActionPerformed(evt);
+            }
+        });
 
         jButton8.setText("Valley");
         jButton8.setToolTipText("4 Hours");
@@ -228,7 +234,7 @@ public class MapFrame extends javax.swing.JFrame {
                     .addComponent(jbSwamp))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton7)
+                    .addComponent(TreehouseFrame)
                     .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jButton8)
                         .addComponent(shoreFrame))
@@ -271,7 +277,7 @@ public class MapFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbSwamp)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(TreehouseFrame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RiverFrame)
@@ -342,6 +348,12 @@ public class MapFrame extends javax.swing.JFrame {
                 }
     }//GEN-LAST:event_shoreFrameActionPerformed
 
+    private void TreehouseFrameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TreehouseFrameActionPerformed
+        MapMenu mm = new MapMenu();
+        mm.doAction("T");
+        GameRun.getGame().setVisited(7);
+    }//GEN-LAST:event_TreehouseFrameActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -381,12 +393,12 @@ public class MapFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CaveFrame;
     private javax.swing.JButton RiverFrame;
+    private javax.swing.JButton TreehouseFrame;
     private javax.swing.JPanel blah;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton forestFrame;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
