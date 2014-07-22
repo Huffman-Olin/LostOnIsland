@@ -15,6 +15,7 @@ import byui.cit260.LostOnAnIsland.view.MapMenu;
 import byui.cit260.LostOnAnIsland.view.RiverChallenge;
 
 import byui.cit260.LostOnAnIsland.view.SwampChallenge;
+import java.awt.Frame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
@@ -33,7 +34,8 @@ public class MapFrame extends javax.swing.JFrame {
      */
     public MapFrame() {
         initComponents();
-        
+      
+ 
         for (int i = 0; i < 8; i++){
             if (!GameRun.getGame().getVisited(i)){
                 continue;
@@ -66,8 +68,6 @@ public class MapFrame extends javax.swing.JFrame {
         }
 
     }
-    
-    
 
     public JLabel getTime1() {
         return time;
@@ -111,12 +111,13 @@ public class MapFrame extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         logs = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        mainmenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         blah.setBackground(new java.awt.Color(0, 153, 204));
 
-        jLabel1.setFont(new java.awt.Font("Marlett", 0, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Alpha Echo", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Map");
 
@@ -130,8 +131,8 @@ public class MapFrame extends javax.swing.JFrame {
             }
         });
 
-        forestFrame.setText("Forrest");
-        forestFrame.setToolTipText("1 Hour");
+        forestFrame.setText("Forest");
+        forestFrame.setToolTipText("4 Hours");
         forestFrame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 forestFrameActionPerformed(evt);
@@ -147,7 +148,7 @@ public class MapFrame extends javax.swing.JFrame {
         });
 
         valleyFrame.setText("Valley");
-        valleyFrame.setToolTipText("4 Hours");
+        valleyFrame.setToolTipText("6 Hours");
         valleyFrame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 valleyFrameActionPerformed(evt);
@@ -155,7 +156,7 @@ public class MapFrame extends javax.swing.JFrame {
         });
 
         shoreFrame.setText("Shore");
-        shoreFrame.setToolTipText("1Hour");
+        shoreFrame.setToolTipText("1 Hour");
         shoreFrame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 shoreFrameActionPerformed(evt);
@@ -175,73 +176,77 @@ public class MapFrame extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("/10");
 
+        mainmenu.setText("Main Menu");
+        mainmenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mainmenuActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout blahLayout = new javax.swing.GroupLayout(blah);
         blah.setLayout(blahLayout);
         blahLayout.setHorizontalGroup(
             blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(blahLayout.createSequentialGroup()
-                .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(blahLayout.createSequentialGroup()
-                        .addGap(273, 273, 273)
-                        .addComponent(jLabel1)
-                        .addGap(98, 98, 98)
-                        .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel5))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(time, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
-                            .addComponent(logs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56))
-                    .addGroup(blahLayout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(40, 40, 40)
+                .addComponent(mainmenu)
+                .addGap(119, 119, 119)
+                .addComponent(jLabel1)
+                .addGap(49, 49, 49)
+                .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(time, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
+                    .addComponent(logs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addContainerGap())
             .addGroup(blahLayout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addComponent(RiverFrame)
-                .addGap(30, 30, 30)
-                .addComponent(forestFrame)
-                .addGap(30, 30, 30)
-                .addComponent(TreehouseFrame)
-                .addGap(36, 36, 36)
-                .addComponent(valleyFrame)
-                .addGap(35, 35, 35)
-                .addComponent(shoreFrame)
+                .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(blahLayout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabel3)
+                        .addGap(4, 4, 4))
+                    .addGroup(blahLayout.createSequentialGroup()
+                        .addComponent(RiverFrame)
+                        .addGap(30, 30, 30)
+                        .addComponent(forestFrame)
+                        .addGap(30, 30, 30)
+                        .addComponent(TreehouseFrame)
+                        .addGap(36, 36, 36)
+                        .addComponent(valleyFrame)
+                        .addGap(35, 35, 35)
+                        .addComponent(shoreFrame)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         blahLayout.setVerticalGroup(
             blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(blahLayout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addComponent(jLabel4)
+                .addGap(18, 18, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blahLayout.createSequentialGroup()
+                .addContainerGap(13, Short.MAX_VALUE)
                 .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(blahLayout.createSequentialGroup()
-                        .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(blahLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(blahLayout.createSequentialGroup()
-                                .addGap(68, 68, 68)
-                                .addComponent(jLabel4)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blahLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(blahLayout.createSequentialGroup()
-                                .addComponent(time, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(logs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)))
-                            .addGroup(blahLayout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(10, 10, 10)))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(blahLayout.createSequentialGroup()
+                            .addComponent(time, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(logs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(blahLayout.createSequentialGroup()
+                            .addComponent(jLabel2)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(mainmenu, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addGap(28, 28, 28)
                 .addGroup(blahLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -250,14 +255,14 @@ public class MapFrame extends javax.swing.JFrame {
                     .addComponent(forestFrame)
                     .addComponent(valleyFrame)
                     .addComponent(shoreFrame))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addGap(18, 18, 18))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(blah, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 633, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(blah, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -283,9 +288,18 @@ public class MapFrame extends javax.swing.JFrame {
 
     private void shoreFrameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shoreFrameActionPerformed
         
+        
+        
         int log = GameRun.getGame().getLogs();
-        if (log == 10){
+        if (log > 9){
             this.dispose();
+            
+            Frame[] frames = Frame.getFrames();
+            for (Frame frame : frames) {
+                frame.dispose();
+                //frame.setVisible(true);
+            }
+            
             ShoreFrame sf = new ShoreFrame();
             sf.setVisible(true);
             
@@ -295,6 +309,8 @@ public class MapFrame extends javax.swing.JFrame {
             "Not enough logs", JOptionPane.ERROR_MESSAGE);
             //return;
                 }
+        
+        
     }//GEN-LAST:event_shoreFrameActionPerformed
 
     private void TreehouseFrameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TreehouseFrameActionPerformed
@@ -308,6 +324,12 @@ public class MapFrame extends javax.swing.JFrame {
         mm.doAction("L");
         GameRun.getGame().setVisited(6);
     }//GEN-LAST:event_valleyFrameActionPerformed
+
+    private void mainmenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainmenuActionPerformed
+        this.dispose();
+        MainMenuFrame MMF = new MainMenuFrame();
+        MMF.setVisible(true);
+    }//GEN-LAST:event_mainmenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -359,6 +381,7 @@ public class MapFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel logs;
+    private javax.swing.JButton mainmenu;
     private javax.swing.JButton shoreFrame;
     private javax.swing.JLabel time;
     private javax.swing.JButton valleyFrame;

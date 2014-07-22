@@ -1,7 +1,9 @@
 package byui.cit260.LostOnAnIsland.control;
 
+import Frames.LoseFrame;
 import byui.cit260.LostOnAnIsland.Lost.GameRun;
 import byui.cit260.LostOnAnIsland.exceptionHandling.ChallengeControlExceptions;
+import java.awt.Frame;
 
 /**
  * * @author olinhuffman
@@ -120,9 +122,16 @@ public class ChallengeControl {
         
        
             
-        if(currentTime < 0){
-            System.out.println("You ran out of time on the way to your destination and died.");
-            MenuControl.quitGame();
+        if(currentTime <= 0){
+            //this.dispose();
+            Frame[] frames = Frame.getFrames();
+            for (Frame frame : frames) {
+                frame.dispose();
+                //frame.setVisible(true);
+            }
+            LoseFrame lf = new LoseFrame();
+            lf.setVisible(true);
+            
         }
         
         

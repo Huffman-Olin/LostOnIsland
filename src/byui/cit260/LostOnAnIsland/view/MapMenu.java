@@ -13,7 +13,7 @@ public class MapMenu extends View {
     
     
     public MapMenu() {
-        time = new int[]{1, 3, 1, 3, 2, 1, 4, 2};
+        time = new int[]{1, 3, 4, 3, 2, 1, 6, 2};
         
     }
 
@@ -24,8 +24,6 @@ public class MapMenu extends View {
     public void setTime(int[] time) {
         this.time = time;
     }
-    
-    
 
     public void run() {
        super.run();
@@ -55,8 +53,6 @@ public class MapMenu extends View {
 //                + "\n\tM-Main Menu");
 //        super.printTime();
     }
-    
-    
 
     @Override
     public void doAction(String value) {
@@ -65,9 +61,10 @@ public class MapMenu extends View {
         do {
             switch (choice) {
                 case 'S':
-                    ChallengeControl.calcTimeRemaining(time[0]);
+                    
                     ShoreView sv = new ShoreView();
                     sv.run();
+                    ChallengeControl.calcTimeRemaining(time[0]);
                     break;
                 case 'V':
                     ChallengeControl.calcTimeRemaining(time[1]);
@@ -75,14 +72,16 @@ public class MapMenu extends View {
                     vc.run();
                     break;
                 case 'F':
-                    ChallengeControl.calcTimeRemaining(time[2]);
+                    
                     ForrestChallenge fc = new ForrestChallenge();
                     fc.run();
+                    ChallengeControl.calcTimeRemaining(time[2]);
                     break;
                 case 'R':
-                    ChallengeControl.calcTimeRemaining(time[3]);
+                    
                     RiverChallenge rc = new RiverChallenge();
                     rc.run();
+                    ChallengeControl.calcTimeRemaining(time[3]);
                     break;
                 case 'C':
                     ChallengeControl.calcTimeRemaining(time[4]);
@@ -95,14 +94,16 @@ public class MapMenu extends View {
                     pc.run();
                     break;
                 case 'L':
-                    ChallengeControl.calcTimeRemaining(time[6]);
+                    
                     ValleyChallenge lc = new ValleyChallenge();
                     lc.run();
+                    ChallengeControl.calcTimeRemaining(time[6]);
                     break;
                 case 'T':
-                    ChallengeControl.calcTimeRemaining(time[7]);
+                    
                     TreehouseChallenge tc = new TreehouseChallenge();
                     tc.run(); 
+                    ChallengeControl.calcTimeRemaining(time[7]);
                     break;
                 case 'M':
                     return;
