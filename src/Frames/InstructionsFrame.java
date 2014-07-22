@@ -35,6 +35,7 @@ public class InstructionsFrame extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         treeDesc = new javax.swing.JTextArea();
         map = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -42,8 +43,9 @@ public class InstructionsFrame extends javax.swing.JFrame {
 
         treeDesc.setEditable(false);
         treeDesc.setColumns(20);
+        treeDesc.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         treeDesc.setRows(5);
-        treeDesc.setText("*********************************************************\"\n                + \"\\nThe objective of the game is to collect enough wood \"\n                + \"\\nto start a signal fire and be rescued. Decide on a \"\n                + \"\\nmap location to go to. Once there, attempt to collect\"\n                + \"\\nthe wood. In order to collect that wood, you must\"\n                + \"\\nanswer the trivia question correctly. If you are able \"\n                + \"\\nto answer the question correctly, you will pick up that\"\n                + \"\\npiece of wood. Your timer starts at 12 hours, and each\"\n                + \"\\nwood pile has a time amount assigned to it. If your time\"\n                + \"\\nruns out before you have collected the right amount of\"\n                + \"\\nwood, then you will loose the game.\"\n                + \"\\n*********************************************************\";");
+        treeDesc.setText("\n                The objective of the game is to collect enough wood \n                to start a signal fire and be rescued. Decide on a \n                map location to go to. Once there, attempt to collect\n                the wood. In order to collect that wood, you must\n                answer the trivia question correctly. If you are able \n                to answer the question correctly, you will pick up that\n                piece of wood. Your timer starts at 12 hours, and each\n                wood pile has a time amount assigned to it. If your time\n                runs out before you have collected the right amount of\n                wood, then you will loose the game.\n               ");
         jScrollPane1.setViewportView(treeDesc);
 
         map.setFont(new java.awt.Font("Abadi MT Condensed Extra Bold", 0, 18)); // NOI18N
@@ -54,25 +56,36 @@ public class InstructionsFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Andale Mono", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Instructions");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(46, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(map)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(map)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(15, 15, 15))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(94, 94, 94))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(82, 82, 82)
+                .addGap(36, 36, 36)
+                .addComponent(jLabel1)
+                .addGap(31, 31, 31)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
                 .addComponent(map)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -131,6 +144,7 @@ public class InstructionsFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton map;

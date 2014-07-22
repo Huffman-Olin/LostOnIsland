@@ -43,24 +43,31 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="map" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" alignment="1" min="-2" pref="478" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" max="32767" attributes="0"/>
+                      <Component id="map" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="235" max="32767" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="224" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" pref="430" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="map" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -78,7 +85,7 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="\u005cn************************************************************************************&quot;&#xa;                + &quot;\u005cn You are an experienced pilot who was traveling to your cabin several hundred &quot;&#xa;                + &quot;        \u005cn miles from home. Unfortunately, you experienced plane troubles and had to make&quot;&#xa;                + &quot;        \u005cn an emergency landing on a remote island. With only a small knife and a limited &quot;&#xa;                + &quot;        \u005cn supply of food and water, you must find 10 pieces of wood to create a signal &quot;&#xa;                + &quot;        \u005cn fire and get rescued.&quot;&#xa;                + &quot;\u005cn You have 12 hours before the sun goes down and all is lost! Explore the island&quot;&#xa;                + &quot;         \u005cn to find the wood. Be careful, wild beasts lurk all around the island, and it &quot;&#xa;                + &quot;         \u005cn is not often that a delicious, &#x201c;free&#x201d; meal wanders their way.&quot;&#xa;                + &quot;\u005cn As you travel around to different locations to gather wood, time will be&quot;&#xa;                + &quot;\u005cn added as &#x201c;payment&#x201d; for the wood. There are several places to gather wood&quot;&#xa;                + &quot;\u005cn from, and once wood has been gathered from a location, there no longer is&quot;&#xa;                + &quot;\u005cn there. If your time reaches 12 hours and you do not have enough wood, the game&quot;&#xa;                + &quot;\u005cn ends and you lose.&quot;&#xa;                + &quot;\u005cn&quot;&#xa;                + &quot;\u005cn&quot;&#xa;                + &quot;\u005cn In the beginning of the game, you will start out with 3 lives.\u005cn&quot;&#xa;                + &quot;\u005cn At each location to collect wood, in order to pick up the wood, you must correctly&quot;&#xa;                + &quot;         \u005cn answer a question. If you incorrectly answer a question, you loose a life and do not&quot;&#xa;                + &quot;         \u005cn pick up the wood.\u005cn&quot;&#xa;                + &quot;\u005cn&quot;&#xa;                + &quot;\u005cn The game is over when one of the following occurs :&quot;&#xa;                + &quot;\u005cn&quot;&#xa;                + &quot;\u005cn \u005ctYou are able to collect enough wood in the allotted time (You win)&quot;&#xa;                + &quot;\u005cn \u005ctYou are attacked and killed by a wild animal (You lose)&quot;&#xa;                + &quot;\u005cn \u005ctYour timer exceeds 12 hours (You lose)&quot;&#xa;                + &quot;\u005cn \u005ctYou are poisoned by wild berries&quot;&#xa;                + &quot;\u005cn \u005ctYou run out of lives&quot;&#xa;                + &quot;\u005cn**************************************************************************************&quot;" containsInvalidXMLChars="true"/>
+                <Property name="text" type="java.lang.String" value="&#xa;            You are an experienced pilot who was traveling to your cabin several hundred &#xa;            miles from home. Unfortunately, you experienced plane troubles and had to make&#xa;            an emergency landing on a remote island. With only a small knife and a limited &#xa;            supply of food and water, you must find 10 pieces of wood to create a signal&#xa;            fire and get rescued.&#xa;            You have 12 hours before the sun goes down and all is lost! Explore the island&#xa;            to find the wood. Be careful, wild beasts lurk all around the island, and it &#xa;            is not often that a delicious, &#x201c;free&#x201d; meal wanders their way.&#xa;            As you travel around to different locations to gather wood, time will be&#xa;            added as &#x201c;payment&#x201d; for the wood. There are several places to gather wood&#xa;            from, and once wood has been gathered from a location, there no longer is&#xa;            there. If your time reaches 12 hours and you do not have enough wood, the game&quot;&#xa;            ends and you lose.&#xa;            &#xa;            At each challenge, in order to pick up the wood, you must correctly&#xa;            answer a question. If you incorrectly answer a question, you loose a life and do not&quot;&#xa;            pick up the wood.&#xa;          &#xa;            The game is over when one of the following occurs :&#xa;                &#xa;            1) You are able to collect enough wood in the allotted time (You win)&#xa;            2) You are attacked and killed by a wild animal (You lose)&#xa;            3) Your timer exceeds 10 hours (You lose)&#xa;              &#xa;        "/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -96,6 +103,17 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mapActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="sansserif" size="48" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Storyline"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
