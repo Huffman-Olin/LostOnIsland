@@ -77,6 +77,11 @@ public class MainMenuFrame extends javax.swing.JFrame {
         });
 
         jbHelp.setText("Help");
+        jbHelp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbHelpActionPerformed(evt);
+            }
+        });
 
         jbQuit.setText("Quit");
         jbQuit.addActionListener(new java.awt.event.ActionListener() {
@@ -179,6 +184,12 @@ public class MainMenuFrame extends javax.swing.JFrame {
         StorylineFrame sf = new StorylineFrame();
         sf.setVisible(true);
     }//GEN-LAST:event_storylineActionPerformed
+
+    private void jbHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbHelpActionPerformed
+        this.dispose();
+        HelpFrame hf = new HelpFrame();
+        hf.setVisible(true);
+    }//GEN-LAST:event_jbHelpActionPerformed
 
     /**
      */
