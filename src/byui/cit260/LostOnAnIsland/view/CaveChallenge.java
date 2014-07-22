@@ -61,7 +61,7 @@ public class CaveChallenge extends View {
                 doAction(choice, speed, distance);
                 valid = true;
             } catch (ChallengeControlExceptions ex) {
-                JOptionPane.showMessageDialog(CF, "The disatance must be a number", "Invlaid distance", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(CF, "The disatance must be a number", "Invalid distance", JOptionPane.ERROR_MESSAGE);
                 return;
             }
         } while (!valid);

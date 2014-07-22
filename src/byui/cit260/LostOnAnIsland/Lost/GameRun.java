@@ -9,6 +9,7 @@ import byui.cit260.LostOnAnIsland.view.MainMenu;
 import byui.cit260.LostOnAnIsland.view.NewGameView;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 public class GameRun {
 
@@ -36,9 +37,11 @@ public class GameRun {
 
         //runNewGame();
     }
-
+    
+   
     public static void runNewGame() {
-
+        
+        
         NewGameView.mainMenuDisplay();
 
         boolean valid = false;
@@ -49,6 +52,7 @@ public class GameRun {
                 valid = true;
 
             } catch (MainExceptions ex) {
+
                 System.out.println(ex.getMessage());
             }
         } while (!valid);
