@@ -43,6 +43,7 @@ public class LoseFrame extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("YOU LOSE.");
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jTextArea1.setText("This game is the property of Olin Huffman and Bethany Larsen.\nIn no way, shape, or form can this game be tampered with.\nBut on the off chance that you should attempt such a thing,\nknow that it will result in your complete termination. \nAnd we're not taking about the player in the game, we're talking\nabout you. Beware and watch your back.... Thanks for playing!");
